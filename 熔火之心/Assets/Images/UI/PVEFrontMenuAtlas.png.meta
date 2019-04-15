@@ -1,0 +1,1759 @@
+fileFormatVersion: 2
+guid: a7df7424bce5b5a42a6ff4371a2ab8a4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PVEFrontMenuAtlas_0
+    21300002: PVEFrontMenuAtlas_1
+    21300004: PVEFrontMenuAtlas_2
+    21300006: PVEFrontMenuAtlas_3
+    21300008: PVEFrontMenuAtlas_4
+    21300010: PVEFrontMenuAtlas_5
+    21300012: PVEFrontMenuAtlas_6
+    21300014: PVEFrontMenuAtlas_7
+    21300016: PVEFrontMenuAtlas_8
+    21300018: PVEFrontMenuAtlas_9
+    21300020: PVEFrontMenuAtlas_10
+    21300022: PVEFrontMenuAtlas_11
+    21300024: PVEFrontMenuAtlas_12
+    21300026: PVEFrontMenuAtlas_13
+    21300028: PVEFrontMenuAtlas_14
+    21300030: PVEFrontMenuAtlas_15
+    21300032: PVEFrontMenuAtlas_16
+    21300034: PVEFrontMenuAtlas_17
+    21300036: PVEFrontMenuAtlas_18
+    21300038: PVEFrontMenuAtlas_19
+    21300040: PVEFrontMenuAtlas_20
+    21300042: PVEFrontMenuAtlas_21
+    21300044: PVEFrontMenuAtlas_22
+    21300046: PVEFrontMenuAtlas_23
+    21300048: PVEFrontMenuAtlas_24
+    21300050: PVEFrontMenuAtlas_25
+    21300052: PVEFrontMenuAtlas_26
+    21300054: PVEFrontMenuAtlas_27
+    21300056: PVEFrontMenuAtlas_28
+    21300058: PVEFrontMenuAtlas_29
+    21300060: PVEFrontMenuAtlas_30
+    21300062: PVEFrontMenuAtlas_31
+    21300064: PVEFrontMenuAtlas_32
+    21300066: PVEFrontMenuAtlas_33
+    21300068: PVEFrontMenuAtlas_34
+    21300070: PVEFrontMenuAtlas_35
+    21300072: PVEFrontMenuAtlas_36
+    21300074: PVEFrontMenuAtlas_37
+    21300076: PVEFrontMenuAtlas_38
+    21300078: PVEFrontMenuAtlas_39
+    21300080: PVEFrontMenuAtlas_40
+    21300082: PVEFrontMenuAtlas_41
+    21300084: PVEFrontMenuAtlas_42
+    21300086: PVEFrontMenuAtlas_43
+    21300088: Frame
+    21300090: HpFrame
+    21300092: PVEFrontMenuAtlas_46
+    21300094: PVEFrontMenuAtlas_47
+    21300096: PVEFrontMenuAtlas_48
+    21300098: PVEFrontMenuAtlas_49
+    21300100: PVEFrontMenuAtlas_50
+    21300102: PVEFrontMenuAtlas_51
+    21300104: PVEFrontMenuAtlas_52
+    21300106: PVEFrontMenuAtlas_53
+    21300108: PVEFrontMenuAtlas_54
+    21300110: PVEFrontMenuAtlas_55
+    21300112: PVEFrontMenuAtlas_56
+    21300114: shortcus
+    21300116: PVEFrontMenuAtlas_58
+    21300118: hpbar
+    21300120: PVEFrontMenuAtlas_60
+    21300122: PVEFrontMenuAtlas_61
+    21300124: "\u5B8C\u6210"
+    21300126: PVEFrontMenuAtlas_63
+    21300128: PVEFrontMenuAtlas_64
+    21300130: PVEFrontMenuAtlas_65
+    21300132: PVEFrontMenuAtlas_66
+    21300134: PVEFrontMenuAtlas_67
+    21300136: "\u56FE\u7EB8\u754C\u9762"
+    21300138: "\u5931\u8D25"
+    21300140: PVEFrontMenuAtlas_70
+    21300142: PVEFrontMenuAtlas_71
+    21300144: PVEFrontMenuAtlas_72
+    21300146: "\u80DC\u5229"
+    21300148: PVEFrontMenuAtlas_74
+    21300150: PVEFrontMenuAtlas_75
+    21300152: PVEFrontMenuAtlas_76
+    21300154: PVEFrontMenuAtlas_77
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 931
+        width: 148
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e25e7ab9be751439272a17cd789e93
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 931
+        width: 149
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55dd3eef97aaeb941875b5d13a2e6752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 942
+        width: 66
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8719d444004b1d408288449e68ff451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 958
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bad613b670876e4593f8dd1583cf324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 944
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef08e5b4b58a9a49b32edc2002fd600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 908
+        width: 144
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9a088eeebac0344aab2c9d27a42110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 944
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399ef9ceaf6ed6b48976f5d0c3491e8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 913
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68903d4f11915614f8d93f7fa1d5b57f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 865
+        width: 285
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbff68e28f01bdf4d9379f401d8691e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 896
+        width: 44
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88cc3802b842944429a1903c5617fdb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 922
+        width: 72
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b06cfe5023890c42abc640fc17aaa2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 903
+        width: 72
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd966ae82bc16a43a60ecae1deaee51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 831
+        width: 25
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ae680e62724e4499d7ea749c19ece5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 848
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8239982858e7b004eb4ed52343be0268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 915
+        width: 141
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0321432642dcf8a4ca216bd521765455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 829
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9629924d3aaec534182121d8e438efeb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 759
+        width: 115
+        height: 135
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd0a4bd9c3146e64b890a8d064598584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 856
+        width: 55
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f044230634c65a243869c5ef605183c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 837
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3e98c3fbad3cd45860993989e622e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 831
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd44a4d1e40d234f9bfd94ce342d346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 868
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce224582a12f0e4bb77eb5b76c4d4f6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 868
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0316c24b43e28104db505d834f597755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 870
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c27ccd928e9b334cab0138c4224203f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 874
+        width: 25
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f724cd77361b5541a04179d9ef729ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 829
+        width: 82
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd66069fb248b2e4ea993f6d42a44477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 763
+        width: 123
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91073a56e46d05e45be7380f6eb0a585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 830
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbe3cd7f17ef3c47be0010c0659bdbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 766
+        width: 81
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106c9de5c5748004597dce3710ce16e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 766
+        width: 81
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9dc68f6d0c7ef24ca3caab9b6ddfa34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_29
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 765
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b618ca4767af941a994cc3dade436e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 744
+        width: 131
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a0ccbe7b53fdc49923fa9a2e32a5b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 845
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993c2bb48c20a394eb94e7158bd95a67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 729
+        width: 123
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0630f074f1ea75547a497402bdd6495e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 765
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f366dcb15fa31cd43b45ba39256857cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 749
+        width: 91
+        height: 78
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8053e7570a2e13d489cd4d6d3754623f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 637
+        width: 174
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7374d1e37e180d478d3a6ed135b1e66
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 659
+        width: 126
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80025e3ffb327ec4f9194a7d34d820cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 725
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2f78a91fcd7574781215e47d601f0d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_38
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 586
+        width: 372
+        height: 179
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e212d344fe30e44b8f5a7eb5f6ca226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_39
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 642
+        width: 131
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3af809efe338e4aa0fd3b2d5bca29b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_40
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 722
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8951f8625a76248ac4fab8a5b2d18d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_41
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 655
+        width: 14
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683251b05c3846f4da3a076bf8655b15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_42
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 602
+        width: 131
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3034f6138075f0c41822c4416adcce46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_43
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 683
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de42089229f19f6499a04c78ffd75180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 506
+        width: 148
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2158cc0a330ef46b950cc276b3fde2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HpFrame
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 534
+        width: 250
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96285bc09348cff43807cda9ac65200b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_46
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 641
+        width: 44
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a007df1ff0c2a204fb3204836e762e04
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_47
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 581
+        width: 36
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd98ab82c0f23434287bd6f99d80c355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_48
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 501
+        width: 140
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da93b35685d3f704fb89d17c75e6cbed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_49
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 501
+        width: 137
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 777ef6576df73f24daa6d47b628599b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_50
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 526
+        width: 89
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c837be37e594a2f42a27e8c67c9a0fa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_51
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 524
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c6058e70bdea54fafa627b85ead042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_52
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 432
+        width: 148
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a30ea5d1400cd42839162845fa9228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_53
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 488
+        width: 28
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba25ba1d36b81f940b23168708bf5068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_54
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 370
+        width: 218
+        height: 132
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4788d08a6636935499c4b1b9f16ba72d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_55
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 433
+        width: 327
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2d6086fe39093e4292cfc0bacff521e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_56
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 433
+        width: 88
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2a1dd0365dfaf40b99b63c5ebd5ae5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shortcus
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 329
+        width: 180
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09bd49aea7ff0f4ea2c251eb5a27469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_58
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 452
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12992f1800faa6d4eb4d4f9e6d7f911b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hpbar
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 419
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521b627b1ecff594da706ac736118acf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_60
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 419
+        width: 95
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0a208bd3fb60144580292d9f9b4a3a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_61
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 367
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c43f351369009e4b806c3913d1a9227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u5B8C\u6210"
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 331
+        width: 344
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7534e6a5c82a3c845bc6bde7bc1c8776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_63
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 416
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f231318bc5cd674690ed890875e9890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_64
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 367
+        width: 185
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47e0f881702dc0345a5d195cc14951df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_65
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 380
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585b42862002a834eba07bcdab4cfde2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_66
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 369
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97df5e751170fba428bc3cc83a2e5bdc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_67
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 344
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92c4031ca4c66304aafa193f91e0f3e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u56FE\u7EB8\u754C\u9762"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 440
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de621f84c669c8b41b9e9677190c4131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u5931\u8D25"
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 178
+        width: 429
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f081b774c844d45abb9b26ce19e8b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_70
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 309
+        width: 99
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832332e88e232c344b2b6ec4a1023e9e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_71
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 308
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5e62a900667ff4db03ffd1e928164c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_72
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 176
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9839a3a4146d7854c827dc1871988020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u80DC\u5229"
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 6
+        width: 491
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b8ff68ed09dfe0428fe33ab4bb84c34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_74
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 144
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2a031dee5374844aaca4988b520a2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_75
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 144
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c62eb0bf33a7f46b73cdcc4b60b208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_76
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 72
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fde58095046ac48bfe4746f4d41051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PVEFrontMenuAtlas_77
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 0
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b862776b5b93a8c42a858dad4c9deebb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 36aadcd06f2e4d242afd33fca2ab177d
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
