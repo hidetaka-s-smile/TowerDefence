@@ -27,7 +27,7 @@ TextureImporter:
     21300044: CommonAtlas1_22
     21300046: CommonAtlas1_23
     21300048: CommonAtlas1_24
-    21300050: CommonAtlas1_25
+    21300050: setting
     21300052: CommonAtlas1_26
     21300054: CommonAtlas1_27
     21300056: CommonAtlas1_28
@@ -57,7 +57,7 @@ TextureImporter:
     21300104: CommonAtlas1_52
     21300106: CommonAtlas1_53
     21300108: CommonAtlas1_54
-    21300110: CommonAtlas1_55
+    21300110: tuzhi
     21300112: CommonAtlas1_56
     21300114: CommonAtlas1_57
   externalObjects: {}
@@ -664,13 +664,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CommonAtlas1_25
+      name: setting
       rect:
         serializedVersion: 2
         x: 328
-        y: 328
-        width: 354
-        height: 268
+        y: 491
+        width: 112
+        height: 110
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1264,7 +1264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CommonAtlas1_55
+      name: tuzhi
       rect:
         serializedVersion: 2
         x: 709

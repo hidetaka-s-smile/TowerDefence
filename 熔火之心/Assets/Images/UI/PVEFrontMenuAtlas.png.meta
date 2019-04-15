@@ -3,19 +3,19 @@ guid: a7df7424bce5b5a42a6ff4371a2ab8a4
 TextureImporter:
   fileIDToRecycleName:
     21300000: PVEFrontMenuAtlas_0
-    21300002: PVEFrontMenuAtlas_1
+    21300002: dutiaoBar
     21300004: PVEFrontMenuAtlas_2
     21300006: PVEFrontMenuAtlas_3
     21300008: PVEFrontMenuAtlas_4
     21300010: PVEFrontMenuAtlas_5
     21300012: PVEFrontMenuAtlas_6
     21300014: PVEFrontMenuAtlas_7
-    21300016: PVEFrontMenuAtlas_8
+    21300016: dutiaoFrame
     21300018: PVEFrontMenuAtlas_9
     21300020: PVEFrontMenuAtlas_10
     21300022: PVEFrontMenuAtlas_11
     21300024: PVEFrontMenuAtlas_12
-    21300026: PVEFrontMenuAtlas_13
+    21300026: SettingCloseBtn1
     21300028: PVEFrontMenuAtlas_14
     21300030: PVEFrontMenuAtlas_15
     21300032: PVEFrontMenuAtlas_16
@@ -31,7 +31,7 @@ TextureImporter:
     21300052: PVEFrontMenuAtlas_26
     21300054: PVEFrontMenuAtlas_27
     21300056: PVEFrontMenuAtlas_28
-    21300058: PVEFrontMenuAtlas_29
+    21300058: SettingCloseBtn2
     21300060: PVEFrontMenuAtlas_30
     21300062: PVEFrontMenuAtlas_31
     21300064: PVEFrontMenuAtlas_32
@@ -50,8 +50,8 @@ TextureImporter:
     21300090: HpFrame
     21300092: PVEFrontMenuAtlas_46
     21300094: PVEFrontMenuAtlas_47
-    21300096: PVEFrontMenuAtlas_48
-    21300098: PVEFrontMenuAtlas_49
+    21300096: CloseBtn1
+    21300098: closeBtn2
     21300100: PVEFrontMenuAtlas_50
     21300102: PVEFrontMenuAtlas_51
     21300104: PVEFrontMenuAtlas_52
@@ -74,7 +74,7 @@ TextureImporter:
     21300138: "\u5931\u8D25"
     21300140: PVEFrontMenuAtlas_70
     21300142: PVEFrontMenuAtlas_71
-    21300144: PVEFrontMenuAtlas_72
+    21300144: BlueFrame
     21300146: "\u80DC\u5229"
     21300148: PVEFrontMenuAtlas_74
     21300150: PVEFrontMenuAtlas_75
@@ -204,13 +204,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_1
+      name: dutiaoBar
       rect:
         serializedVersion: 2
-        x: 155
-        y: 931
-        width: 149
-        height: 70
+        x: 178
+        y: 900
+        width: 106
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,13 +344,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_8
+      name: dutiaoFrame
       rect:
         serializedVersion: 2
         x: 0
-        y: 865
-        width: 285
-        height: 64
+        y: 870
+        width: 175
+        height: 61
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,7 +444,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_13
+      name: SettingCloseBtn1
       rect:
         serializedVersion: 2
         x: 708
@@ -507,8 +507,8 @@ TextureImporter:
       name: PVEFrontMenuAtlas_16
       rect:
         serializedVersion: 2
-        x: 250
-        y: 759
+        x: 247
+        y: 764
         width: 115
         height: 135
       alignment: 0
@@ -764,7 +764,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_29
+      name: SettingCloseBtn2
       rect:
         serializedVersion: 2
         x: 708
@@ -947,7 +947,7 @@ TextureImporter:
       name: PVEFrontMenuAtlas_38
       rect:
         serializedVersion: 2
-        x: 291
+        x: 292
         y: 586
         width: 372
         height: 179
@@ -1144,7 +1144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_48
+      name: CloseBtn1
       rect:
         serializedVersion: 2
         x: 704
@@ -1164,7 +1164,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_49
+      name: closeBtn2
       rect:
         serializedVersion: 2
         x: 852
@@ -1547,7 +1547,7 @@ TextureImporter:
       name: "\u56FE\u7EB8\u754C\u9762"
       rect:
         serializedVersion: 2
-        x: 2
+        x: 5
         y: 4
         width: 440
         height: 363
@@ -1624,7 +1624,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_72
+      name: BlueFrame
       rect:
         serializedVersion: 2
         x: 882
