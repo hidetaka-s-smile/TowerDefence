@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631637557433039810}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.147982, z: 0}
+  m_LocalPosition: {x: 0, y: 0.147982, z: 1.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8169803782263535107}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 631637557843679601}
   - component: {fileID: 631637557843679602}
   - component: {fileID: 631637557843679502}
-  - component: {fileID: 631637557843679503}
+  - component: {fileID: 4403996980358356276}
   m_Layer: 9
   m_Name: tower (1)
   m_TagString: Untagged
@@ -123,7 +123,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 4.007881
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &631637557843679503
+--- !u!114 &4403996980358356276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,15 +132,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 631637557843679604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57cf3a1341a95674aa79a30ef447e802, type: 3}
+  m_Script: {fileID: 11500000, guid: 0de79768fae1f8444aba5a76bed5592e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
-  AttackTime: 0
-  ad: 0
+  hp: 100
+  ad: 10
   bulletPrefeb: {fileID: 6024032564868862079, guid: 846f7a7c434bd104a85e5ef58c8a47f2,
     type: 3}
-  attackRateTime: 1
+  attackRateTime: 0.2
   timer: 0
   firepostion: {fileID: 631637557433039809}
   head: {fileID: 8169803782263535107}
@@ -235,7 +234,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8169803782263302691}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.004705429, y: 0.47201806, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

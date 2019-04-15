@@ -5,7 +5,6 @@ using UnityEngine;
 public class tower : MonoBehaviour
 {
     public float hp;             //血量
-    public float AttackTime;      //攻击间隔
     public float ad;               //攻击力
     public GameObject bulletPrefeb; //子弹
     public float attackRateTime;//攻击间隔
@@ -19,14 +18,14 @@ public class tower : MonoBehaviour
     /// <param name="other"></param>
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "emeny")
+        if (other.tag == "enemy")
         {
             enemys.Add(other.gameObject);
         }
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.tag == "emeny")
+        if (other.tag == "enemy")
         {
             enemys.Remove(other.gameObject);
         }
@@ -62,7 +61,6 @@ public class tower : MonoBehaviour
     public void CanYHeadFollow()
     {
         Vector3 targetPosition = enemys[0].transform.position;
-        targetPosition.y = head.position.y;
         head.LookAt(enemys[0].transform.position);
     }
     /// <summary>
@@ -75,7 +73,7 @@ public class tower : MonoBehaviour
         dir.y = 0;
         float angle = Vector3.Angle(dir, new Vector3(0, 0, 1));
         angle *= Mathf.Sign(dir.x);
-        head.localEulerAngles = new Vector3(0, 0, angle);
+        head.localEulerAngles = new Vector3(0, angle, 0);
 
     }
     /// <summary>
