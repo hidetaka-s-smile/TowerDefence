@@ -27,7 +27,10 @@ public class TowerIcon : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     /// </summary>
     public void CopyItem()
     {
-        Instantiate(gameObject, transform.parent);
+        GameObject go = Instantiate(gameObject, transform.parent);
+        go.transform.localScale = new Vector3(1, 1, 1);
+        TowerIcon newIcon = go.GetComponent<TowerIcon>();
+        newIcon.Info = this.Info;
     }
 
     /// <summary>
@@ -44,6 +47,7 @@ public class TowerIcon : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     /// <param name="eventData"></param>
     public void OnBeginDrag(PointerEventData eventData)
     {
+        CopyItem();
         isDrag = true;
         img.raycastTarget = false;
         //设为最表层
@@ -77,7 +81,10 @@ public class TowerIcon : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     public void OnPointerUp(PointerEventData eventData)
     {
         if (!isDrag)
+        {
+            CopyItem();
             Destroy(gameObject);
+        }            
     }
 
     /// <summary>
@@ -86,7 +93,7 @@ public class TowerIcon : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     /// <param name="eventData"></param>
     public void OnPointerDown(PointerEventData eventData)
     {
-        CopyItem();
+        //CopyItem();
         ShrinkItem();
     }
 
@@ -97,14 +104,16 @@ public class TowerIcon : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDra
     {
         //是快捷栏，使得该快捷栏的信息变更
         if (eventData.pointerCurrentRaycast.gameObject != null)
-        {
+        {            
             if (eventData.pointerCurrentRaycast.gameObject.tag == Tags.shortcut)
             {
+                print(eventData.pointerCurrentRaycast.gameObject.name);
                 Shortcut shortCut = eventData.pointerCurrentRaycast.gameObject.GetComponent<Shortcut>();
                 shortCut.SetShortcutInfo(info);
             }
             else if (eventData.pointerCurrentRaycast.gameObject.tag == Tags.shortcutIcon)
             {
+                print(eventData.pointerCurrentRaycast.gameObject.name);
                 Shortcut shortCut = eventData.pointerCurrentRaycast.gameObject.transform.parent.GetComponent<Shortcut>();
                 shortCut.SetShortcutInfo(info);
             }

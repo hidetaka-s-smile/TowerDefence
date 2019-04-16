@@ -102,13 +102,14 @@ GameObject:
   - component: {fileID: 3384751786163844370}
   - component: {fileID: 6637455156669816247}
   - component: {fileID: 4580878622104665235}
+  - component: {fileID: 7457414678007465299}
   m_Layer: 5
   m_Name: TowerIconImage
   m_TagString: ShortcutIcon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3384751786163844370
 RectTransform:
   m_ObjectHideFlags: 0
@@ -143,7 +144,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6313503496461743742}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -156,7 +157,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4bc05a7b370cf5d45918e8836b0ebdf2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0299664d1179d25478bf4634fca9d02e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -165,6 +166,18 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!114 &7457414678007465299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6313503496461743742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351bf9fd8ac6b2343921e982b3528820, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6336916520675467465
 GameObject:
   m_ObjectHideFlags: 0

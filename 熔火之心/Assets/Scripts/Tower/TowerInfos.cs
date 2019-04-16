@@ -16,6 +16,7 @@ public class TowerInfos : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         InitInfosFromText();
     }
 

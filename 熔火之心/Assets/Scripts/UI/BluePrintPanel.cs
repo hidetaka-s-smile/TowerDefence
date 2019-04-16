@@ -17,13 +17,19 @@ public class BluePrintPanel : MonoBehaviour
     public int[] towerIdArray;//玩家能解锁的塔的编号数组 
 
     private Animation anim;
-    private int curIndex = 0;//当前即将解锁的塔编号，默认一开始就有基础炮塔图纸
+    private int curIndex = 0;//当前即将解锁的塔编号
     private bool isOpen = false;
 
     private void Awake()
     {
         instance = this;
         anim = gameObject.GetComponent<Animation>();        
+    }
+
+    private void Start()
+    {
+        //默认一开始就有基础炮塔图纸
+        InventNewTower();
     }
 
     /// <summary>

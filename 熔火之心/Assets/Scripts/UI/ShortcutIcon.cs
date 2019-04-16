@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ShortcutIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class ShortcutIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler,IPointerDownHandler, IPointerUpHandler
 {
     private Image img;
     private Shortcut originGrid;//初始快捷栏
@@ -47,6 +47,25 @@ public class ShortcutIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     {
         img.raycastTarget = true;
         ShortcutCast(eventData);
+        RestoreItemSize();
+    }
+
+    /// <summary>
+    /// 鼠标点下时
+    /// </summary>
+    /// <param name="eventData"></param>
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        ShrinkItem();
+    }
+
+    /// <summary>
+    /// 鼠标抬起时
+    /// </summary>
+    /// <param name="eventData"></param>
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        RestoreItemSize();
     }
 
     /// <summary>
@@ -124,6 +143,7 @@ public class ShortcutIcon : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 TowerInfo currentInfo = currentGrid.Info;
                 currentGrid.SetShortcutInfo(originGrid.Info);
                 originGrid.SetShortcutInfo(currentInfo);
+                print("快捷栏图标交换成功");
             }
         }
         //复位
