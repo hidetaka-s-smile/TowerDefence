@@ -7,7 +7,19 @@ using System.Collections;
 [RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusinfo))]
 public class EnemyAI : MonoBehaviour
 {
-    float theAtkRange;
+    private float theExecuteRange;
+    private float theAtkRange;
+    private EnemyAnimation animAction;
+    private EnemyMotor motor;
+    private float atkTime = 0;
+    /// <summary>
+    /// 攻击间隔
+    /// </summary>
+    public float atkInterval = 3;
+    /// <summary>
+    /// 攻击延迟时间
+    /// </summary>
+    public float delay = 0.3f;
     /// <summary>
     /// 敌人状态
     /// </summary>
@@ -26,11 +38,10 @@ public class EnemyAI : MonoBehaviour
         /// </summary>
         Run
     }
-
-    private EnemyAnimation animAction;
-    private EnemyMotor motor;
     private void Start()
     {
+        //thePlayer = GameObject.FindGameObjectWithTag("player").transform;
+        theExecuteRange = GetComponent<EnemyStatusinfo>().atkExecuteRange;
         theAtkRange = GetComponent<EnemyStatusinfo>().atkRange;
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
@@ -52,25 +63,23 @@ public class EnemyAI : MonoBehaviour
                 break;
         }
     }
-
-    private float atkTime;
-    /// <summary>
-    /// 攻击间隔
-    /// </summary>
-    public float atkInterval = 2;
-    /// <summary>
-    /// 攻击延迟时间
-    /// </summary>
-    public float delay = 0.3f;
-
+    public void CaculateDamaga()
+    {
+        //if (Vector3.Distance(thePlayer.position, transform.position) < theAtkRange)
+        //{
+        //调用人物扣血方法
+        // }
+    }
     private void Attack()
     {
+        animAction.Play(animAction.atkName);
+        Invoke("CaculateDamaga", delay);
         //限制攻击频率
         //播放攻动画
         if (atkTime <= Time.time )
         {
             animAction.Play(animAction.atkName);
-            //攻击
+            
             atkTime = Time.time + atkInterval;
         }
 
@@ -79,8 +88,8 @@ public class EnemyAI : MonoBehaviour
             //如果攻击动画没有播放  再  播放闲置动画
             animAction.Play(animAction.idleName);
         }
+        if (motor.run()) state = State.Run;
     }
-
     private void Run()
     {
         //播放跑步动画

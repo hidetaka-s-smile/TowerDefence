@@ -16,7 +16,7 @@ public class EnemyAnimation : MonoBehaviour
     /// <summary>
     /// 攻击动画
     /// </summary>
-    public string atkName = "attack01";
+    public string atkName = "Attack01";
 
     /// <summary>
     /// 死亡动画
