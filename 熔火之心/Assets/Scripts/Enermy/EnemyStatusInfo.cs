@@ -8,6 +8,10 @@ using UnityEngine;
 public class EnemyStatusinfo : MonoBehaviour
 {
     /// <summary>
+    /// 敌人执行攻击动作的范围与伤害距离的差距
+    /// </summary>
+    public float atkExecuteRange;
+    /// <summary>
     /// 攻击范围
     /// </summary>
     public float atkRange;
@@ -19,7 +23,6 @@ public class EnemyStatusinfo : MonoBehaviour
     /// 最大血量
     /// </summary>
     public float maxHP;
-
     public void Damage(float amount)
     {
         //如果敌人已经死亡 则退出(防止虐尸)

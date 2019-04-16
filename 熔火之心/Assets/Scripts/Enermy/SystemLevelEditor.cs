@@ -56,7 +56,7 @@ public class SystemLevelEditor : MonoBehaviour
             currentLevel++;
             theMonsterGrow.monsterAutoGrow( monsterCntForEachLevel[currentLevel - 1], monsterTypeNumberForEachLevel[currentLevel - 1] );//生成对应数量怪兽
         }
-        if (currentLevel == maxLevel) ;//生成boss
+        //if (currentLevel == maxLevel) ;//生成boss
     }
     public void deachCnt()
     {
