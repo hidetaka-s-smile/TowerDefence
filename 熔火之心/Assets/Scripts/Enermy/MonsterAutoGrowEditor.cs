@@ -32,7 +32,7 @@ public class MonsterAutoGrowEditor : MonoBehaviour
     public void CreateEnemy()
     {
         int tempRandomIndex = Random.Range(0, typeCnt);
-        GameObject.Instantiate(MonsterTypePrefabs[tempRandomIndex] ,transform.position+new Vector3(1,1,1), Quaternion.identity);
+        GameObject.Instantiate(MonsterTypePrefabs[tempRandomIndex] ,transform.position+new Vector3(2,0,2), Quaternion.identity);
     }
 
     public void monsterAutoGrow(int theMaxCnt, int theTypeCnt)

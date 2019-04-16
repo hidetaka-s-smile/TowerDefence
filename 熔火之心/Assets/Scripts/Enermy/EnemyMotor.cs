@@ -13,19 +13,20 @@ public class EnemyMotor : MonoBehaviour
     /// 敌人执行攻击动作的范围与伤害距离的差距
     /// </summary>
     public float atkExecuteRange = 5;
-    float atkRange = EnemyStatusinfo.atkRange;
+    float atkRange;
     /// <summary>
     /// 移动速度
     /// </summary>
     public float moveSpeed = 10;
     private Transform player;
-    private CharacterController theCC;
-    private NavMeshAgent theAgent;
+    //private CharacterController theCC;
+    //private NavMeshAgent theAgent;
     void Start()
     {
-        theCC = this.GetComponent<CharacterController>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        theAgent = GetComponent<NavMeshAgent>();
+        atkRange = GetComponent<EnemyStatusinfo>().atkRange;
+        //theCC = this.GetComponent<CharacterController>();
+        player = GameObject.FindGameObjectWithTag("player").transform;
+        //theAgent = GetComponent<NavMeshAgent>();
     }
 
     //执行寻路 如果攻击进入范围返回F 给状态类切换状态
@@ -36,8 +37,26 @@ public class EnemyMotor : MonoBehaviour
         {
             return false;
         }
-        transform.LookAt(targetPos);
-        theCC.SimpleMove(transform.forward * moveSpeed * Time.deltaTime);
+        LookRotation(targetPos);
+        MovementForward();
+        //theCC.SimpleMove(transform.forward * moveSpeed * Time.deltaTime);
         return true;
+    }
+    /// <summary>
+    /// 向前移动
+    /// </summary>
+    public void MovementForward()
+    {
+        transform.Translate(0, 0, moveSpeed * Time.deltaTime);
+    }
+
+    /// <summary>
+    /// 朝向目标点的旋转
+    /// </summary>
+    /// <param name="targetPos">目标位置</param> 
+    public void LookRotation(Vector3 targetPos)
+    {
+        //暂时……  一帧旋转至目标方位
+        transform.LookAt(targetPos);
     }
 }

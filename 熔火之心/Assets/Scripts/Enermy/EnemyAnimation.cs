@@ -11,22 +11,22 @@ public class EnemyAnimation : MonoBehaviour
     /// <summary>
     /// 跑步动画
     /// </summary>
-    public string runName = "run";
+    public string runName = "Run";
 
     /// <summary>
     /// 攻击动画
     /// </summary>
-    public string atkName = "shooting";
+    public string atkName = "attack01";
 
     /// <summary>
     /// 死亡动画
     /// </summary>
-    public string deathName = "death";
+    public string deathName = "Dead";
 
     /// <summary>
     /// 闲置动画
     /// </summary>
-    public string idleName = "idleWgun";
+    public string idleName = "Idle";
     private Animation anim;
     private void Awake()
     {

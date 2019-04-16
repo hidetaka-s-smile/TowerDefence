@@ -10,7 +10,7 @@ public class EnemyStatusinfo : MonoBehaviour
     /// <summary>
     /// 攻击范围
     /// </summary>
-    public static float atkRange;
+    public float atkRange;
     /// <summary>
     /// 当前血量
     /// </summary>
@@ -33,12 +33,14 @@ public class EnemyStatusinfo : MonoBehaviour
     /// </summary>
     public float deathDelay = 10;
 
-
+    
     //敌人生成器引用  敌人创建时由生成器传递
     SystemLevelEditor theEditor;
     private void Start()
     {
-        theEditor = GetComponent<SystemLevelEditor>();
+        
+        theEditor = GameObject.FindGameObjectWithTag("LevelEditor").GetComponent<SystemLevelEditor>();
+
     }
     /// <summary>
     /// 死亡
