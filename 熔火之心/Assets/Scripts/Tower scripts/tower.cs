@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tower : MonoBehaviour
+public class Tower : MonoBehaviour
 {
     public float hp;             //血量
     public float ad;               //攻击力
@@ -18,14 +18,14 @@ public class tower : MonoBehaviour
     /// <param name="other"></param>
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "enemy")
+        if (other.tag == "Enemy")
         {
             enemys.Add(other.gameObject);
         }
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.tag == "enemy")
+        if (other.tag == "Enemy")
         {
             enemys.Remove(other.gameObject);
         }
@@ -34,26 +34,30 @@ public class tower : MonoBehaviour
     {
         
     }
-    public void Update()
+    public virtual void Update()
     {
         //塔的头部跟随敌人
-        if (enemys.Count > 0 && enemys[0]!=null)
+        if (enemys.Count > 0 )
         {
             CantYHeadFollow();
         }
         timer += Time.deltaTime;
         //攻击
-        if(enemys.Count>0&&timer>attackRateTime && enemys[0] != null)
+        if(enemys.Count>0&&timer>attackRateTime)
         {
-            timer -= attackRateTime;
+            timer =0;
             Attack();
         }
     }
     //攻击
-    public void Attack()
+    public virtual void Attack()
     {
+        if(enemys[0]==null)
+        {
+            UpdateEnemys();
+        }
         GameObject bullet= GameObject.Instantiate(bulletPrefeb, firepostion.position, firepostion.rotation);
-        bullet.GetComponent<bullet>().SetTarget(enemys[0].transform);
+        bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
     }
     /// <summary>
     /// 头部可随y轴旋转摆动跟随敌人
@@ -75,6 +79,23 @@ public class tower : MonoBehaviour
         angle *= Mathf.Sign(dir.x);
         head.localEulerAngles = new Vector3(0, angle, 0);
 
+    }
+    //更新敌人
+    //当enemys[0]为null时，更新敌人
+    public void UpdateEnemys()
+    {
+        List<int> emptyIndex = new List<int>();
+        for(int index=0;index<enemys.Count;index++)
+        {
+            if(enemys[index]==null)
+            {
+                emptyIndex.Add(index);
+            }
+        }
+        for(int i=0;i<emptyIndex.Count;i++)
+        {
+            enemys.RemoveAt(emptyIndex[i] - i);
+        }
     }
     /// <summary>
     /// 被攻击
