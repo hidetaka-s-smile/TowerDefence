@@ -1,7 +1,26 @@
 fileFormatVersion: 2
 guid: 33c7d8d7b01e69c439fbf9b0bbac1064
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: UICryptAtlas_0
+    21300002: UICryptAtlas_1
+    21300004: UICryptAtlas_2
+    21300006: UICryptAtlas_3
+    21300008: UICryptAtlas_4
+    21300010: UICryptAtlas_5
+    21300012: UICryptAtlas_6
+    21300014: UICryptAtlas_7
+    21300016: UICryptAtlas_8
+    21300018: bg
+    21300020: UICryptAtlas_10
+    21300022: UICryptAtlas_11
+    21300024: UICryptAtlas_12
+    21300026: UICryptAtlas_13
+    21300028: UICryptAtlas_14
+    21300030: UICryptAtlas_15
+    21300032: UICryptAtlas_16
+    21300034: UICryptAtlas_17
+    21300036: UICryptAtlas_18
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +59,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -104,11 +123,391 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UICryptAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 754
+        width: 198
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a46bfe2fdd706e429c2c1a4931f995c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 691
+        width: 200
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9c70b49e6ae5f4789d2be11ae19ca7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 691
+        width: 200
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec409154d0a9c340bd276e296efd98a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 752
+        width: 327
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc24fde327b98f49b97a160ca2393df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 834
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cd0cfd14de60a48bf666faa3127fbd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 830
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e33d8d53429d374aacd0f3268fd4245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 619
+        width: 123
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62d9d9dbf08cd94483d63b27115ae9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 520
+        width: 200
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e90eb5c56dfe247af59fb649d418b6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_8
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 506
+        width: 198
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42500be41d61e5b4383db6738e40b8dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 498
+        width: 154
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22790f3e82fe68f439d2aae2dcddae45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 370
+        width: 198
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67794e635a235504eb012a4b33b73680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 370
+        width: 198
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ff9365b4c49354f9c7223c530e3aa2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 272
+        width: 198
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b276c70d4fe35d4983c903679b0d333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 258
+        width: 198
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248cf4b9eef908c43b64690e8c18996d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 359
+        width: 91
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7020e834830624d9db1fd76bf23947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 440
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbf7e349280fe449a4ffe69845a8509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 3
+        width: 208
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9421df623cfcd43b1b7674b9aa6e70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 259
+        width: 123
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94508d8d46aa6bc438fbb1d3df253fbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UICryptAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3
+        width: 214
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6ef05f217822349b4b5428242136cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 554784f077ede4841ad7b3931e79baaa
     vertices: []
     indices: 
     edges: []

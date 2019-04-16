@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BluePrintPanel : MonoBehaviour
 {
+    public Scrollbar scrollbar;//垂直滑动条
+
     private Animation anim;
     private bool isOpen = false;
 
@@ -19,6 +22,7 @@ public class BluePrintPanel : MonoBehaviour
     {      
         if(!isOpen && !anim.isPlaying)
         {
+            scrollbar.value = 1;
             isOpen = true;
             anim.Play("BluePrintPanelEnter");
         }
