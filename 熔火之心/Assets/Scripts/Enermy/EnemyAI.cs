@@ -7,6 +7,7 @@ using System.Collections;
 [RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusinfo))]
 public class EnemyAI : MonoBehaviour
 {
+    float theAtkRange;
     /// <summary>
     /// 敌人状态
     /// </summary>
@@ -30,6 +31,7 @@ public class EnemyAI : MonoBehaviour
     private EnemyMotor motor;
     private void Start()
     {
+        theAtkRange = GetComponent<EnemyStatusinfo>().atkRange;
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
     }
@@ -51,12 +53,11 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    private float atkTime=Time.time;
+    private float atkTime;
     /// <summary>
     /// 攻击间隔
     /// </summary>
-    public float atkInterval = 3;
-
+    public float atkInterval = 2;
     /// <summary>
     /// 攻击延迟时间
     /// </summary>
@@ -69,7 +70,7 @@ public class EnemyAI : MonoBehaviour
         if (atkTime <= Time.time )
         {
             animAction.Play(animAction.atkName);
-            //攻击具体内容
+            //攻击
             atkTime = Time.time + atkInterval;
         }
 
