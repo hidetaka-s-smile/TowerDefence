@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 821923723}
   - component: {fileID: 821923722}
   - component: {fileID: 821923721}
+  - component: {fileID: 6583993387804462092}
+  - component: {fileID: 1668880348465930370}
+  - component: {fileID: 1038105634727494771}
   m_Layer: 0
   m_Name: mon_goblinWizard
   m_TagString: Untagged
@@ -29,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.22, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 400124}
@@ -87,8 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ad23c0cb0f7a74c8606f55c3dd16d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thePlayer: {fileID: 6244424890637371192, guid: 4943c7609a126084c9786368e538c39d,
-    type: 3}
   moveSpeed: 10
 --- !u!114 &821923722
 MonoBehaviour:
@@ -102,8 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988cd0aa15db9aa4d82f8cbb4dac163f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkExecuteRange: 25
-  atkRange: 30
+  atkExecuteRange: 36
+  atkRange: 40
   currentHP: 1
   maxHP: 1
   deathDelay: 10
@@ -122,6 +123,53 @@ MonoBehaviour:
   atkInterval: 3
   delay: 0.3
   state: 2
+--- !u!143 &6583993387804462092
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!65 &1668880348465930370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &1038105634727494771
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

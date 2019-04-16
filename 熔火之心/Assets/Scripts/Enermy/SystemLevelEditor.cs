@@ -1,21 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 /// <summary>
 ///关卡编辑器
 /// </summary>
 public class SystemLevelEditor : MonoBehaviour
 {
+        private Text timerText;
+        private int remainTime = 10;//剩余时间
+        private float timer = 0;//计时器
+        public bool isBegin = true; //是否开始计时
+        /// <summary>
+        /// 显示倒计时
+        /// </summary>
+        public void ShowTimer()
+        {
+            timerText.enabled = true;
+            //初始化计时器
+            remainTime = 10;
+            timer = 0;
+            //开始计时
+            isBegin = true;
+        }
 
+        /// <summary>
+        /// 隐藏倒计时
+        /// </summary>
+    
+       private void HideTimer()
+        {
+            timerText.enabled = false;
+            //调用关卡管理器的开始生成敌人
+            print("敌人开始出来了");
+        }
+    
     /// <summary>
     /// 当前死亡怪物数
     /// </summary>
     private int nowDeachCnt = 0;
-    /// <summary>
-    /// 关卡间歇时间
-    /// </summary>
-    public int restSecond = 120;
     /// <summary>
     /// 总关卡数
     /// </summary>
@@ -39,23 +62,51 @@ public class SystemLevelEditor : MonoBehaviour
     /// < summary>
     public int[] monsterCntForEachLevel;
     MonsterAutoGrowEditor theMonsterGrow;
-    void Start()
+    private void Awake()
     {
         theMonsterGrow = GetComponent<MonsterAutoGrowEditor>();
-
-        theMonsterGrow.monsterAutoGrow(monsterCntForEachLevel[0], monsterTypeNumberForEachLevel[0]);
+        timerText = gameObject.GetComponent<Text>();
+    }
+    void Start()
+    {
+        ShowTimer();
         
     }
     private void Update()
     {
         //如果死亡数达到 进入下一关 生成下一关怪 死亡数清零 
-        
-        if (nowDeachCnt >= monsterCntForEachLevel[currentLevel - 1])
+        if (isBegin == false)
         {
-            nowDeachCnt = 0;
-            currentLevel++;
-            theMonsterGrow.monsterAutoGrow( monsterCntForEachLevel[currentLevel - 1], monsterTypeNumberForEachLevel[currentLevel - 1] );//生成对应数量怪兽
+            
+            theMonsterGrow.monsterAutoGrow(monsterCntForEachLevel[currentLevel - 1], monsterTypeNumberForEachLevel[currentLevel - 1]);//生成对应数量怪兽
+            ShowTimer();
         }
+        //计时
+        if (isBegin)
+        {
+            timer += Time.deltaTime;
+            if (timer >= 1)
+            {
+                timer = 0;
+                remainTime -= 1;
+                timerText.text = string.Format("{0:d2}", remainTime % 60);
+            }
+            if (remainTime <= 0)
+            {
+
+                isBegin = false;
+                HideTimer();
+            }
+        }
+
+        if(nowDeachCnt >= monsterCntForEachLevel[currentLevel - 1]) {
+            currentLevel++;
+            nowDeachCnt = 0;
+            
+        }
+
+        
+
         //if (currentLevel == maxLevel) ;//生成boss
     }
     public void deachCnt()
