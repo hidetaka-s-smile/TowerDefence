@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bullet : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     public int speed = 20;
     private Transform target;
@@ -13,15 +13,27 @@ public class bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //如果目标为空或死亡则销毁子弹
+        if(target==null)
+        {
+            Die();
+        }
         transform.LookAt(target.position);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag==Tags.enemy)
+        if(other.tag=="Enemy")
         {
-            Destroy(this.gameObject);
+            Die();
+            return;
         }
     }
+    //销毁子弹
+    public void Die()
+    {
+        Destroy(this.gameObject);
+    }
+        
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tower1 :tower
+public class Tower1 :Tower
 {
     // Start is called before the first frame update
     void Start()
