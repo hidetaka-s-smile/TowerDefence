@@ -16,8 +16,6 @@ public class TowerInfos : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log(textAsset.text);
-        Debug.LogWarning("无用警告");
         InitInfosFromText();
     }
 
@@ -33,7 +31,7 @@ public class TowerInfos : MonoBehaviour
         {
             string[] propArray = towerInfoArray.Split('，');//储存塔信息的每个属性
             TowerInfo towerInfo = new TowerInfo();
-            //下标0为ID，1为名字，2为生命值，3为攻击力，4为攻击间隔，5为建造时间，6为建造费用
+            //下标0为ID，1为名字，2为生命值，3为攻击力，4为攻击间隔，5为建造时间，6为建造费用,7为特性描述
             towerInfo.id = int.Parse(propArray[0]);
             towerInfo.name = propArray[1];
             towerInfo.hp = int.Parse(propArray[2]);
@@ -41,6 +39,7 @@ public class TowerInfos : MonoBehaviour
             towerInfo.atkTime = float.Parse(propArray[4]);
             towerInfo.buildTime = int.Parse(propArray[5]);
             towerInfo.buildCost = int.Parse(propArray[6]);
+            towerInfo.des = propArray[7];
             //储存完毕，加入字典
             towerInfoDict.Add(towerInfo.id, towerInfo);
             print("已经导入一种名为" + towerInfo.name + "的塔");
@@ -52,7 +51,7 @@ public class TowerInfos : MonoBehaviour
     /// 通过ID获取塔的信息
     /// </summary>
     /// <param name="id"></param>
-    private TowerInfo GetTowerInfo(int id)
+    public TowerInfo GetTowerInfo(int id)
     {
         TowerInfo towerInfo = null;
         towerInfoDict.TryGetValue(id, out towerInfo);

@@ -14,4 +14,5 @@ public class TowerInfo
     public float atkTime;  //攻击间隔
     public int buildTime;  //建造时间
     public int buildCost;  //建造费用
+    public string des;     //塔的特性描述
 }

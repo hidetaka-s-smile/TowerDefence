@@ -8,8 +8,10 @@ using UnityEngine;
 public class Tags
 {
     //标签
-    public const string player = "Player";      //玩家
-    public const string enemy = "Enemy";        //敌人
-    public const string tower = "Tower";        //炮塔
-    public const string shopNPC = "ShopNPC";    //商人
+    public const string player = "Player";              //玩家
+    public const string enemy = "Enemy";                //敌人
+    public const string tower = "Tower";                //炮塔
+    public const string shopNPC = "ShopNPC";            //商人
+    public const string shortcut = "Shortcut";          //快捷栏
+    public const string shortcutIcon = "ShortcutIcon";  //快捷栏图标
 }
