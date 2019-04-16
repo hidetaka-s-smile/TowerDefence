@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b49efbd14a3a7f149b9c67c2154fbca9
+guid: 20d9ac376892be84eba65bc5df915cb6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: wp_sword01
-    second: {fileID: 2100000, guid: 65a42170f090b504db29f2e2e6b94136, type: 2}
+    second: {fileID: 2100000, guid: 0815df5955766de49b928523995a5eca, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

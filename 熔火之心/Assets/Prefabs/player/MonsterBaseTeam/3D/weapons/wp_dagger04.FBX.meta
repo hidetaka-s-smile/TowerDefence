@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 64cfd4774060fc842bdff26928de6e63
+guid: e9faa6ee169bfcf44afde236a0c9424d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: wp_dagger04
-    second: {fileID: 2100000, guid: 2dd6b5899338c4a47bb5b6302bfbcf66, type: 2}
+    second: {fileID: 2100000, guid: 9cf06b5b5dd7fd94cbbffd8289ca5ff6, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

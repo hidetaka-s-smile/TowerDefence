@@ -234,7 +234,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179050133189256705}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 414f757766c2d644999aab640724e3c7, type: 3}
+  m_Avatar: {fileID: 9000000, guid: d463bd509128ef348b7aab2fa0d5d501, type: 3}
   m_Controller: {fileID: 9100000, guid: 169c7412188f8bb4986afe6df6f52fd0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -256,11 +256,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1ab1feccb67768479a98d3265aaa07f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
-  hp: 500
-  hp_max: 500
-  mp: 300
-  mp_max: 300
+  Level: 1
+  Hp: 500
+  Hp_max: 500
+  EXP: 300
+  EXP_max: 300
+  Component: 0
   Tower: {fileID: 631637557843679604, guid: 94fe903be920f7446bcda1db009de594, type: 3}
   havetower: 0
   cd: 0
@@ -268,7 +269,7 @@ MonoBehaviour:
   ifcd: 0
   ismove: 0
   isbuild: 0
-  anima: {fileID: 0}
+  anima: {fileID: 6155537470450665333}
 --- !u!54 &3798096367903330121
 Rigidbody:
   m_ObjectHideFlags: 0

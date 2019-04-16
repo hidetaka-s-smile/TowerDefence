@@ -125,8 +125,7 @@ public class Play : MonoBehaviour
         {
             GetMouse();
             newTower = GameObject.Instantiate(Tower, MousePoint, b) as GameObject;
-            GameObject TowerColor = newTower.transform.Find("Base").gameObject; ;
-            TowerColor.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
+            newTower.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
             
             havetower = true;
         }
@@ -155,8 +154,7 @@ public class Play : MonoBehaviour
     }
     void BuildEnd()
     {
-        GameObject TowerColor = newTower.transform.Find("Base").gameObject; ;
-        TowerColor.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
+        newTower.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
         isbuild = false;
         CanMove = true;
         anima.SetBool("attack1", false);

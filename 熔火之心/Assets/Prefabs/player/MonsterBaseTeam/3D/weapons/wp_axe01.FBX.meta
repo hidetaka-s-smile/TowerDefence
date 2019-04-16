@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: be8af5f53657a054d94930d8ef073048
+guid: 57088432e99ed5e4e95237c0097d84f4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: wp_axe01
-    second: {fileID: 2100000, guid: b8ebd4de9869d2c49976c845695aa882, type: 2}
+    second: {fileID: 2100000, guid: d998bb1de7b584d49adcc8aef9ba4bf9, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

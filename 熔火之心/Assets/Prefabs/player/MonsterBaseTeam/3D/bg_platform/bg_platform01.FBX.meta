@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 018a47aef316c8d43a74b3c93f02dd33
+guid: d1e6fb7d4814c0240a6e95436701d78b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: bg_platform01
-    second: {fileID: 2100000, guid: 531a44f5e6f7add4ab10f4d303275c23, type: 2}
+    second: {fileID: 2100000, guid: f5c6e0fb7e41f9a4aa0e9967487dbf68, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

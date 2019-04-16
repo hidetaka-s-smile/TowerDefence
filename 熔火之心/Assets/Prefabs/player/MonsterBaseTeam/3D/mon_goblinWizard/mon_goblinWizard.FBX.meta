@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6c16fc685f75d7b43b4c3855172e5fee
+guid: b2240cdd2147fac48943ec69ac2a6038
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -137,7 +137,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: mon_goblinWizard
-    second: {fileID: 2100000, guid: 570ca24771302e940b41f9ad613c5748, type: 2}
+    second: {fileID: 2100000, guid: 6824704b0e75bd94aa363b3578cf3256, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

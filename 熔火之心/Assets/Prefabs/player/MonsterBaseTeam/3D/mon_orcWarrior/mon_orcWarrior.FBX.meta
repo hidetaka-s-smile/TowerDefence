@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27574a472d417a04087a7be40c5e9bf8
+guid: 1e7b313f13179724ab8459d791e40e46
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -131,7 +131,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mon_orcWarrior
-    second: {fileID: 2100000, guid: 659231908f2169c4d944efca5bd2dbf4, type: 2}
+    second: {fileID: 2100000, guid: f7f6a6cacee8c514e93f91d5061d4b24, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

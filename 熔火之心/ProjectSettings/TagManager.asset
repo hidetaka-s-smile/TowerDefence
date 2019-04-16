@@ -9,6 +9,7 @@ TagManager:
   - LevelEditor
   - Shortcut
   - ShortcutIcon
+  - Plane
   layers:
   - Default
   - TransparentFX

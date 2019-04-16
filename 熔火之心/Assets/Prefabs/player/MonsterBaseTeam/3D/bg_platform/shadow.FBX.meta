@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f7ea449153453b34f865e64d704427e1
+guid: 39dd0c60f60aeed44a421431dd9b6d54
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: shadow
-    second: {fileID: 2100000, guid: 0323f02be0c55144b951eb4028291eb9, type: 2}
+    second: {fileID: 2100000, guid: 62ebb582870b5474c8a52c6790ba5d00, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

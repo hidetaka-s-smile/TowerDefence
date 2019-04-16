@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b4f56b2fc7df98040a918d3b34ff5b77
+guid: 8d406c2e70e06e5458aa22d6968e2eea
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -14,7 +14,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: wp_blunt02
-    second: {fileID: 2100000, guid: e637a048e2f95084da3fdb571ed9f42e, type: 2}
+    second: {fileID: 2100000, guid: 46d564cfae9a3c24db7e964549fb1ed3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

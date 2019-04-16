@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 414f757766c2d644999aab640724e3c7
+guid: d463bd509128ef348b7aab2fa0d5d501
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -134,7 +134,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: mon_trolCurer
-    second: {fileID: 2100000, guid: d24a41ec8d745724986c37348f4ae71d, type: 2}
+    second: {fileID: 2100000, guid: a5ad6c9b4ec83b04aa54770b1c027f46, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -161,7 +161,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
