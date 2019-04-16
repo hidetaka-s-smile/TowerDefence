@@ -16,7 +16,7 @@ public class Gear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(Vector3.up * speed);
+        transform.Rotate(Vector3.right * speed);
         float distance = Vector3.Distance(P_Transform.position, transform.position);
         if(distance <18f)
         {

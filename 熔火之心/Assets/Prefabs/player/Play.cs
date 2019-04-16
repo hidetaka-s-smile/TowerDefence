@@ -31,7 +31,7 @@ public class Play : MonoBehaviour
     private bool CanMove = true;
     Ray ray;
     RaycastHit hit;
-    // Start is called before the first frame update
+
     void Start()
     {
         anima = GetComponent<Animator>();
@@ -39,7 +39,6 @@ public class Play : MonoBehaviour
         controller = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.localEulerAngles = new Vector3(0.0f, transform.localEulerAngles.y, 0.0f);
@@ -85,7 +84,6 @@ public class Play : MonoBehaviour
             GetMouse();         //实时获取鼠标位置 
     }
 
-
     void Move()
     {
         transform.LookAt(new Vector3(targetPoint.x, targetPoint.y + 1f, targetPoint.z));
@@ -105,6 +103,7 @@ public class Play : MonoBehaviour
         }
         isbuild = false;
     }
+
     void GetMouse()
     {
         ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -119,7 +118,12 @@ public class Play : MonoBehaviour
             MousePoint = hit.point;
         }
     }
-    void Beforebuild()
+
+    /// <summary>
+    /// 根据快捷键获取塔的信息，动态加载塔的预制体
+    /// </summary>
+    /// <param name="towerInfo"></param>
+    public void Beforebuild()
     {
         if (havetower == false)
         {
@@ -130,11 +134,13 @@ public class Play : MonoBehaviour
             havetower = true;
         }
     }
+
     void Startbuild()
     {
         havetower = false;
         isbuild = true;
     }
+
     void MoveBuild()
     {
         transform.LookAt(new Vector3(towerPoint.x, towerPoint.y+2f, towerPoint.z));
@@ -152,6 +158,7 @@ public class Play : MonoBehaviour
             Invoke("BuildEnd", 2);
         }
     }
+
     void BuildEnd()
     {
         newTower.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
@@ -159,6 +166,7 @@ public class Play : MonoBehaviour
         CanMove = true;
         anima.SetBool("attack1", false);
     }
+
     void GetTarget()
     {
         ray = UnityEngine.Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -171,6 +179,20 @@ public class Play : MonoBehaviour
             }
             //点击位置坐标   
             targetPoint = hit.point;
+        }
+    }
+
+    /// <summary>
+    /// 获得伤害
+    /// </summary>
+    public void GetDamage(int damage)
+    {
+        Hp -= damage;
+        //反应在UI上
+        if(Hp <= 0)
+        {
+            //角色死亡，游戏结束，调用关卡管理器的游戏结束事件
+
         }
     }
 }
