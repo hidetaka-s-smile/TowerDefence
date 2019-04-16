@@ -1,0 +1,15 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+/// <summary>
+/// 标签库
+/// </summary>
+public class Tags
+{
+    //标签
+    public const string player = "Player";      //玩家
+    public const string enemy = "Enemy";        //敌人
+    public const string tower = "Tower";        //炮塔
+    public const string shopNPC = "ShopNPC";    //商人
+}

@@ -19,7 +19,7 @@ public class bullet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="emeny")
+        if(other.tag==Tags.enemy)
         {
             Destroy(this.gameObject);
         }
