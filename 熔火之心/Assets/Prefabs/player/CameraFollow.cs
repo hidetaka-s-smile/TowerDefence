@@ -16,7 +16,7 @@ public class CameraFollow : MonoBehaviour {
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player").GetComponent<Transform>();
+        player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Transform>();
         offset = transform.position - player.position;
         transform.LookAt(player);
     }

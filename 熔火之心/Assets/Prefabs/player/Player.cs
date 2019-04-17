@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Play : MonoBehaviour
+public class Player : MonoBehaviour
 {
     public int Level = 1;       //等级
-    public float Hp = 500f;        //生命值
-    public float Hp_max = 500f;    //最大生命值
-    public float EXP = 300f;        //魔法值
-    public float EXP_max = 300f;    //最大魔法值
-    public int Component = 0;
+    public int Hp = 500;        //生命值
+    public int Hp_max = 500;    //最大生命值
+    public int EXP = 200;        //经验值
+    public int EXP_max = 200;    //最大经验值
+    public int Component = 0;   //零件数
 
-    public GameObject Tower;
     private Transform m_Transform;
     private Quaternion b = new Quaternion(0, 0, 0, 0);
     private Vector3 mousePositionOnScreen;
@@ -32,6 +31,8 @@ public class Play : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
+    private GameObject towerGO;//即将建造的塔的物体
+
     void Start()
     {
         anima = GetComponent<Animator>();
@@ -42,10 +43,10 @@ public class Play : MonoBehaviour
     void Update()
     {
         transform.localEulerAngles = new Vector3(0.0f, transform.localEulerAngles.y, 0.0f);
-        if (Input.GetKeyDown(KeyCode.Q) && isbuild == false)
-        {
-            Beforebuild();
-        }
+        //if (Input.GetKeyDown(KeyCode.Q) && isbuild == false)
+        //{
+        //    Beforebuild();
+        //}
         if (havetower == true)      //预制跟随鼠标
         {
             newTower.transform.position = new Vector3(MousePoint.x, MousePoint.y + 2f, MousePoint.z);
@@ -123,12 +124,14 @@ public class Play : MonoBehaviour
     /// 根据快捷键获取塔的信息，动态加载塔的预制体
     /// </summary>
     /// <param name="towerInfo"></param>
-    public void Beforebuild()
-    {
+    public void Beforebuild(TowerInfo towerInfo)
+    {        
         if (havetower == false)
         {
+            //根据塔名从Resources文件夹动态加载塔的种类
+            towerGO = Resources.Load<GameObject>(@"TowerGameObject\" + towerInfo.name);
             GetMouse();
-            newTower = GameObject.Instantiate(Tower, MousePoint, b) as GameObject;
+            newTower = GameObject.Instantiate(towerGO, MousePoint, b) as GameObject;
             newTower.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
             
             havetower = true;
@@ -189,10 +192,48 @@ public class Play : MonoBehaviour
     {
         Hp -= damage;
         //反应在UI上
+
         if(Hp <= 0)
         {
+            //播放死亡音效
+
             //角色死亡，游戏结束，调用关卡管理器的游戏结束事件
 
         }
+        //还没死则播放受伤音效
+
+    }
+
+    /// <summary>
+    /// 获得经验值
+    /// </summary>
+    /// <param name="exp"></param>
+    public void GetExp(int exp)
+    {
+        EXP += exp;
+        if (EXP >= EXP_max)
+        {
+            //将多出的经验值加上，然后升级
+            int remain = EXP_max - EXP;
+            EXP += remain;
+            LevelUp();
+        }
+        //反应在UI上，如果可以请用Mathf.Lerp方法线性变化实现，不行也没关系，自己把握时间
+        
+    }
+
+    /// <summary>
+    /// 角色升级
+    /// </summary>
+    public void LevelUp()
+    {
+        //等级增加，血量恢复
+        Level++;
+        EXP_max = Level * 100 + 100;
+        Hp = Hp_max;//Hp_max随等级如何更改，之后多番测试后决定
+        //反应在UI上
+
+        //调用蓝图系统，发明新的图纸
+        BluePrintPanel.instance.InventNewTower();
     }
 }

@@ -404,6 +404,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: mon_trolCurer
       objectReference: {fileID: 0}
+    - target: {fileID: 1179050133189256705, guid: 597da5bd934cc794cb48c4937d0cabf3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2332994133055508750, guid: 597da5bd934cc794cb48c4937d0cabf3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -869,6 +874,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6022958674710343424}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &171818616907559135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4177977280779453612, guid: 0090363d6696a0f4eb71b4f812ba9fe9,
+    type: 3}
+  m_PrefabInstance: {fileID: 6022958674710343424}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171818616907559132}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &171818617351430464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,6 +924,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8593616919593415884}
     m_Modifications:
+    - target: {fileID: 7336434848157621110, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
+        type: 3}
+      propertyPath: m_Name
+      value: CountDownTimer
+      objectReference: {fileID: 0}
     - target: {fileID: 7336434848157621065, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1012,11 +1034,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7336434848157621110, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
-        type: 3}
-      propertyPath: m_Name
-      value: CountDownTimer
-      objectReference: {fileID: 0}
     - target: {fileID: 7336434848157621066, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
         type: 3}
       propertyPath: m_FontData.m_FontSize
@@ -1077,7 +1094,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8357424018376540624}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1158,7 +1175,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.6, y: 0.000009452888}
+  m_AnchoredPosition: {x: -21.6, y: 0.0000010967216}
   m_SizeDelta: {x: 432.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4851832360309784177
@@ -1758,7 +1775,7 @@ PrefabInstance:
         type: 3}
       propertyPath: iconImg
       value: 
-      objectReference: {fileID: 6022958674710343426}
+      objectReference: {fileID: 171818616907559135}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0090363d6696a0f4eb71b4f812ba9fe9, type: 3}
 --- !u!114 &6022958674710343425 stripped

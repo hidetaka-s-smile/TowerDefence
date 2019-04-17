@@ -21,11 +21,11 @@ public class PlayerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HpNum = Player.GetComponent<Play>().Hp;
-        Hp.rectTransform.localScale = new Vector3(HpNum / Player.GetComponent<Play>().Hp_max, 1f, 1f);
-        EXPNum = Player.GetComponent<Play>().EXP;
-        EXP.rectTransform.localScale = new Vector3(EXPNum / Player.GetComponent<Play>().EXP_max, 1f, 1f);
-        Lv.text = Player.GetComponent<Play>().Level.ToString();
-        gear.text = Player.GetComponent<Play>().Component.ToString();
+        HpNum = Player.GetComponent<Player>().Hp;
+        Hp.rectTransform.localScale = new Vector3(HpNum / Player.GetComponent<Player>().Hp_max, 1f, 1f);
+        EXPNum = Player.GetComponent<Player>().EXP;
+        EXP.rectTransform.localScale = new Vector3(EXPNum / Player.GetComponent<Player>().EXP_max, 1f, 1f);
+        Lv.text = Player.GetComponent<Player>().Level.ToString();
+        gear.text = Player.GetComponent<Player>().Component.ToString();
     }
 }

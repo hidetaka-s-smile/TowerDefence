@@ -25,7 +25,7 @@ public class Gear : MonoBehaviour
     }
     void PickUp()
     {
-        Player.GetComponent<Play>().Component++;
+        Player.GetComponent<Player>().Component++;
         Destroy(this.gameObject);
     }
 }

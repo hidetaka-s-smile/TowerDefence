@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    public float hp;             //血量
-    public float ad;               //攻击力
+    public int hp;             //血量
+    public int ad;               //攻击力
     public GameObject bulletPrefeb; //子弹
     public float attackRateTime;//攻击间隔
     public float timer = 0;        //计时器
@@ -102,6 +102,37 @@ public class Tower : MonoBehaviour
     /// </summary>
     public void UnderAttack()
     {
+        //要不要做成当检测到自己被攻击时，切换目标优先攻击这个敌人？自己把握一下时间看看要不要实现这个AI,这种大改动做前记得备份脚本噢
+        //可以用下面那个受到伤害的方法来获取伤害来源（加个参数，让敌人把自己传递过来,做炮塔记得要和做敌人的世祥多沟通，让战斗交互更智能）
+    }
 
+    /// <summary>
+    /// 受到伤害
+    /// </summary>
+    /// <param name="damage">伤害值</param>
+    public void GetDamage(int damage)
+    {
+        hp -= damage;
+        //反应在血条UI上
+
+        //播放被敲打的音效
+
+        if (hp <= 0)
+        {
+            BeDestroyed();
+        }
+    }
+
+    /// <summary>
+    /// 被摧毁事件(可被玩家调用主动拆除)
+    /// </summary>
+    public void BeDestroyed()
+    {
+        //播放摧毁音效和动画
+
+        //根据该塔的零件需求的50%实例化掉落零件（和JJ沟通）
+
+        //毁灭该物体
+        Destroy(gameObject);
     }
 }
