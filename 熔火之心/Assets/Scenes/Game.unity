@@ -721,6 +721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnermyGrowPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 6658226139017268007, guid: d4ef7ba010d943949a6ad5c5025aea77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -831,6 +836,30 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6658226139017268001, guid: d4ef7ba010d943949a6ad5c5025aea77,
+        type: 3}
+      propertyPath: monsterType.Array.data[0]
+      value: 
+      objectReference: {fileID: 2869680763672089638, guid: b742747fb5161b94394f4f413873b133,
+        type: 3}
+    - target: {fileID: 6658226139017268001, guid: d4ef7ba010d943949a6ad5c5025aea77,
+        type: 3}
+      propertyPath: monsterType.Array.data[1]
+      value: 
+      objectReference: {fileID: 7526796403689280631, guid: 74ba1cbc59e8a0046800ab07a1ae1265,
+        type: 3}
+    - target: {fileID: 6658226139017268001, guid: d4ef7ba010d943949a6ad5c5025aea77,
+        type: 3}
+      propertyPath: monsterType.Array.data[2]
+      value: 
+      objectReference: {fileID: 2051085500286074414, guid: 0d0550d56a74ba940bd8f525ec11e1a3,
+        type: 3}
+    - target: {fileID: 6658226139017268001, guid: d4ef7ba010d943949a6ad5c5025aea77,
+        type: 3}
+      propertyPath: monsterType.Array.data[3]
+      value: 
+      objectReference: {fileID: 1009137254577808001, guid: 1d37b549d7240ef408526563e5ecd9e2,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4ef7ba010d943949a6ad5c5025aea77, type: 3}
 --- !u!1 &1513488461
@@ -887,6 +916,7 @@ MonoBehaviour:
   slider: {fileID: 1513488464}
   bg: {fileID: 1536924425}
   fill: {fileID: 2142577292}
+  isLoading: 0
 --- !u!114 &1513488464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1541,8 +1571,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4851832360309784177}
   m_HandleRect: {fileID: 8357424018376540624}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1623,7 +1653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.6, y: -0.000028075141}
+  m_AnchoredPosition: {x: -21.6, y: 0.0000049967034}
   m_SizeDelta: {x: 432.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4851832360309784177
@@ -1895,18 +1925,6 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &5974743881606246414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8743620927423424463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa45aa2e1c953542a6da1fb7a0a15dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6022958674710343424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2658,7 +2676,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4264389663396994731}
   - component: {fileID: 3779769514687831455}
-  - component: {fileID: 5974743881606246414}
   - component: {fileID: 968373242}
   m_Layer: 5
   m_Name: BluePrintGrid

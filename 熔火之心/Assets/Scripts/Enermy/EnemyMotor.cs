@@ -22,7 +22,7 @@ public class EnemyMotor : MonoBehaviour
     //private NavMeshAgent theAgent;
     private void Awake()
     {
-        thePlayerTF = GameObject.FindGameObjectWithTag("player").transform;
+        thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
     }
     void Start()
     {

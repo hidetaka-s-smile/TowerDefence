@@ -44,7 +44,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void Start()
     {
-        thePlayer = GameObject.FindGameObjectWithTag("player").transform;
+        thePlayer = GameObject.FindGameObjectWithTag(Tags.player).transform;
         theExecuteRange = GetComponent<EnemyStatusinfo>().atkExecuteRange;
         theAtkRange = GetComponent<EnemyStatusinfo>().atkRange;
         animAction = GetComponent<EnemyAnimation>();
