@@ -27,7 +27,9 @@ public class Player : MonoBehaviour
     public bool ismove=false;
     public bool isbuild = false;
     public Animator anima;
-    private bool CanMove = true;
+    public bool CanMove = true;
+    private int BuildTime = 0;
+    private TowerInfo TInfo;
     Ray ray;
     RaycastHit hit;
 
@@ -52,7 +54,7 @@ public class Player : MonoBehaviour
             newTower.transform.position = new Vector3(MousePoint.x, MousePoint.y + 2f, MousePoint.z);
         }
 
-        if (Input.GetMouseButtonDown(0) && havetower == true)       //确定建立
+        if (Input.GetMouseButtonDown(0) && havetower == true )       //确定建立
         {
             if (ismove == true)
             {
@@ -103,6 +105,7 @@ public class Player : MonoBehaviour
             anima.SetBool("run", false);
         }
         isbuild = false;
+        print(2);
     }
 
     void GetMouse()
@@ -125,14 +128,14 @@ public class Player : MonoBehaviour
     /// </summary>
     /// <param name="towerInfo"></param>
     public void Beforebuild(TowerInfo towerInfo)
-    {        
+    {
+        TInfo = towerInfo;
+        GetMouse();
         if (havetower == false)
         {
             //根据塔名从Resources文件夹动态加载塔的种类
             towerGO = Resources.Load<GameObject>(@"TowerGameObject\" + towerInfo.name);
-            GetMouse();
             newTower = GameObject.Instantiate(towerGO, MousePoint, b) as GameObject;
-            newTower.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
             
             havetower = true;
         }
@@ -141,6 +144,7 @@ public class Player : MonoBehaviour
     void Startbuild()
     {
         havetower = false;
+        print("开始建");
         isbuild = true;
     }
 
@@ -158,16 +162,28 @@ public class Player : MonoBehaviour
             anima.SetBool("attack1", true);
             CanMove = false;
             anima.SetBool("run", false);
-            Invoke("BuildEnd", 2);
+            BuildTime++;
+            if (BuildTime > newTower.GetComponent<Tower>().buildTime*30)
+            {
+                BuildEnd();
+                BuildTime = 0;
+            }
+        }
+        if (Input.GetMouseButtonDown(1) && CanMove == true)
+        {
+            Destroy(newTower);
+            Move();
+            return;
         }
     }
 
     void BuildEnd()
     {
-        newTower.GetComponent<Renderer>().material.color = new Color(0f, 1f, 0.878356f, 0.5f);
         isbuild = false;
+        print(1);
         CanMove = true;
         anima.SetBool("attack1", false);
+        return;
     }
 
     void GetTarget()

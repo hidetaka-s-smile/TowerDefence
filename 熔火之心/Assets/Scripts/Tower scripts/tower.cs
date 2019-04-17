@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    public int buildTime;  //建造时间
+    public int buildCost;  //建造费用
     public int hp;             //血量
     public int ad;               //攻击力
     public GameObject bulletPrefeb; //子弹
