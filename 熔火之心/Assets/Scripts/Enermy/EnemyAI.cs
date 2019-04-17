@@ -24,6 +24,9 @@ public class EnemyAI : MonoBehaviour
     /// <summary>
     /// 敌人状态
     /// </summary>
+    private float RecoveyMove ;
+    private float RecoveyAtk;
+    
     public enum State
     {
         /// <summary>
@@ -46,6 +49,8 @@ public class EnemyAI : MonoBehaviour
         theAtkRange = GetComponent<EnemyStatusinfo>().atkRange;
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
+        RecoveyMove = motor.moveSpeed;
+        RecoveyAtk = atkInterval; 
     }
     /// <summary>
     /// 敌人状态
@@ -99,6 +104,22 @@ public class EnemyAI : MonoBehaviour
         animAction.Play(animAction.runName);
         //调用马达寻路功能  如果到达终点，修改状态为 state 攻击
         if (!motor.run()) state = State.Attack;
+    } 
+    /// <summary>
+    /// 冰冻
+    /// </summary>
+    /// <param name="debuff">减少倍数 整数</param>
+    /// <param name="recovetTime">恢复时间 浮点类型</param>
+    public void frozen(int debuff,float recovetTime)
+    {
+        motor.moveSpeed /= debuff;
+        atkInterval /= recovetTime;
+        Invoke("recovey", recovetTime);
+    }
+    private void recovey()
+    {
+        motor.moveSpeed = RecoveyMove;
+        atkInterval = RecoveyAtk;
     }
 
 }

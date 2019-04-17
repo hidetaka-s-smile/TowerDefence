@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class EnemyStatusinfo : MonoBehaviour
 {
+    ParticleSystem blood;
     /// <summary>
     /// 敌人执行攻击动作的范围与伤害距离的差距
     /// </summary>
@@ -30,6 +31,7 @@ public class EnemyStatusinfo : MonoBehaviour
         currentHP -= amount;
         if (currentHP <= 0)
             Death();
+        blood.Play();
     }
     /// <summary>
     /// 死亡延迟时间
@@ -39,10 +41,11 @@ public class EnemyStatusinfo : MonoBehaviour
     SystemLevelEditor theEditor;
     private void Start()
     {
-        
+        blood = GetComponentInChildren<ParticleSystem>();
         theEditor = GameObject.FindGameObjectWithTag("LevelEditor").GetComponent<SystemLevelEditor>();
 
     }
+
     /// <summary>
     /// 死亡
     /// </summary>
