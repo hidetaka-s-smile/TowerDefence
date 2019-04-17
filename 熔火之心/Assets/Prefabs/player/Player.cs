@@ -232,6 +232,8 @@ public class Player : MonoBehaviour
     }
     void BuildEnd()
     {
+        //炮塔可以攻击了
+        newTower.GetComponent<Tower>().IsBuilding=true;
         isbuild = false;
         CanMove = true;
         anima.SetBool("attack1", false);
