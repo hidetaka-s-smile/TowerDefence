@@ -105,7 +105,6 @@ public class Player : MonoBehaviour
             anima.SetBool("run", false);
         }
         isbuild = false;
-        print(2);
     }
 
     void GetMouse()
@@ -136,7 +135,12 @@ public class Player : MonoBehaviour
             //根据塔名从Resources文件夹动态加载塔的种类
             towerGO = Resources.Load<GameObject>(@"TowerGameObject\" + towerInfo.name);
             newTower = GameObject.Instantiate(towerGO, MousePoint, b) as GameObject;
-            
+
+            for (int i = 0; i < newTower.GetComponentsInChildren<Transform>(true).Length-2; i++)
+            {
+                Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
+                wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 0.5f);
+            }
             havetower = true;
         }
     }
@@ -144,7 +148,6 @@ public class Player : MonoBehaviour
     void Startbuild()
     {
         havetower = false;
-        print("开始建");
         isbuild = true;
     }
 
@@ -180,9 +183,13 @@ public class Player : MonoBehaviour
     void BuildEnd()
     {
         isbuild = false;
-        print(1);
         CanMove = true;
         anima.SetBool("attack1", false);
+        for (int i = 0; i < newTower.GetComponentsInChildren<Transform>(true).Length - 2; i++)
+        {
+            Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
+            wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
+        }
         return;
     }
 
