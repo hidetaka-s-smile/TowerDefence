@@ -26,8 +26,8 @@ public class EnemyMotor : MonoBehaviour
     }
     void Start()
     {
-        theExecuteRange = GetComponent<EnemyStatusinfo>().atkExecuteRange;
-        atkRange = GetComponent<EnemyStatusinfo>().atkRange;
+        theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
+        atkRange = GetComponent<EnemyStatusInfo>().atkRange;
         //theCC = this.GetComponent<CharacterController>();
 
         //theAgent = GetComponent<NavMeshAgent>();

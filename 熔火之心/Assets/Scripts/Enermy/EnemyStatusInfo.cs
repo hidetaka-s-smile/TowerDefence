@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 敌人状态信息类
 /// </summary>
-public class EnemyStatusinfo : MonoBehaviour
+public class EnemyStatusInfo : MonoBehaviour
 {
     ParticleSystem blood;
     /// <summary>

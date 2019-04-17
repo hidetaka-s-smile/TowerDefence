@@ -4,7 +4,7 @@ using System.Collections;
 /// <summary>
 /// 人工智能
 /// </summary>
-[RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusinfo))]
+[RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo))]
 public class EnemyAI : MonoBehaviour
 {
     private Transform thePlayer;
@@ -45,8 +45,8 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         thePlayer = GameObject.FindGameObjectWithTag(Tags.player).transform;
-        theExecuteRange = GetComponent<EnemyStatusinfo>().atkExecuteRange;
-        theAtkRange = GetComponent<EnemyStatusinfo>().atkRange;
+        theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
+        theAtkRange = GetComponent<EnemyStatusInfo>().atkRange;
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
         RecoveyMove = motor.moveSpeed;
