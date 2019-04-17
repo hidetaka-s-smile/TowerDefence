@@ -7,14 +7,15 @@ using UnityEngine.UI;
 /// </summary>
 public class SystemLevelEditor : MonoBehaviour
 {
-        private Text timerText;
-        private int remainTime = 10;//剩余时间
-        private float timer = 0;//计时器
-        public bool isBegin = true; //是否开始计时
-        /// <summary>
-        /// 显示倒计时
+    private bool monsterGrowFlag = true; 
+    private Text timerText;
+    private int remainTime = 10;//剩余时间
+    private float timer = 0;//计时器
+    public bool isBegin = true; //是否开始计时
+    /// <summary>
+        /// 初始化计时器 开关开启
         /// </summary>
-        public void ShowTimer()
+    public void ShowTimer()
         {
             timerText.enabled = true;
             //初始化计时器
@@ -23,18 +24,15 @@ public class SystemLevelEditor : MonoBehaviour
             //开始计时
             isBegin = true;
         }
-
-        /// <summary>
+    /// <summary>
         /// 隐藏倒计时
         /// </summary>
-    
-       private void HideTimer()
+    private void HideTimer()
         {
             timerText.enabled = false;
             //调用关卡管理器的开始生成敌人
             print("敌人开始出来了");
         }
-    
     /// <summary>
     /// 当前死亡怪物数
     /// </summary>
@@ -47,8 +45,6 @@ public class SystemLevelEditor : MonoBehaviour
     /// 当前关卡
     /// </summary>
     public int currentLevel = 1;
-
-
     /// <summary>
     /// 怪物类型
     /// </summary>
@@ -70,18 +66,10 @@ public class SystemLevelEditor : MonoBehaviour
     void Start()
     {
         ShowTimer();
-        
     }
     private void Update()
     {
-        //如果死亡数达到 进入下一关 生成下一关怪 死亡数清零 
-        if (isBegin == false)
-        {
-            
-            theMonsterGrow.monsterAutoGrow(monsterCntForEachLevel[currentLevel - 1], monsterTypeNumberForEachLevel[currentLevel - 1]);//生成对应数量怪兽
-            ShowTimer();
-        }
-        //计时
+        //计时 如果计时开关开启 开始计时  如果计时完毕 开关关闭
         if (isBegin)
         {
             timer += Time.deltaTime;
@@ -98,15 +86,21 @@ public class SystemLevelEditor : MonoBehaviour
                 HideTimer();
             }
         }
+        //如果怪物全死亡  计时器开始
 
-        if(nowDeachCnt >= monsterCntForEachLevel[currentLevel - 1]) {
-            currentLevel++;
-            nowDeachCnt = 0;
-            
+        if (!isBegin&&monsterGrowFlag)
+        {
+            print("!");
+            theMonsterGrow.monsterAutoGrow(monsterCntForEachLevel[currentLevel - 1], monsterTypeNumberForEachLevel[currentLevel - 1]);
+            monsterGrowFlag = false;
         }
-
-        
-
+        if (nowDeachCnt >= monsterCntForEachLevel[currentLevel - 1])
+        {
+            monsterGrowFlag = true; 
+            nowDeachCnt = 0;
+            ShowTimer();
+            currentLevel++;
+        }
         //if (currentLevel == maxLevel) ;//生成boss
     }
     public void deachCnt()

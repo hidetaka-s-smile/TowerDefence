@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 需要伤害值
+/// </summary>
 public class Bullet : MonoBehaviour
 {
     public int speed = 20;
@@ -27,6 +29,8 @@ public class Bullet : MonoBehaviour
         if(other.tag=="Enemy")
         {
             Die();
+            //调用敌人受伤方法  伤害值暂时为5
+            GetComponent<EnemyStatusinfo>().Damage(5);
             return;
         }
     }

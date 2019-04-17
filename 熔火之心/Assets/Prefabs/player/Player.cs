@@ -236,4 +236,12 @@ public class Player : MonoBehaviour
         //调用蓝图系统，发明新的图纸
         BluePrintPanel.instance.InventNewTower();
     }
+    public void playDamage(int hurtValue)
+    {
+        Hp -= hurtValue;
+        if (Hp <= 0)
+        {
+           // 游戏结束
+        }
+    }
 }
