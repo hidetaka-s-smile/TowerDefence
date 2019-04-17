@@ -232,7 +232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8625f1b163be4469fe7c6b9ddc24e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildTime: 0
+  buildCost: 0
   hp: 0
+  hpMax: 0
   ad: 0
   bulletPrefeb: {fileID: 0}
   attackRateTime: 0
@@ -240,6 +243,7 @@ MonoBehaviour:
   firepostion: {fileID: 2944127357955485688}
   head: {fileID: 5726151586376023297}
   enemys: []
+  hpBarSlider: {fileID: 0}
   laserReanderer: {fileID: 1686433134}
 --- !u!1 &1969407624644170879
 GameObject:
@@ -282,8 +286,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1.761424, z: 1}
+  m_Center: {x: 0, y: 0.38071194, z: 0}
 --- !u!1001 &5726151586376148871
 PrefabInstance:
   m_ObjectHideFlags: 0

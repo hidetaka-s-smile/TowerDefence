@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
+    public bool IsBuilding;  //是否在建造中
     public int buildTime;  //建造时间
     public int buildCost;  //建造费用
     public int hp;             //血量
@@ -42,17 +43,21 @@ public class Tower : MonoBehaviour
     }
     public virtual void Update()
     {
-        //塔的头部跟随敌人
-        if (enemys.Count > 0 )
+        //如果不在建造中
+        if(IsBuilding==true)
         {
-            CantYHeadFollow();
-        }
-        timer += Time.deltaTime;
-        //攻击
-        if(enemys.Count>0&&timer>attackRateTime)
-        {
-            timer =0;
-            Attack();
+            //塔的头部跟随敌人
+            if (enemys.Count > 0)
+            {
+                CantYHeadFollow();
+            }
+            timer += Time.deltaTime;
+            //攻击
+            if (enemys.Count > 0 && timer > attackRateTime)
+            {
+                timer = 0;
+                Attack();
+            }
         }
     }
     //攻击
