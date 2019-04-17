@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
     public int buildTime;  //建造时间
     public int buildCost;  //建造费用
     public int hp;             //血量
+    public int hpMax;          //最大血量
     public int ad;               //攻击力
     public GameObject bulletPrefeb; //子弹
     public float attackRateTime;//攻击间隔
@@ -14,6 +16,8 @@ public class Tower : MonoBehaviour
     public Transform firepostion;   //子弹初始位置
     public Transform head;          //发射子弹的头部
     public List<GameObject> enemys = new List<GameObject>();//可攻击敌人的存放数组
+    public Slider hpBarSlider;//血条UI
+
     /// <summary>
     /// 触发器判断是否有敌人
     /// </summary>
@@ -116,7 +120,7 @@ public class Tower : MonoBehaviour
     {
         hp -= damage;
         //反应在血条UI上
-
+        hpBarSlider.value = hp / hpMax;
         //播放被敲打的音效
 
         if (hp <= 0)
