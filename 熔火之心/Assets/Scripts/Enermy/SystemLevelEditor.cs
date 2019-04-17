@@ -90,7 +90,6 @@ public class SystemLevelEditor : MonoBehaviour
 
         if (!isBegin&&monsterGrowFlag)
         {
-            print("!");
             theMonsterGrow.monsterAutoGrow(monsterCntForEachLevel[currentLevel - 1], monsterTypeNumberForEachLevel[currentLevel - 1]);
             monsterGrowFlag = false;
         }
