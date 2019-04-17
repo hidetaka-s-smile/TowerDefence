@@ -7,6 +7,7 @@ using System.Collections;
 [RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusinfo))]
 public class EnemyAI : MonoBehaviour
 {
+    private Transform thePlayer;
     private float theExecuteRange;
     private float theAtkRange;
     private EnemyAnimation animAction;
@@ -40,7 +41,7 @@ public class EnemyAI : MonoBehaviour
     }
     private void Start()
     {
-        //thePlayer = GameObject.FindGameObjectWithTag("player").transform;
+        thePlayer = GameObject.FindGameObjectWithTag("player").transform;
         theExecuteRange = GetComponent<EnemyStatusinfo>().atkExecuteRange;
         theAtkRange = GetComponent<EnemyStatusinfo>().atkRange;
         animAction = GetComponent<EnemyAnimation>();
@@ -65,10 +66,12 @@ public class EnemyAI : MonoBehaviour
     }
     public void CaculateDamaga()
     {
-        //if (Vector3.Distance(thePlayer.position, transform.position) < theAtkRange)
-        //{
-        //调用人物扣血方法
-        // }
+        
+        if (Vector3.Distance(thePlayer.position, transform.position) < theAtkRange)
+        {
+            print("D");
+            thePlayer.GetComponent<Player>().GetDamage(1);
+        }
     }
     private void Attack()
     {

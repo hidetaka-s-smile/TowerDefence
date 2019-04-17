@@ -11,7 +11,8 @@ public class MonsterAutoGrowEditor : MonoBehaviour
     /// <summary>
     /// 敌人生成延迟时间
     /// </summary>
-    public int maxMonsterGrowDelay = 1;
+    public int maxMonsterGrowDelay = 20;
+    private int tempDelay;
     private GameObject[] MonsterTypePrefabs;
     /// <summary>
     /// 要生成敌人的数量
@@ -23,7 +24,7 @@ public class MonsterAutoGrowEditor : MonoBehaviour
     private int typeCnt;
     void Start()
     {
-
+        tempDelay = maxMonsterGrowDelay;
         MonsterTypePrefabs = GetComponent<SystemLevelEditor>().monsterType;
     }
     /// <summary>
@@ -40,10 +41,12 @@ public class MonsterAutoGrowEditor : MonoBehaviour
         maxCnt = theMaxCnt;
         typeCnt = theTypeCnt;
         int nowCnt = 0;///当前关卡敌人生成数
+        tempDelay = maxMonsterGrowDelay;
         while (nowCnt < maxCnt)
         {
             nowCnt++;
-            Invoke("CreateEnemy", maxMonsterGrowDelay*Time.deltaTime);
+            Invoke("CreateEnemy", tempDelay*Time.deltaTime);
+            tempDelay +=20;
         }
     }
 

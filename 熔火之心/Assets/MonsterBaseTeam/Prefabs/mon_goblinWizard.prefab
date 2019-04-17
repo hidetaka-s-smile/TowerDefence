@@ -105,8 +105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   atkExecuteRange: 36
   atkRange: 40
-  currentHP: 1
-  maxHP: 1
+  currentHP: 100
+  maxHP: 100
   deathDelay: 10
 --- !u!114 &821923721
 MonoBehaviour:

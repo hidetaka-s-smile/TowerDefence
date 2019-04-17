@@ -252,4 +252,5 @@ public class Player : MonoBehaviour
         //调用蓝图系统，发明新的图纸
         BluePrintPanel.instance.InventNewTower();
     }
+
 }
