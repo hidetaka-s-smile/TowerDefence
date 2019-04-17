@@ -1,0 +1,1534 @@
+fileFormatVersion: 2
+guid: 48be382f2a8c6e4468ef3370f269251b
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bip001
+    100002: Bip001 Footsteps
+    100004: Bip001 Head
+    100006: Bip001 HeadNub
+    100008: Bip001 L Calf
+    100010: Bip001 L Clavicle
+    100012: Bip001 L Finger0
+    100014: Bip001 L Finger0Nub
+    100016: Bip001 L Foot
+    100018: Bip001 L Forearm
+    100020: Bip001 L Hand
+    100022: Bip001 L Thigh
+    100024: Bip001 L Toe0
+    100026: Bip001 L Toe01
+    100028: Bip001 L Toe0Nub
+    100030: Bip001 L UpperArm
+    100032: Bip001 Neck
+    100034: Bip001 Pelvis
+    100036: Bip001 Ponytail1
+    100038: Bip001 Ponytail1Nub
+    100040: Bip001 Ponytail2
+    100042: Bip001 Ponytail21
+    100044: Bip001 Ponytail22
+    100046: Bip001 Ponytail23
+    100048: Bip001 Ponytail24
+    100050: Bip001 Ponytail2Nub
+    100052: Bip001 R Calf
+    100054: Bip001 R Clavicle
+    100056: Bip001 R Finger0
+    100058: Bip001 R Finger0Nub
+    100060: Bip001 R Foot
+    100062: Bip001 R Forearm
+    100064: Bip001 R Hand
+    100066: Bip001 R Thigh
+    100068: Bip001 R Toe0
+    100070: Bip001 R Toe01
+    100072: Bip001 R Toe0Nub
+    100074: Bip001 R UpperArm
+    100076: Bip001 Spine
+    100078: Bip001 Spine1
+    100080: Bip001 Spine2
+    100082: Bip001 Tail
+    100084: Bip001 Tail1
+    100086: Bip001 Tail10
+    100088: Bip001 Tail11
+    100090: Bip001 Tail12
+    100092: Bip001 Tail13
+    100094: Bip001 Tail2
+    100096: Bip001 Tail3
+    100098: Bip001 Tail4
+    100100: Bip001 Tail5
+    100102: Bip001 Tail6
+    100104: Bip001 Tail7
+    100106: Bip001 Tail8
+    100108: Bip001 Tail9
+    100110: Bip001 TailNub
+    100112: Bip001 Xtra01
+    100114: Bip001 Xtra01Nub
+    100116: Bip001 Xtra01Opp
+    100118: Bip001 Xtra01OppNub
+    100120: Bip001 Xtra02
+    100122: Bip001 Xtra02Nub
+    100124: Bip001 Xtra02Opp
+    100126: Bip001 Xtra02OppNub
+    100128: Bip001 Xtra03
+    100130: Bip001 Xtra03Nub
+    100132: Bip001 Xtra03Opp
+    100134: Bip001 Xtra03OppNub
+    100136: Bip001 Xtra04
+    100138: Bip001 Xtra04Nub
+    100140: Bip001 Xtra04Opp
+    100142: Bip001 Xtra04OppNub
+    100144: Bip001 Xtra05
+    100146: Bip001 Xtra05Nub
+    100148: Bip001 Xtra05Opp
+    100150: Bip001 Xtra05OppNub
+    100152: Bip001 Xtra06
+    100154: Bip001 Xtra06Nub
+    100156: Bip001 Xtra06Opp
+    100158: Bip001 Xtra06OppNub
+    100160: Bip001 Xtra07
+    100162: Bip001 Xtra07Nub
+    100164: Bip001 Xtra07Opp
+    100166: Bip001 Xtra07OppNub
+    100168: Bip001 Xtra08
+    100170: Bip001 Xtra08Nub
+    100172: Bip001 Xtra08Opp
+    100174: Bip001 Xtra08OppNub
+    100176: Bip001 Xtra09
+    100178: Bip001 Xtra09Nub
+    100180: Bip001 Xtra09Opp
+    100182: Bip001 Xtra09OppNub
+    100184: Bip001 Xtra10
+    100186: Bip001 Xtra10Nub
+    100188: Bip001 Xtra10Opp
+    100190: Bip001 Xtra10OppNub
+    100192: Bip001 Xtra11
+    100194: Bip001 Xtra11Nub
+    100196: Bip001 Xtra11Opp
+    100198: Bip001 Xtra11OppNub
+    100200: Bip001 Xtra12
+    100202: Bip001 Xtra12Nub
+    100204: Bip001 Xtra12Opp
+    100206: Bip001 Xtra12OppNub
+    100208: Bip001 Xtra13
+    100210: Bip001 Xtra13Nub
+    100212: Bip001 Xtra13Opp
+    100214: Bip001 Xtra13OppNub
+    100216: Bip001 Xtra14
+    100218: Bip001 Xtra14Nub
+    100220: Bip001 Xtra14Opp
+    100222: Bip001 Xtra14OppNub
+    100224: Bip001 Xtra15
+    100226: Bip001 Xtra15Nub
+    100228: Bip001 Xtra15Opp
+    100230: Bip001 Xtra15OppNub
+    100232: Bip001 Xtra16
+    100234: Bip001 Xtra16Nub
+    100236: Bip001 Xtra16Opp
+    100238: Bip001 Xtra16OppNub
+    100240: Bip001 Xtra17
+    100242: Bip001 Xtra17Nub
+    100244: Bip001 Xtra17Opp
+    100246: Bip001 Xtra17OppNub
+    100248: Bip001 Xtra18
+    100250: Bip001 Xtra18Nub
+    100252: Bip001 Xtra18Opp
+    100254: Bip001 Xtra18OppNub
+    100256: Bip001 Xtra19
+    100258: Bip001 Xtra19Nub
+    100260: Bip001 Xtra19Opp
+    100262: Bip001 Xtra19OppNub
+    100264: Bip001 Xtra20
+    100266: Bip001 Xtra20Nub
+    100268: Bip001 Xtra20Opp
+    100270: Bip001 Xtra20OppNub
+    100272: Bip001 Xtra21
+    100274: Bip001 Xtra21Nub
+    100276: Bip001 Xtra21Opp
+    100278: Bip001 Xtra21OppNub
+    100280: Bip001 Xtra22
+    100282: Bip001 Xtra22Nub
+    100284: Bip001 Xtra22Opp
+    100286: Bip001 Xtra22OppNub
+    100288: Bip001 Xtra23
+    100290: Bip001 Xtra23Nub
+    100292: Bip001 Xtra23Opp
+    100294: Bip001 Xtra23OppNub
+    100296: Bip001 Xtra24
+    100298: Bip001 Xtra24Nub
+    100300: Bip001 Xtra24Opp
+    100302: Bip001 Xtra24OppNub
+    100304: //RootNode
+    100306: Manticore
+    400000: Bip001
+    400002: Bip001 Footsteps
+    400004: Bip001 Head
+    400006: Bip001 HeadNub
+    400008: Bip001 L Calf
+    400010: Bip001 L Clavicle
+    400012: Bip001 L Finger0
+    400014: Bip001 L Finger0Nub
+    400016: Bip001 L Foot
+    400018: Bip001 L Forearm
+    400020: Bip001 L Hand
+    400022: Bip001 L Thigh
+    400024: Bip001 L Toe0
+    400026: Bip001 L Toe01
+    400028: Bip001 L Toe0Nub
+    400030: Bip001 L UpperArm
+    400032: Bip001 Neck
+    400034: Bip001 Pelvis
+    400036: Bip001 Ponytail1
+    400038: Bip001 Ponytail1Nub
+    400040: Bip001 Ponytail2
+    400042: Bip001 Ponytail21
+    400044: Bip001 Ponytail22
+    400046: Bip001 Ponytail23
+    400048: Bip001 Ponytail24
+    400050: Bip001 Ponytail2Nub
+    400052: Bip001 R Calf
+    400054: Bip001 R Clavicle
+    400056: Bip001 R Finger0
+    400058: Bip001 R Finger0Nub
+    400060: Bip001 R Foot
+    400062: Bip001 R Forearm
+    400064: Bip001 R Hand
+    400066: Bip001 R Thigh
+    400068: Bip001 R Toe0
+    400070: Bip001 R Toe01
+    400072: Bip001 R Toe0Nub
+    400074: Bip001 R UpperArm
+    400076: Bip001 Spine
+    400078: Bip001 Spine1
+    400080: Bip001 Spine2
+    400082: Bip001 Tail
+    400084: Bip001 Tail1
+    400086: Bip001 Tail10
+    400088: Bip001 Tail11
+    400090: Bip001 Tail12
+    400092: Bip001 Tail13
+    400094: Bip001 Tail2
+    400096: Bip001 Tail3
+    400098: Bip001 Tail4
+    400100: Bip001 Tail5
+    400102: Bip001 Tail6
+    400104: Bip001 Tail7
+    400106: Bip001 Tail8
+    400108: Bip001 Tail9
+    400110: Bip001 TailNub
+    400112: Bip001 Xtra01
+    400114: Bip001 Xtra01Nub
+    400116: Bip001 Xtra01Opp
+    400118: Bip001 Xtra01OppNub
+    400120: Bip001 Xtra02
+    400122: Bip001 Xtra02Nub
+    400124: Bip001 Xtra02Opp
+    400126: Bip001 Xtra02OppNub
+    400128: Bip001 Xtra03
+    400130: Bip001 Xtra03Nub
+    400132: Bip001 Xtra03Opp
+    400134: Bip001 Xtra03OppNub
+    400136: Bip001 Xtra04
+    400138: Bip001 Xtra04Nub
+    400140: Bip001 Xtra04Opp
+    400142: Bip001 Xtra04OppNub
+    400144: Bip001 Xtra05
+    400146: Bip001 Xtra05Nub
+    400148: Bip001 Xtra05Opp
+    400150: Bip001 Xtra05OppNub
+    400152: Bip001 Xtra06
+    400154: Bip001 Xtra06Nub
+    400156: Bip001 Xtra06Opp
+    400158: Bip001 Xtra06OppNub
+    400160: Bip001 Xtra07
+    400162: Bip001 Xtra07Nub
+    400164: Bip001 Xtra07Opp
+    400166: Bip001 Xtra07OppNub
+    400168: Bip001 Xtra08
+    400170: Bip001 Xtra08Nub
+    400172: Bip001 Xtra08Opp
+    400174: Bip001 Xtra08OppNub
+    400176: Bip001 Xtra09
+    400178: Bip001 Xtra09Nub
+    400180: Bip001 Xtra09Opp
+    400182: Bip001 Xtra09OppNub
+    400184: Bip001 Xtra10
+    400186: Bip001 Xtra10Nub
+    400188: Bip001 Xtra10Opp
+    400190: Bip001 Xtra10OppNub
+    400192: Bip001 Xtra11
+    400194: Bip001 Xtra11Nub
+    400196: Bip001 Xtra11Opp
+    400198: Bip001 Xtra11OppNub
+    400200: Bip001 Xtra12
+    400202: Bip001 Xtra12Nub
+    400204: Bip001 Xtra12Opp
+    400206: Bip001 Xtra12OppNub
+    400208: Bip001 Xtra13
+    400210: Bip001 Xtra13Nub
+    400212: Bip001 Xtra13Opp
+    400214: Bip001 Xtra13OppNub
+    400216: Bip001 Xtra14
+    400218: Bip001 Xtra14Nub
+    400220: Bip001 Xtra14Opp
+    400222: Bip001 Xtra14OppNub
+    400224: Bip001 Xtra15
+    400226: Bip001 Xtra15Nub
+    400228: Bip001 Xtra15Opp
+    400230: Bip001 Xtra15OppNub
+    400232: Bip001 Xtra16
+    400234: Bip001 Xtra16Nub
+    400236: Bip001 Xtra16Opp
+    400238: Bip001 Xtra16OppNub
+    400240: Bip001 Xtra17
+    400242: Bip001 Xtra17Nub
+    400244: Bip001 Xtra17Opp
+    400246: Bip001 Xtra17OppNub
+    400248: Bip001 Xtra18
+    400250: Bip001 Xtra18Nub
+    400252: Bip001 Xtra18Opp
+    400254: Bip001 Xtra18OppNub
+    400256: Bip001 Xtra19
+    400258: Bip001 Xtra19Nub
+    400260: Bip001 Xtra19Opp
+    400262: Bip001 Xtra19OppNub
+    400264: Bip001 Xtra20
+    400266: Bip001 Xtra20Nub
+    400268: Bip001 Xtra20Opp
+    400270: Bip001 Xtra20OppNub
+    400272: Bip001 Xtra21
+    400274: Bip001 Xtra21Nub
+    400276: Bip001 Xtra21Opp
+    400278: Bip001 Xtra21OppNub
+    400280: Bip001 Xtra22
+    400282: Bip001 Xtra22Nub
+    400284: Bip001 Xtra22Opp
+    400286: Bip001 Xtra22OppNub
+    400288: Bip001 Xtra23
+    400290: Bip001 Xtra23Nub
+    400292: Bip001 Xtra23Opp
+    400294: Bip001 Xtra23OppNub
+    400296: Bip001 Xtra24
+    400298: Bip001 Xtra24Nub
+    400300: Bip001 Xtra24Opp
+    400302: Bip001 Xtra24OppNub
+    400304: //RootNode
+    400306: Manticore
+    4300000: Manticore
+    7400000: walk
+    7400002: run
+    7400004: stand
+    7400006: idle
+    7400008: roar
+    7400010: attack 1
+    7400012: attack 2
+    7400014: attack 3
+    7400016: attack 4
+    7400018: hit 1
+    7400020: hit 2
+    7400022: death
+    7400024: fly forward
+    7400026: fly
+    7400028: fly attack 1
+    7400030: fly attack 2
+    7400032: fly attack 3
+    7400034: fly hit 1
+    7400036: fly hit 2
+    7400038: fly death
+    7400040: stand to fly
+    7400042: fly to stand
+    11100000: //RootNode
+    13700000: Manticore
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: 
+      firstFrame: 2
+      lastFrame: 38
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bip001
+        weight: 1
+      - path: Bip001/Bip001 Footsteps
+        weight: 1
+      - path: Bip001/Bip001 Pelvis
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf/Bip001
+          L Foot
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf/Bip001
+          L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf/Bip001
+          L Foot/Bip001 L Toe0/Bip001 L Toe01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf/Bip001
+          L Foot/Bip001 L Toe0/Bip001 L Toe01/Bip001 L Toe0Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001
+          R Foot
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001
+          R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001
+          R Foot/Bip001 R Toe0/Bip001 R Toe01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001
+          R Foot/Bip001 R Toe0/Bip001 R Toe01/Bip001 R Toe0Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 HeadNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail1
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail1/Bip001 Ponytail1Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail2
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail2/Bip001 Ponytail21
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail2/Bip001 Ponytail21/Bip001 Ponytail22
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail2/Bip001 Ponytail21/Bip001 Ponytail22/Bip001
+          Ponytail23
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail2/Bip001 Ponytail21/Bip001 Ponytail22/Bip001
+          Ponytail23/Bip001 Ponytail24
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 Head/Bip001 Ponytail2/Bip001 Ponytail21/Bip001 Ponytail22/Bip001
+          Ponytail23/Bip001 Ponytail24/Bip001 Ponytail2Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 L Clavicle
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 L Clavicle/Bip001 L UpperArm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001 L Hand
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001
+          L Finger0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001 L Hand/Bip001
+          L Finger0/Bip001 L Finger0Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 R Clavicle
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 R Clavicle/Bip001 R UpperArm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001
+          R Finger0
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001
+          R Finger0/Bip001 R Finger0Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra01Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra02Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra03Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra04Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra05
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra05/Bip001 Xtra05Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra05/Bip001 Xtra10
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra05/Bip001 Xtra10/Bip001
+          Xtra10Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra05/Bip001 Xtra10/Bip001
+          Xtra11
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra05/Bip001 Xtra10/Bip001
+          Xtra11/Bip001 Xtra11Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06/Bip001 Xtra06Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06/Bip001 Xtra12
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06/Bip001 Xtra12/Bip001
+          Xtra12Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06/Bip001 Xtra12/Bip001
+          Xtra13
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06/Bip001 Xtra12/Bip001
+          Xtra13/Bip001 Xtra13Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06/Bip001 Xtra12/Bip001
+          Xtra13/Bip001 Xtra14
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra06/Bip001 Xtra12/Bip001
+          Xtra13/Bip001 Xtra14/Bip001 Xtra14Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07/Bip001 Xtra07Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07/Bip001 Xtra15
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07/Bip001 Xtra15/Bip001
+          Xtra15Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07/Bip001 Xtra15/Bip001
+          Xtra16
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07/Bip001 Xtra15/Bip001
+          Xtra16/Bip001 Xtra16Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07/Bip001 Xtra15/Bip001
+          Xtra16/Bip001 Xtra17
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra07/Bip001 Xtra15/Bip001
+          Xtra16/Bip001 Xtra17/Bip001 Xtra17Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08/Bip001 Xtra08Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08/Bip001 Xtra18
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08/Bip001 Xtra18/Bip001
+          Xtra18Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08/Bip001 Xtra18/Bip001
+          Xtra19
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08/Bip001 Xtra18/Bip001
+          Xtra19/Bip001 Xtra19Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08/Bip001 Xtra18/Bip001
+          Xtra19/Bip001 Xtra20
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra08/Bip001 Xtra18/Bip001
+          Xtra19/Bip001 Xtra20/Bip001 Xtra20Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09/Bip001 Xtra09Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09/Bip001 Xtra21
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09/Bip001 Xtra21/Bip001
+          Xtra21Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09/Bip001 Xtra21/Bip001
+          Xtra22
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09/Bip001 Xtra21/Bip001
+          Xtra22/Bip001 Xtra22Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09/Bip001 Xtra21/Bip001
+          Xtra22/Bip001 Xtra23
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra03/Bip001 Xtra04/Bip001 Xtra09/Bip001 Xtra21/Bip001
+          Xtra22/Bip001 Xtra23/Bip001 Xtra23Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra24
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01/Bip001 Xtra02/Bip001 Xtra24/Bip001 Xtra24Nub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra01OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra02OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra03OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra04OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra05Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra05Opp/Bip001
+          Xtra05OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra05Opp/Bip001
+          Xtra10Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra05Opp/Bip001
+          Xtra10Opp/Bip001 Xtra10OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra05Opp/Bip001
+          Xtra10Opp/Bip001 Xtra11Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra05Opp/Bip001
+          Xtra10Opp/Bip001 Xtra11Opp/Bip001 Xtra11OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp/Bip001
+          Xtra06OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp/Bip001
+          Xtra12Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp/Bip001
+          Xtra12Opp/Bip001 Xtra12OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp/Bip001
+          Xtra12Opp/Bip001 Xtra13Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp/Bip001
+          Xtra12Opp/Bip001 Xtra13Opp/Bip001 Xtra13OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp/Bip001
+          Xtra12Opp/Bip001 Xtra13Opp/Bip001 Xtra14Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra06Opp/Bip001
+          Xtra12Opp/Bip001 Xtra13Opp/Bip001 Xtra14Opp/Bip001 Xtra14OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp/Bip001
+          Xtra07OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp/Bip001
+          Xtra15Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp/Bip001
+          Xtra15Opp/Bip001 Xtra15OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp/Bip001
+          Xtra15Opp/Bip001 Xtra16Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp/Bip001
+          Xtra15Opp/Bip001 Xtra16Opp/Bip001 Xtra16OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp/Bip001
+          Xtra15Opp/Bip001 Xtra16Opp/Bip001 Xtra17Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra07Opp/Bip001
+          Xtra15Opp/Bip001 Xtra16Opp/Bip001 Xtra17Opp/Bip001 Xtra17OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp/Bip001
+          Xtra08OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp/Bip001
+          Xtra18Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp/Bip001
+          Xtra18Opp/Bip001 Xtra18OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp/Bip001
+          Xtra18Opp/Bip001 Xtra19Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp/Bip001
+          Xtra18Opp/Bip001 Xtra19Opp/Bip001 Xtra19OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp/Bip001
+          Xtra18Opp/Bip001 Xtra19Opp/Bip001 Xtra20Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra08Opp/Bip001
+          Xtra18Opp/Bip001 Xtra19Opp/Bip001 Xtra20Opp/Bip001 Xtra20OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp/Bip001
+          Xtra09OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp/Bip001
+          Xtra21Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp/Bip001
+          Xtra21Opp/Bip001 Xtra21OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp/Bip001
+          Xtra21Opp/Bip001 Xtra22Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp/Bip001
+          Xtra21Opp/Bip001 Xtra22Opp/Bip001 Xtra22OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp/Bip001
+          Xtra21Opp/Bip001 Xtra22Opp/Bip001 Xtra23Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra03Opp/Bip001 Xtra04Opp/Bip001 Xtra09Opp/Bip001
+          Xtra21Opp/Bip001 Xtra22Opp/Bip001 Xtra23Opp/Bip001 Xtra23OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra24Opp
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
+          Xtra01Opp/Bip001 Xtra02Opp/Bip001 Xtra24Opp/Bip001 Xtra24OppNub
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7/Bip001 Tail8
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7/Bip001 Tail8/Bip001
+          Tail9
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7/Bip001 Tail8/Bip001
+          Tail9/Bip001 Tail10
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7/Bip001 Tail8/Bip001
+          Tail9/Bip001 Tail10/Bip001 Tail11
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7/Bip001 Tail8/Bip001
+          Tail9/Bip001 Tail10/Bip001 Tail11/Bip001 Tail12
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7/Bip001 Tail8/Bip001
+          Tail9/Bip001 Tail10/Bip001 Tail11/Bip001 Tail12/Bip001 Tail13
+        weight: 1
+      - path: Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Tail/Bip001 Tail1/Bip001 Tail2/Bip001
+          Tail3/Bip001 Tail4/Bip001 Tail5/Bip001 Tail6/Bip001 Tail7/Bip001 Tail8/Bip001
+          Tail9/Bip001 Tail10/Bip001 Tail11/Bip001 Tail12/Bip001 Tail13/Bip001 TailNub
+        weight: 1
+      - path: Manticore
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: run
+      takeName: 
+      firstFrame: 42
+      lastFrame: 63
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: stand
+      takeName: 
+      firstFrame: 67
+      lastFrame: 107
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: 
+      firstFrame: 111
+      lastFrame: 232
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: roar
+      takeName: 
+      firstFrame: 235
+      lastFrame: 325
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack 1
+      takeName: 
+      firstFrame: 329
+      lastFrame: 374
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack 2
+      takeName: 
+      firstFrame: 378
+      lastFrame: 418
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack 3
+      takeName: 
+      firstFrame: 422
+      lastFrame: 462
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: attack 4
+      takeName: 
+      firstFrame: 466
+      lastFrame: 512
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hit 1
+      takeName: 
+      firstFrame: 516
+      lastFrame: 536
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: hit 2
+      takeName: 
+      firstFrame: 540
+      lastFrame: 560
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: death
+      takeName: 
+      firstFrame: 562
+      lastFrame: 602
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly forward
+      takeName: 
+      firstFrame: 606
+      lastFrame: 636
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly
+      takeName: 
+      firstFrame: 640
+      lastFrame: 670
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 1
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly attack 1
+      takeName: 
+      firstFrame: 674
+      lastFrame: 719
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly attack 2
+      takeName: 
+      firstFrame: 723
+      lastFrame: 773
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly attack 3
+      takeName: 
+      firstFrame: 777
+      lastFrame: 822
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly hit 1
+      takeName: 
+      firstFrame: 826
+      lastFrame: 856
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly hit 2
+      takeName: 
+      firstFrame: 860
+      lastFrame: 890
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly death
+      takeName: 
+      firstFrame: 892
+      lastFrame: 943
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: stand to fly
+      takeName: 
+      firstFrame: 947
+      lastFrame: 991
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: fly to stand
+      takeName: 
+      firstFrame: 995
+      lastFrame: 1019
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
