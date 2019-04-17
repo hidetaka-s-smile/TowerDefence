@@ -28,7 +28,7 @@ public class ColdBullet : MonoBehaviour
         {
             Die();
             //调用敌人受伤方法  伤害值暂时为5
-            GetComponent<EnemyStatusinfo>().Damage(5);
+            GetComponent<EnemyStatusInfo>().Damage(5);
             return;
         }
     }

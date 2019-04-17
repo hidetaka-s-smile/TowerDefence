@@ -16,19 +16,19 @@ public class BuildLoader : MonoBehaviour
     public Image fill;//拉条
 
     private float loadTime;//加载的时间
-    private bool isLoading = false;//是否正在加载
+    public bool isLoading = false;//是否正在加载
     private float timer = 0;//计时器
-    private float smoothing = 0;//线性变化参数
 
     private void Awake()
     {
         instance = this;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Z))
         {
+            print("z");
             BuildLoad(2);
         }
         else if (Input.GetKeyDown(KeyCode.X))
@@ -37,9 +37,10 @@ public class BuildLoader : MonoBehaviour
         }
         if (isLoading)
         {
-            slider.value = Mathf.Lerp(slider.value, 1, Time.deltaTime / smoothing);
+            slider.value += (1.0f / 50.0f) / loadTime;
+            //slider.value = Mathf.Lerp(slider.value, 1, Time.deltaTime );
             //读条完毕，隐藏读条
-            if(slider.value > 0.999f)
+            if(slider.value > 0.9f)
             {
                 isLoading = false;
                 HideLoader();
@@ -56,7 +57,8 @@ public class BuildLoader : MonoBehaviour
         timer = 0;
         slider.value = 0;
         ShowLoader();
-        isLoading = true;      
+        isLoading = true;
+        loadTime = time;
     }
 
     /// <summary>
