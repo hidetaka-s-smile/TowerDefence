@@ -555,17 +555,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de79768fae1f8444aba5a76bed5592e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildTime: 0
-  buildCost: 0
-  hp: 0
-  ad: 0
+  buildTime: 3
+  buildCost: 10
+  hp: 100
+  hpMax: 100
+  ad: 10
   bulletPrefeb: {fileID: 6024032564868862079, guid: 846f7a7c434bd104a85e5ef58c8a47f2,
     type: 3}
-  attackRateTime: 0
+  attackRateTime: 0.2
   timer: 0
   firepostion: {fileID: 631637557433039809}
   head: {fileID: 8169803782263535107}
   enemys: []
+  hpBarSlider: {fileID: 2084824408}
 --- !u!1 &8169803782263302689
 GameObject:
   m_ObjectHideFlags: 0
