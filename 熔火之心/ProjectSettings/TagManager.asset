@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - player
   - New tag
   - LevelEditor
   - Shortcut
   - ShortcutIcon
   - Plane
+  - Tower
   layers:
   - Default
   - TransparentFX
