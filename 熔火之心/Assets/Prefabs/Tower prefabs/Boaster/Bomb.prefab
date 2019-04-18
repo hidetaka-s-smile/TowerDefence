@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4692695334569502996}
   - component: {fileID: 2370832410232618788}
   - component: {fileID: 4378042000984143028}
+  - component: {fileID: 3701253831787841514}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -42,9 +43,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4692695334569503003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ee653309b5e72649845e66a3197fb67, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f824b2279b099847a75637191d88f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
 --- !u!65 &4378042000984143028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58,6 +60,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 13.333305, y: 13.333305, z: 13.333305}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3701253831787841514
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692695334569503003}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &4692695334411902407
 PrefabInstance:
   m_ObjectHideFlags: 0

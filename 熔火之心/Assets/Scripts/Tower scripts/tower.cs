@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
+    public int gearnum;//零件数 
     public bool IsBuilding;  //是否在建造中
     public int buildTime;  //建造时间
     public int buildCost;  //建造费用
