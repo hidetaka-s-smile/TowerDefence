@@ -24,7 +24,7 @@ TextureImporter:
     21300038: CommonAtlas1_19
     21300040: CommonAtlas1_20
     21300042: CommonAtlas1_21
-    21300044: CommonAtlas1_22
+    21300044: point
     21300046: CommonAtlas1_23
     21300048: CommonAtlas1_24
     21300050: setting
@@ -604,7 +604,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CommonAtlas1_22
+      name: point
       rect:
         serializedVersion: 2
         x: 443

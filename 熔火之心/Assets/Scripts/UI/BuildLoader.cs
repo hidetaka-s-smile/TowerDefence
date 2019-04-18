@@ -17,7 +17,6 @@ public class BuildLoader : MonoBehaviour
 
     private float loadTime;//加载的时间
     public bool isLoading = false;//是否正在加载
-    private float timer = 0;//计时器
 
     private void Awake()
     {
@@ -26,15 +25,6 @@ public class BuildLoader : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            print("z");
-            BuildLoad(2);
-        }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-            BuildLoad(5);
-        }
         if (isLoading)
         {
             slider.value += (1.0f / 50.0f) / loadTime;
@@ -54,7 +44,6 @@ public class BuildLoader : MonoBehaviour
     /// <param name="time">读条的时间</param>
     public void BuildLoad(float time)
     {
-        timer = 0;
         slider.value = 0;
         ShowLoader();
         isLoading = true;

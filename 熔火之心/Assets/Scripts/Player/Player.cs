@@ -316,7 +316,7 @@ public class Player : MonoBehaviour
         EXP_max = Level * 100 + 100;
         Hp = Hp_max;//Hp_max随等级如何更改，之后多番测试后决定
         //反应在UI上
-
+        LevelUpTxt.instance.Show();
         //调用蓝图系统，发明新的图纸
         BluePrintPanel.instance.InventNewTower();
     }

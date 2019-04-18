@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4812380278886034155}
   - component: {fileID: 4812380278886034152}
   - component: {fileID: 4812380278886034153}
+  - component: {fileID: 8935042701763998286}
   m_Layer: 0
   m_Name: ColdBullet
   m_TagString: Untagged
@@ -106,6 +107,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+--- !u!54 &8935042701763998286
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2290568356421474484}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &8799845443628731525
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,11 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 299930324401578352}
     m_Modifications:
-    - target: {fileID: 1267397794776088595, guid: 3992c15f113d3ff44a99965ad1883c93,
-        type: 3}
-      propertyPath: m_Name
-      value: RocketMissileBlue
-      objectReference: {fileID: 0}
     - target: {fileID: 753958586231323095, guid: 3992c15f113d3ff44a99965ad1883c93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -172,6 +184,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267397794776088595, guid: 3992c15f113d3ff44a99965ad1883c93,
+        type: 3}
+      propertyPath: m_Name
+      value: RocketMissileBlue
       objectReference: {fileID: 0}
     - target: {fileID: 3403134327716148927, guid: 3992c15f113d3ff44a99965ad1883c93,
         type: 3}
