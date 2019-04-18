@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static AudioManager _instance;
+
+    public AudioClip btnClip;
+
+    private AudioSource audioSource;
+
+    private void Awake()
     {
-        
+        _instance = this;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// 播放按钮音效
+    /// </summary>
+    public void PlayButtonClip()
     {
-        
+        audioSource.PlayOneShot(btnClip);
+    }
+
+    /// <summary>
+    /// 播放指定2D音效
+    /// </summary>
+    /// <param name="clip"></param>
+    public void Play2DClip(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
