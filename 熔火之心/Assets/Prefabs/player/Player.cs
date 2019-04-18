@@ -24,8 +24,11 @@ public class Player : MonoBehaviour
     public int cd;
     public float speed;
     public bool ifcd;
+    public bool ifclear = false;
     public bool ismove=false;
     public bool isbuild = false;
+    public bool isclear = false;
+    public GameObject clearTower;
     public Animator anima;
     public bool CanMove = true;
     private int BuildTime = 0;
@@ -49,12 +52,36 @@ public class Player : MonoBehaviour
         //{
         //    Beforebuild();
         //}
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            ifclear = true;
+        }
         if (havetower == true)      //预制跟随鼠标
         {
             newTower.transform.position = new Vector3(MousePoint.x, MousePoint.y + 2f, MousePoint.z);
         }
 
-        if (Input.GetMouseButtonDown(0) && havetower == true )       //确定建立
+        if(Input.GetMouseButtonDown(0) && ifclear == true)        //拆除
+        {
+            if (Physics.Raycast(ray, out hit))
+            {
+                //判断点击的是否塔 
+                print(hit.collider.name);
+                if (hit.collider.tag.Equals("Tower"))
+                {
+                    clearTower = hit.transform.gameObject;
+                    towerPoint = MousePoint;
+                    isclear = true;
+                    ifclear = false;
+                }
+            }
+        }
+        if(isclear == true)
+        {
+            MoveClear();
+        }
+
+        if (Input.GetMouseButtonDown(0) && havetower == true && ifclear == false)       //确定建立
         {
             if (ismove == true)
             {
@@ -105,6 +132,7 @@ public class Player : MonoBehaviour
             anima.SetBool("run", false);
         }
         isbuild = false;
+        ifclear = false;
     }
 
     void GetMouse()
@@ -135,8 +163,9 @@ public class Player : MonoBehaviour
             //根据塔名从Resources文件夹动态加载塔的种类
             towerGO = Resources.Load<GameObject>(@"TowerGameObject\" + towerInfo.name);
             newTower = GameObject.Instantiate(towerGO, MousePoint, b) as GameObject;
-
-            for (int i = 0; i < newTower.GetComponentsInChildren<Transform>(true).Length-2; i++)
+            //炮塔建造中
+            newTower.GetComponent<Tower>().IsBuilding = true;
+            for (int i = 0; i < 3; i++)
             {
                 Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
                 wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 0.5f);
@@ -155,7 +184,7 @@ public class Player : MonoBehaviour
     {
         transform.LookAt(new Vector3(towerPoint.x, towerPoint.y+2f, towerPoint.z));
         float distance = Vector3.Distance(towerPoint, transform.position);//计算目标位置到当前位置
-        if (distance > 15f)
+        if (distance > 12f)
         {
             anima.SetBool("run", true);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -166,7 +195,7 @@ public class Player : MonoBehaviour
             CanMove = false;
             anima.SetBool("run", false);
             BuildTime++;
-            if (BuildTime > newTower.GetComponent<Tower>().buildTime*30)
+            if (BuildTime > newTower.GetComponent<Tower>().buildTime * 30)
             {
                 BuildEnd();
                 BuildTime = 0;
@@ -180,17 +209,50 @@ public class Player : MonoBehaviour
         }
     }
 
+    void MoveClear()
+    {
+        transform.LookAt(new Vector3(towerPoint.x, towerPoint.y + 2f, towerPoint.z));
+        float distance = Vector3.Distance(towerPoint, transform.position);//计算目标位置到当前位置
+        if (distance > 12f)
+        {
+            anima.SetBool("run", true);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
+        else
+        {
+            anima.SetBool("attack1", true);
+            CanMove = false;
+            anima.SetBool("run", false);
+            BuildTime++;
+            //炮塔摧毁中
+            clearTower.GetComponent<Tower>().IsBuilding = true;
+            if (BuildTime > clearTower.GetComponent<Tower>().buildTime * 30)
+            {
+                ClearEnd();
+                BuildTime = 0;
+            }
+        }
+    }
     void BuildEnd()
     {
+        //炮塔可以攻击了
+        newTower.GetComponent<Tower>().IsBuilding=false;
         isbuild = false;
         CanMove = true;
         anima.SetBool("attack1", false);
-        for (int i = 0; i < newTower.GetComponentsInChildren<Transform>(true).Length - 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
             wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
         }
         return;
+    }
+    void ClearEnd()
+    {
+        isclear = false;
+        CanMove = true;
+        anima.SetBool("attack1", false);
+        Destroy(clearTower);
     }
 
     void GetTarget()
@@ -207,7 +269,6 @@ public class Player : MonoBehaviour
             targetPoint = hit.point;
         }
     }
-
     /// <summary>
     /// 获得伤害
     /// </summary>

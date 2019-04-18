@@ -44,7 +44,7 @@ public class Tower : MonoBehaviour
     public virtual void Update()
     {
         //如果不在建造中
-        if(IsBuilding==true)
+        if(IsBuilding==false)
         {
             //塔的头部跟随敌人
             if (enemys.Count > 0)
@@ -58,6 +58,26 @@ public class Tower : MonoBehaviour
                 timer = 0;
                 Attack();
             }
+        }
+    }
+    //当塔在建造或摧毁时鼠标在塔上时虚化
+    private void OnMouseOver()
+    {
+        if(IsBuilding==true)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                Transform wallTransform = this.GetComponentsInChildren<Transform>()[i];
+                wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 0.5f);
+            }
+        }
+    }
+    private void OnMouseExit()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Transform wallTransform = this.GetComponentsInChildren<Transform>()[i];
+            wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
         }
     }
     //攻击

@@ -22,12 +22,16 @@ public class EnemyMotor : MonoBehaviour
     //private NavMeshAgent theAgent;
     private void Awake()
     {
+<<<<<<< HEAD
         thePlayerTF = GameObject.FindGameObjectWithTag("Player").transform;
+=======
+        thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
+>>>>>>> 3c7faffe5525b19fcb6c3f6ce45f0e83fd0b6a06
     }
     void Start()
     {
-        theExecuteRange = GetComponent<EnemyStatusinfo>().atkExecuteRange;
-        atkRange = GetComponent<EnemyStatusinfo>().atkRange;
+        theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
+        atkRange = GetComponent<EnemyStatusInfo>().atkRange;
         //theCC = this.GetComponent<CharacterController>();
 
         //theAgent = GetComponent<NavMeshAgent>();
