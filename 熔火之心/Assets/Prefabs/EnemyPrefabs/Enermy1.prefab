@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8093881006702423632}
   m_Layer: 0
   m_Name: Enermy1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,8 +24,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2869680763672089638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.028890967, y: 0.36495346, z: -0.22875041}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 2.4423, y: -0.60521, z: -9.0872}
+  m_LocalScale: {x: 2.5596, y: 2.5596, z: 2.5596}
   m_Children:
   - {fileID: 9146198080845709837}
   m_Father: {fileID: 0}
@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f876e55bd9ad5746b7ea08ff476a4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thePlayerTF: {fileID: 0}
   atkInterval: 3
   delay: 0.3
   state: 2
@@ -79,6 +80,23 @@ MonoBehaviour:
   currentHP: 100
   maxHP: 100
   deathDelay: 10
+--- !u!114 &5361469835016170339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9146198080845933851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 40
+  ColliderDistance: 30
+  ObstacleTags:
+  - Tower
+  - Enemy
 --- !u!114 &6622564952889330488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ad23c0cb0f7a74c8606f55c3dd16d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thePlayerTF: {fileID: 0}
   moveSpeed: 10
 --- !u!1001 &245618477062674102
 PrefabInstance:
@@ -176,6 +195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Basilisk (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293115619074574210, guid: 0bcba3756b4267e4cb5826ee62bba300,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4293115619074271380, guid: 0bcba3756b4267e4cb5826ee62bba300,
         type: 3}

@@ -4,10 +4,12 @@ using System.Collections;
 /// <summary>
 /// 人工智能
 /// </summary>
-[RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo))]
+[RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo) ) ]
+[RequireComponent(typeof(EnemyInspectTower))]
 public class EnemyAI : MonoBehaviour
 {
-    private Transform thePlayer;
+    private EnemyInspectTower theObstaclesInspect;
+    public Transform thePlayerTF;
     private float theExecuteRange;
     private float theAtkRange;
     private EnemyAnimation animAction;
@@ -42,19 +44,14 @@ public class EnemyAI : MonoBehaviour
         /// </summary>
         Run
     }
-    private void Start()
+    private void Awake()
     {
-<<<<<<< HEAD
-        thePlayer = GameObject.FindGameObjectWithTag("Player").transform;
-        theExecuteRange = GetComponent<EnemyStatusinfo>().atkExecuteRange;
-        theAtkRange = GetComponent<EnemyStatusinfo>().atkRange;
-=======
-        thePlayer = GameObject.FindGameObjectWithTag(Tags.player).transform;
-        theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
-        theAtkRange = GetComponent<EnemyStatusInfo>().atkRange;
->>>>>>> 3c7faffe5525b19fcb6c3f6ce45f0e83fd0b6a06
+        theObstaclesInspect = GetComponent<EnemyInspectTower>();
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
+        thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
+        theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
+        theAtkRange = GetComponent<EnemyStatusInfo>().atkRange;
         RecoveyMove = motor.moveSpeed;
         RecoveyAtk = atkInterval; 
     }
@@ -68,6 +65,17 @@ public class EnemyAI : MonoBehaviour
         switch (state)
         {
             case State.Run:
+                theObstaclesInspect.MoveForward();
+                theObstaclesInspect.Detection();
+
+                //theObstaclesInspect.Detection();
+                //if (theObstaclesInspect.IsObstacle)
+                //{
+                //    print("111");
+                //    theObstaclesInspect.MoveForward();
+
+                //}
+                //if(!theObstaclesInspect.IsObstacle)
                 Run();
                 break;
             case State.Attack:
@@ -78,10 +86,10 @@ public class EnemyAI : MonoBehaviour
     public void CaculateDamaga()
     {
         
-        if (Vector3.Distance(thePlayer.position, transform.position) < theAtkRange)
+        if (Vector3.Distance(thePlayerTF.position, transform.position) < theAtkRange)
         {
             print("D");
-            thePlayer.GetComponent<Player>().GetDamage(1);
+            //thePlayerTF.GetComponent<Player>().GetDamage(1);
         }
     }
     private void Attack()
