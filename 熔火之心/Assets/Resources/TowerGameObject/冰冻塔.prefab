@@ -435,15 +435,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b041b389eeffe59478a14753dfbb33ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gearnum: 25
   IsBuilding: 0
-  buildTime: 0
-  buildCost: 0
-  hp: 0
-  hpMax: 0
-  ad: 0
+  buildTime: 4
+  buildCost: 25
+  hp: 150
+  hpMax: 150
+  ad: 20
   bulletPrefeb: {fileID: 2290568356421474484, guid: a45f5342cac4d4a4b8a3a17244841d99,
     type: 3}
-  attackRateTime: 0
+  attackRateTime: 0.5
   timer: 0
   firepostion: {fileID: 5214264246329446029}
   head: {fileID: 2160712394708519913}

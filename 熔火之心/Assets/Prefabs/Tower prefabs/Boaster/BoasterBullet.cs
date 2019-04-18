@@ -60,6 +60,10 @@ public class BoasterBullet : MonoBehaviour
             transform.LookAt(target.position);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
+        if(target==null)
+        {
+            Die();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -75,7 +79,7 @@ public class BoasterBullet : MonoBehaviour
 
             GameObject Bomb = GameObject.Instantiate(Bombprafeb, bombpostion.position, bombpostion.rotation);
             Die();
-            GetComponent<EnemyStatusInfo>().Damage(damage);
+            other.GetComponent<EnemyStatusInfo>().Damage(damage);
             return;
         }
     }

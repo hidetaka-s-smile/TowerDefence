@@ -15,7 +15,7 @@ public class Bombing : MonoBehaviour
         {
             Die();
             //调用敌人受伤方法  伤害值暂时为5
-            GetComponent<EnemyStatusInfo>().Damage(damage);
+            other.GetComponent<EnemyStatusInfo>().Damage(damage);
             return;
         }
     }
