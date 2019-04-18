@@ -389,6 +389,7 @@ GameObject:
   - component: {fileID: 4991046414348940352}
   - component: {fileID: 3275764248145019448}
   - component: {fileID: 7092918178457633393}
+  - component: {fileID: 2062781839826665058}
   m_Layer: 9
   m_Name: "\u5927\u70AE"
   m_TagString: Tower
@@ -516,6 +517,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!65 &2062781839826665058
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991046414348940346}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1 &6939601117681021651
 GameObject:
   m_ObjectHideFlags: 0

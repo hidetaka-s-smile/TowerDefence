@@ -52,9 +52,14 @@ public class Player : MonoBehaviour
         //{
         //    Beforebuild();
         //}
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.F) && isbuild == false)
         {
             ifclear = true;
+            if (havetower == true)
+            {
+                Destroy(newTower);
+                havetower = false;
+            }
         }
         if (havetower == true)      //预制跟随鼠标
         {
@@ -74,8 +79,13 @@ public class Player : MonoBehaviour
                     isclear = true;
                     ifclear = false;
                 }
+                else
+                {
+                    ifclear = false;
+                }
             }
         }
+
         if(isclear == true)
         {
             MoveClear();
@@ -83,6 +93,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0) && havetower == true && ifclear == false)       //确定建立
         {
+            ifclear = false;
             if (ismove == true)
             {
                 CanMove = false;
@@ -194,8 +205,9 @@ public class Player : MonoBehaviour
             anima.SetBool("attack1", true);
             CanMove = false;
             anima.SetBool("run", false);
+            BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime * 1.0f);
             BuildTime++;
-            if (BuildTime > newTower.GetComponent<Tower>().buildTime * 30)
+            if (BuildTime > newTower.GetComponent<Tower>().buildTime * 40)
             {
                 BuildEnd();
                 BuildTime = 0;
@@ -225,6 +237,7 @@ public class Player : MonoBehaviour
             anima.SetBool("run", false);
             BuildTime++;
             //炮塔摧毁中
+            BuildLoader.instance.BuildLoad(clearTower.GetComponent<Tower>().buildTime * 1.0f);
             clearTower.GetComponent<Tower>().IsBuilding = true;
             if (BuildTime > clearTower.GetComponent<Tower>().buildTime * 30)
             {

@@ -34,6 +34,7 @@ public class Shortcut : MonoBehaviour
         //按下快捷键使用技能或道具
         if (Input.GetKeyDown(keyCode))
         {
+            player.ifclear = false;
             if (type == ShortcutType.Tower)
             {
                 print("正准备建造" + info.name);
