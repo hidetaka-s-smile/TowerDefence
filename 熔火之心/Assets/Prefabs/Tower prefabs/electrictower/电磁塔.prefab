@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918593897590754742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -27.622906, z: 0}
+  m_LocalPosition: {x: 12.8, y: -27.622908, z: -29.167263}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 7193753342994102765}
@@ -126,11 +126,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gearnum: 0
   IsBuilding: 0
-  buildTime: 0
-  buildCost: 0
-  hp: 0
-  hpMax: 0
-  ad: 0
+  buildTime: 7
+  buildCost: 40
+  hp: 250
+  hpMax: 250
+  ad: 400
   bulletPrefeb: {fileID: 1831134357308570988, guid: 8368c6a64d5d181419153016107dfa49,
     type: 3}
   attackRateTime: 3

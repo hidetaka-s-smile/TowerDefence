@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
-    public int gearnum;//零件数 
     public bool IsBuilding;  //是否在建造中
     public int buildTime;  //建造时间
     public int buildCost;  //建造费用
@@ -62,7 +61,7 @@ public class Tower : MonoBehaviour
         }
     }
     //当塔在建造或摧毁时鼠标在塔上时虚化
-    private void OnMouseOver()
+    public void OnMouseOver()
     {
         if(IsBuilding==true)
         {
@@ -73,7 +72,7 @@ public class Tower : MonoBehaviour
             }
         }
     }
-    private void OnMouseExit()
+    public void OnMouseExit()
     {
         for (int i = 0; i < 3; i++)
         {

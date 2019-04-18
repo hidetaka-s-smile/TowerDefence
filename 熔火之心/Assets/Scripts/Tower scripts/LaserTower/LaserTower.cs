@@ -39,5 +39,6 @@ public class LaserTower : Tower
             UpdateEnemys();
         }
         laserReanderer.SetPositions(new Vector3[] { firepostion.position, enemys[0].transform.position });
+        enemys[0].GetComponent<EnemyStatusInfo>().Damage(ad*Time.deltaTime);
     }
 }
