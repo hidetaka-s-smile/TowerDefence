@@ -31,6 +31,14 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            GameOver();
+        }
+    }
+
     /// <summary>
     /// 游戏是否正在运行 是则返回真
     /// </summary>
@@ -51,7 +59,7 @@ public class GameManager : MonoBehaviour
         //人物模型倒地动画，游戏停止运行
 
         //显示死亡界面UI
-        ShowGameOverUI();
+        GameOverUI.instance.Show();
     }
 
     /// <summary>
@@ -71,14 +79,6 @@ public class GameManager : MonoBehaviour
     /// 游戏暂停
     /// </summary>
     public void Pause()
-    {
-
-    }
-
-    /// <summary>
-    /// 显示玩家死亡界面UI
-    /// </summary>
-    private void ShowGameOverUI()
     {
 
     }

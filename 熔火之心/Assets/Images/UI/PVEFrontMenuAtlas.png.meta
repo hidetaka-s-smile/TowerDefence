@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: a7df7424bce5b5a42a6ff4371a2ab8a4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: PVEFrontMenuAtlas_0
+    21300000: Button1
     21300002: dutiaoBar
     21300004: PVEFrontMenuAtlas_2
     21300006: PVEFrontMenuAtlas_3
@@ -34,7 +34,7 @@ TextureImporter:
     21300058: SettingCloseBtn2
     21300060: PVEFrontMenuAtlas_30
     21300062: PVEFrontMenuAtlas_31
-    21300064: PVEFrontMenuAtlas_32
+    21300064: button2
     21300066: PVEFrontMenuAtlas_33
     21300068: PVEFrontMenuAtlas_34
     21300070: PVEFrontMenuAtlas_35
@@ -184,7 +184,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_0
+      name: Button1
       rect:
         serializedVersion: 2
         x: 2
@@ -347,8 +347,8 @@ TextureImporter:
       name: dutiaoFrame
       rect:
         serializedVersion: 2
-        x: 0
-        y: 870
+        x: 4
+        y: 868
         width: 175
         height: 61
       alignment: 0
@@ -488,7 +488,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 178
-        y: 829
+        y: 830
         width: 71
         height: 71
       alignment: 0
@@ -824,13 +824,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PVEFrontMenuAtlas_32
+      name: button2
       rect:
         serializedVersion: 2
-        x: 131
-        y: 729
-        width: 123
-        height: 99
+        x: 153
+        y: 931
+        width: 151
+        height: 79
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
