@@ -163,7 +163,8 @@ public class Player : MonoBehaviour
             //根据塔名从Resources文件夹动态加载塔的种类
             towerGO = Resources.Load<GameObject>(@"TowerGameObject\" + towerInfo.name);
             newTower = GameObject.Instantiate(towerGO, MousePoint, b) as GameObject;
-
+            //炮塔建造中
+            newTower.GetComponent<Tower>().IsBuilding = true;
             for (int i = 0; i < 3; i++)
             {
                 Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
@@ -223,6 +224,8 @@ public class Player : MonoBehaviour
             CanMove = false;
             anima.SetBool("run", false);
             BuildTime++;
+            //炮塔摧毁中
+            clearTower.GetComponent<Tower>().IsBuilding = true;
             if (BuildTime > clearTower.GetComponent<Tower>().buildTime * 30)
             {
                 ClearEnd();
@@ -233,7 +236,7 @@ public class Player : MonoBehaviour
     void BuildEnd()
     {
         //炮塔可以攻击了
-        newTower.GetComponent<Tower>().IsBuilding=true;
+        newTower.GetComponent<Tower>().IsBuilding=false;
         isbuild = false;
         CanMove = true;
         anima.SetBool("attack1", false);
