@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-class EnemyInspectTower:MonoBehaviour
+public class temp : MonoBehaviour
 {
 
     public float MoveSpeed = 2; //避开时的移动速度
@@ -30,12 +30,13 @@ class EnemyInspectTower:MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        m_transform.Translate(Vector3.forward * Time.deltaTime * MoveSpeed);
         MoveForward();
         Detection();
 
     }
     //当侧面有障碍物而前方没有时向前移动
-    public void MoveForward()
+    void MoveForward()
     {
         if (_IsObstacle)
         {
@@ -48,7 +49,7 @@ class EnemyInspectTower:MonoBehaviour
     }
     //障碍物检测
     #region Detection
-    public void Detection()
+    void Detection()
     {
         IsForward = DirectionForward();
         IsInLeft = DirectionLeft();
@@ -207,3 +208,4 @@ class EnemyInspectTower:MonoBehaviour
     }
 
 }
+

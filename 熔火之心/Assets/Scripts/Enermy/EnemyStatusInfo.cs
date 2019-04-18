@@ -53,7 +53,6 @@ public class EnemyStatusInfo : MonoBehaviour
     {
         //销毁当前游戏物体
         Destroy(gameObject, deathDelay);
-
         //播放动画
         var anim = GetComponent<EnemyAnimation>();
         anim.Play(anim.deathName);
