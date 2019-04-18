@@ -32,15 +32,23 @@ public class Shortcut : MonoBehaviour
     private void Update()
     {
         //按下快捷键使用技能或道具
-        if (Input.GetKeyDown(keyCode))
+        if (Input.GetKeyDown(keyCode) && player.isclear == false)
         {
             player.ifclear = false;
             if (type == ShortcutType.Tower)
             {
                 print("正准备建造" + info.name);
                 //调用玩家的建造方法，传入info，生成相应预制体
-                if(Info != null && !player.isbuild)
-                    player.Beforebuild(Info);
+                if(player.Component - info.buildCost>0)
+                {
+                    if (Info != null && !player.isbuild)
+                        player.Beforebuild(Info);
+                }
+                else
+                {
+                    print("零件不足");
+                }
+                
             }                
             else print("技能栏为空");
         }

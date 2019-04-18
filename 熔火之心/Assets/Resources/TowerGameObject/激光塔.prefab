@@ -84,7 +84,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2481268940648408752}
   - component: {fileID: 2481268940640618836}
-  - component: {fileID: 2481268940648053399}
   m_Layer: 0
   m_Name: lasertowermodel
   m_TagString: Untagged
@@ -125,19 +124,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &2481268940648053399
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2481268940648053392}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.761424, z: 1}
-  m_Center: {x: 0, y: 0.38071194, z: 0}
 --- !u!1 &2481268940648053394
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +690,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8625f1b163be4469fe7c6b9ddc24e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gearnum: 20
   IsBuilding: 0
   buildTime: 3
   buildCost: 20
@@ -719,6 +704,8 @@ MonoBehaviour:
   head: {fileID: 2481268940648408754}
   enemys: []
   hpBarSlider: {fileID: 6957999482641583220}
+  gear: {fileID: 2230413465281151538, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
+  NewGear: {fileID: 0}
   laserReanderer: {fileID: 7861134800192632541}
 --- !u!54 &1984325488574089917
 Rigidbody:

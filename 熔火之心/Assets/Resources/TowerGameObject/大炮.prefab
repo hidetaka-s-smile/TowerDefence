@@ -486,7 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb025088ebf98e0488baf1843657f54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gearnum: 30
   IsBuilding: 0
   buildTime: 6
   buildCost: 30
@@ -501,6 +500,8 @@ MonoBehaviour:
   head: {fileID: 7934017418686436864}
   enemys: []
   hpBarSlider: {fileID: 8405176409915490264}
+  gear: {fileID: 2230413465281151538, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
+  NewGear: {fileID: 0}
 --- !u!54 &7092918178457633393
 Rigidbody:
   m_ObjectHideFlags: 0

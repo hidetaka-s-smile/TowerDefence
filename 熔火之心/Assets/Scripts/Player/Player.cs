@@ -110,6 +110,7 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(1)&&CanMove == true)        //移动
         {
             ismove = true;
+            isclear = false;
             anima.SetBool("run", true);
             if(havetower==true)
             {
@@ -258,6 +259,7 @@ public class Player : MonoBehaviour
             Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
             wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
         }
+        Component -= newTower.GetComponent<Tower>().buildCost;
         return;
     }
     void ClearEnd()
@@ -265,7 +267,7 @@ public class Player : MonoBehaviour
         isclear = false;
         CanMove = true;
         anima.SetBool("attack1", false);
-        Destroy(clearTower);
+        clearTower.GetComponent<Tower>().BeDestroyed();
     }
 
     void GetTarget()

@@ -18,7 +18,8 @@ public class Tower : MonoBehaviour
     public Transform head;          //发射子弹的头部
     public List<GameObject> enemys = new List<GameObject>();//可攻击敌人的存放数组
     public Slider hpBarSlider;//血条UI
-
+    public GameObject gear;
+    public GameObject NewGear;
     /// <summary>
     /// 触发器判断是否有敌人
     /// </summary>
@@ -162,7 +163,15 @@ public class Tower : MonoBehaviour
         //播放摧毁音效和动画
 
         //根据该塔的零件需求的50%实例化掉落零件（和JJ沟通）
-
+        NewGear = GameObject.Instantiate(gear,new Vector3(transform.position.x, transform.position.y+5f, transform.position.z), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
+        if(hp>0)
+        {
+            gear.GetComponent<Gear>().num = buildCost;
+        }
+        else
+        {
+            gear.GetComponent<Gear>().num = buildCost/2;
+        }
         //毁灭该物体
         Destroy(gameObject);
     }
