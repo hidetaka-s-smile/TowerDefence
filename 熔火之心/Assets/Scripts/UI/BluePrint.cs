@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class BluePrint : MonoBehaviour
 {
+    public Text nameText;
     public Text hpNum;
     public Text costNum;
     public Text atkNum;
@@ -31,6 +32,7 @@ public class BluePrint : MonoBehaviour
         //更改图标
         icon.sprite = Resources.Load<Sprite>(@"TowerIcon\" + info.name);
         //更改塔属性
+        nameText.text = info.name;
         hpNum.text = info.hp.ToString();
         atkNum.text = info.atk.ToString();
         atkTimeNum.text = info.atkTime.ToString();

@@ -406,6 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8625f1b163be4469fe7c6b9ddc24e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gearnum: 0
   IsBuilding: 0
   buildTime: 0
   buildCost: 0

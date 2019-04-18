@@ -1465,6 +1465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f88fb23a71a16e24f82b2afb794b8127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 7843159223789595855}
   hpNum: {fileID: 802005589787659611}
   costNum: {fileID: 5520645045213800911}
   atkNum: {fileID: 99135588432851814}

@@ -12,18 +12,20 @@ public class BluePrintPanel : MonoBehaviour
     public static BluePrintPanel instance;
 
     public Scrollbar scrollbar;//垂直滑动条
-    public Transform bluePrintList;//蓝图列表
+    public Image fillImg;//滑动条图片
+    public Image bgImg;//滑动条背景图片
+    public Transform bluePrintList;//蓝图列表,新的图纸的父物体
     public GameObject bluePrintPrefab;//蓝图预制体
     public int[] towerIdArray;//玩家能解锁的塔的编号数组 
 
     private Animation anim;
     private int curIndex = 0;//当前即将解锁的塔编号
-    private bool isOpen = false;
+    private bool isOpen = false;   
 
     private void Awake()
     {
         instance = this;
-        anim = gameObject.GetComponent<Animation>();        
+        anim = gameObject.GetComponent<Animation>();
     }
 
     private void Start()
@@ -36,8 +38,10 @@ public class BluePrintPanel : MonoBehaviour
     /// 面板进入游戏界面
     /// </summary>
     public void OnPanelEnter()
-    {      
-        if(!isOpen && !anim.isPlaying)
+    {
+        if (NewTowerNoticePointer.instance.IsShow)
+            NewTowerNoticePointer.instance.Hide();
+        if (!isOpen && !anim.isPlaying)
         {
             scrollbar.value = 1;
             isOpen = true;
@@ -62,8 +66,16 @@ public class BluePrintPanel : MonoBehaviour
     /// </summary>
     public void InventNewTower()
     {
+        //提醒玩家
+        if (curIndex > 0)
+        {
+            NewTowerNoticePointer.instance.Show();
+        }        
         TowerInfo newTowerInfo = TowerInfos.instance.GetTowerInfo(towerIdArray[curIndex]);
         curIndex++;
+        // 超过两张图纸 显示滑动条
+        if (curIndex > 2)
+            ShowScrollbar();
         //安全校验
         if (newTowerInfo != null)
         {
@@ -72,5 +84,14 @@ public class BluePrintPanel : MonoBehaviour
             BluePrint bluePrint = go.GetComponent<BluePrint>();
             bluePrint.InitBluePrint(newTowerInfo);
         }
+    }
+
+    /// <summary>
+    /// 超过两张图纸 显示滑动条
+    /// </summary>
+    private void ShowScrollbar()
+    {
+        fillImg.enabled = true;
+        bgImg.enabled = true;
     }
 }

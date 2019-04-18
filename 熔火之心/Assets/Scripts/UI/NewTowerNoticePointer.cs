@@ -13,6 +13,12 @@ public class NewTowerNoticePointer : MonoBehaviour
 
     private Image img;
     private Animation anim;
+    private bool isShow = false;
+
+    /// <summary>
+    /// 是否显示该UI
+    /// </summary>
+    public bool IsShow { get => isShow; }
 
     private void Awake()
     {
@@ -25,11 +31,14 @@ public class NewTowerNoticePointer : MonoBehaviour
     {
         img.enabled = true;
         anim.enabled = true;
+        isShow = true;
     }
 
     public void Hide()
     {
         img.enabled = false;
         anim.enabled = false;
+        isShow = false;
     }
+
 }
