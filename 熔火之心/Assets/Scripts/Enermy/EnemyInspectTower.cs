@@ -8,7 +8,7 @@ class EnemyInspectTower:MonoBehaviour
     public float MoveSpeed = 2; //避开时的移动速度
     public float ColliderDistance = 2; //检测距离
 
-    public string[] ObstacleTags; //障碍物的标签,就是要避开的障碍物
+    public string[] ObstacleTags= { Tags.enemy, Tags.player }; //障碍物的标签,就是要避开的障碍物
     public bool IsObstacle { get { return _IsObstacle; } } //是否有障碍物，用来给外部的接口
 
     private Vector3 pos; //记录避开障碍物前的的旋转坐标
@@ -24,14 +24,12 @@ class EnemyInspectTower:MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        m_transform = this.transform;
+        m_transform = transform;
 
     }
     // Update is called once per frame
     void Update()
     {
-        MoveForward();
-        Detection();
 
     }
     //当侧面有障碍物而前方没有时向前移动
@@ -109,7 +107,7 @@ class EnemyInspectTower:MonoBehaviour
         RaycastHit hitForward;
         Vector3 LocalForward = m_transform.TransformPoint(Vector3.forward) - m_transform.position;
         if (Physics.Raycast(m_transform.position,
-                             LocalForward,
+                             m_transform.forward,
                              out hitForward, ColliderDistance / 2))
         {
             if (CompareTags(hitForward.transform.gameObject.tag))
@@ -128,7 +126,7 @@ class EnemyInspectTower:MonoBehaviour
         Vector3 LocalRight = m_transform.TransformPoint(Vector3.right) - m_transform.position;
         if (Physics.Raycast(m_transform.position,
                              LocalRight,
-                             out hitRight, ColliderDistance))
+                             out hitRight, ColliderDistance/2))
         {
             if (CompareTags(hitRight.transform.gameObject.tag))
             {
@@ -146,7 +144,7 @@ class EnemyInspectTower:MonoBehaviour
         Vector3 LocalLeft = m_transform.TransformPoint(-Vector3.right) - m_transform.position;
         if (Physics.Raycast(m_transform.position,
                              LocalLeft,
-                             out hitLeft, ColliderDistance))
+                             out hitLeft, ColliderDistance/2))
         {
             if (CompareTags(hitLeft.transform.gameObject.tag))
             {

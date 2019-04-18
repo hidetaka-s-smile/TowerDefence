@@ -65,10 +65,14 @@ public class EnemyAI : MonoBehaviour
         switch (state)
         {
             case State.Run:
+
+
                 if(!theObstaclesInspect.IsObstacle)
                 Run();
                 theObstaclesInspect.MoveForward();
                 theObstaclesInspect.Detection();
+
+
 
                 break;
             case State.Attack:

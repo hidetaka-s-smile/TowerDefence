@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8093881006702423632}
-  - component: {fileID: 5627138317928844175}
   m_Layer: 0
   m_Name: Enermy1
   m_TagString: Enemy
@@ -32,19 +31,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5627138317928844175
+--- !u!65 &795743891368267953
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2869680763672089638}
+  m_GameObject: {fileID: 9146198080845933851}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5, z: 1.5}
-  m_Center: {x: -1.5, y: 0.7, z: 6}
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0.02, y: 0.11, z: -0.05}
 --- !u!114 &337463029108965680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 15
-  ColliderDistance: 20
+  MoveSpeed: 10
+  ColliderDistance: 2
   ObstacleTags:
   - Tower
   - Enemy
