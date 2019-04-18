@@ -8,7 +8,7 @@ using UnityEngine;
 public class Tags
 {
     //标签
-    public const string player = "Player";              //玩家
+    public const string player = "player";              //玩家
     public const string enemy = "Enemy";                //敌人
     public const string tower = "Tower";                //炮塔
     public const string shopNPC = "ShopNPC";            //商人

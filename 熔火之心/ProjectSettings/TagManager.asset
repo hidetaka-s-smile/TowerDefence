@@ -10,6 +10,8 @@ TagManager:
   - ShortcutIcon
   - Plane
   - Tower
+  - player
+  - Enemy
   layers:
   - Default
   - TransparentFX
