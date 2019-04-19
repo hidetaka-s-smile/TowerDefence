@@ -300,6 +300,7 @@ public class Player : MonoBehaviour
 
         if(Hp <= 0)
         {
+            Hp = 0;
             //播放死亡音效
 
             //角色死亡，游戏结束，调用关卡管理器的游戏结束事件
