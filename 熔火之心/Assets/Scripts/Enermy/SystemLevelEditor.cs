@@ -7,7 +7,7 @@ using UnityEngine.UI;
 /// </summary>
 public class SystemLevelEditor : MonoBehaviour
 {
-    //单例模式
+    //单例模式 
     public static SystemLevelEditor instance;
 
     /// <summary>

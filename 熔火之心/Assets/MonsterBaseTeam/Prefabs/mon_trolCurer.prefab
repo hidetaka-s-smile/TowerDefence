@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Isdead: 0
   atkExecuteRange: 70
-  atkRange: 80
+  atkRange: 60
   currentHP: 100
   maxHP: 100
   deathDelay: 10

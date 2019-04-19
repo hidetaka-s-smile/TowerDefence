@@ -6,19 +6,19 @@ using System.Collections;
 /// </summary>
 [RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo) ) ]
 [RequireComponent(typeof(EnemyInspectTower))]
+
 public class EnemyAI : MonoBehaviour
 {
     public GameObject bullet;
     public int atkValue = 10;
     private EnemyStatusInfo theSta;
-    
     private EnemyInspectTower theObstaclesInspect;
     public Transform thePlayerTF;
     private float theExecuteRange;
     private float theAtkRange;
     private EnemyAnimation animAction;
     private EnemyMotor motor;
-    private float atkTime = 0;
+    private float atkTime=0;
     /// <summary>
     /// 攻击间隔
     /// </summary>
@@ -50,13 +50,11 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         theSta = GetComponent<EnemyStatusInfo>();
-
         theObstaclesInspect = GetComponent<EnemyInspectTower>();
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
         theExecuteRange =theSta.atkExecuteRange;
         theAtkRange = theSta.atkRange;
-
         RecoveyMove = motor.moveSpeed;
         RecoveyAtk = atkInterval; 
     }
@@ -87,36 +85,36 @@ public class EnemyAI : MonoBehaviour
     public void CaculateDamaga()
     {
         
-        if (Vector3.Distance(thePlayerTF.position, transform.position) < theAtkRange)
+        if (thePlayerTF!=null&& Vector3.Distance(thePlayerTF.position, transform.position) < theAtkRange)
         {
             if (thePlayerTF.tag == Tags.player)
                 thePlayerTF.GetComponent<Player>().GetDamage(atkValue);
-            else thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
+            else if(thePlayerTF.GetComponent<Tower>()!=null)thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
         }
     }
     private void Attack()
     {
-        Invoke("CaculateDamaga", delay);
+        
         //限制攻击频率
         //播放攻动画
-        if (atkTime <= Time.time )
+        if (atkTime <= Time.time)
         {
-            if (bullet != null)
+            if (thePlayerTF != null)
             {
-                GameObject bulletGO = Instantiate(bullet, transform.position+new Vector3(2,4,2),Quaternion.identity ) as GameObject;
-                bulletGO.GetComponent<BulletfFy>().ini(thePlayerTF.position);
+                animAction.Play(animAction.atkName);
+                if (bullet != null)
+                {
+                    GameObject bulletGO = Instantiate(bullet, transform.position + new Vector3(2, 4, 2), Quaternion.identity) as GameObject;
+                    bulletGO.GetComponent<BulletfFy>().ini(thePlayerTF,atkValue);
+                }
+                else Invoke("CaculateDamaga", delay);
+                atkTime = Time.time + atkInterval;
             }
-            animAction.Play(animAction.atkName);
-            atkTime = Time.time + atkInterval;
-
+            
         }
-
-        if (!animAction.IsPlaying(animAction.atkName) )
+        if (!animAction.IsPlaying(animAction.atkName))
         {
-            //如果攻击动画没有播放  再  播放闲置动画
             animAction.Play(animAction.idleName);
-
-
         }
         if (motor.run()) state = State.Run;
     }

@@ -5,21 +5,25 @@ using UnityEngine;
 public class BulletfFy : MonoBehaviour
 {
     public int moveSpeed = 60;
-    Vector3 theTarget;
-    public void ini(Vector3 target)
+    Transform theTarget;
+    private int theAtkValue ;
+    public void ini(Transform target,int atkValue)
     {
+        theAtkValue = atkValue;
         theTarget = target;
     }
     private void Movement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, theTarget, Time.deltaTime * moveSpeed);
+        transform.position = Vector3.MoveTowards(transform.position, theTarget.position, Time.deltaTime * moveSpeed);
     }
     private void Update()
     {
         Movement();
-        if ((transform.position - theTarget).sqrMagnitude < 1)
+        if ((transform.position - theTarget.position).sqrMagnitude < 1)
         { 
-            Destroy(gameObject);
+            if(theTarget.tag == Tags.player)
+                theTarget.GetComponent<Player>().GetDamage(theAtkValue);
+            else theTarget.GetComponent<Tower>().GetDamage(theAtkValue);
         }
     }
 }
