@@ -1,16 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
-
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 /// <summary>
 /// 人工智能
 /// </summary>
 [RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo) ) ]
 [RequireComponent(typeof(EnemyInspectTower))]
-
-public class EnemyAI : MonoBehaviour
+public class BossAI : MonoBehaviour
 {
-    public GameObject frozenOBJ;
-    public GameObject dizzOBJ;
     public GameObject bullet;
     public int atkValue = 10;
     private EnemyStatusInfo theSta;
@@ -20,7 +17,7 @@ public class EnemyAI : MonoBehaviour
     private float theAtkRange;
     private EnemyAnimation animAction;
     private EnemyMotor motor;
-    private float atkTime=0;
+    private float atkTime = 0;
     /// <summary>
     /// 攻击间隔
     /// </summary>
@@ -49,18 +46,18 @@ public class EnemyAI : MonoBehaviour
         /// </summary>
         Run
     }
-    void Awake()
+    private void Awake()
     {
         theSta = GetComponent<EnemyStatusInfo>();
         theObstaclesInspect = GetComponent<EnemyInspectTower>();
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
-        theExecuteRange =theSta.atkExecuteRange;
+        theExecuteRange = theSta.atkExecuteRange;
         theAtkRange = theSta.atkRange;
         RecoveyMove = motor.moveSpeed;
-        RecoveyAtk = atkInterval; 
+        RecoveyAtk = atkInterval;
     }
-    public void Start()
+    private void Start()
     {
         thePlayerTF = motor.thePlayerTF;
     }
@@ -69,13 +66,13 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     public State state = State.Run;
     //每帧判断状态
-    public void Update()
+    private void Update()
     {
         switch (state)
         {
             case State.Run:
-                if(!theObstaclesInspect.IsObstacle)
-                Run();
+                if (!theObstaclesInspect.IsObstacle)
+                    Run();
                 theObstaclesInspect.MoveForward();
                 theObstaclesInspect.Detection();
                 break;
@@ -86,17 +83,17 @@ public class EnemyAI : MonoBehaviour
     }
     public void CaculateDamaga()
     {
-        
-        if (thePlayerTF!=null&& Vector3.Distance(thePlayerTF.position, transform.position) < theAtkRange)
+
+        if (thePlayerTF != null && Vector3.Distance(thePlayerTF.position, transform.position) < theAtkRange)
         {
             if (thePlayerTF.tag == Tags.player)
                 thePlayerTF.GetComponent<Player>().GetDamage(atkValue);
-            else if(thePlayerTF.GetComponent<Tower>()!=null)thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
+            else if (thePlayerTF.GetComponent<Tower>() != null) thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
         }
     }
     private void Attack()
     {
-        
+
         //限制攻击频率
         //播放攻动画
         if (atkTime <= Time.time)
@@ -106,14 +103,13 @@ public class EnemyAI : MonoBehaviour
                 animAction.Play(animAction.atkName);
                 if (bullet != null)
                 {
-                    GameObject bulletGO = Instantiate(bullet, 
-                        transform.position + new Vector3(2, 4, 2), Quaternion.identity) as GameObject;
-                    bulletGO.GetComponent<BulletfFy>().ini(thePlayerTF,atkValue);
+                    GameObject bulletGO = Instantiate(bullet, transform.position + new Vector3(2, 4, 2), Quaternion.identity) as GameObject;
+                    bulletGO.GetComponent<BulletfFy>().ini(thePlayerTF, atkValue);
                 }
                 else Invoke("CaculateDamaga", delay);
                 atkTime = Time.time + atkInterval;
             }
-            
+
         }
         if (!animAction.IsPlaying(animAction.atkName))
         {
@@ -127,36 +123,22 @@ public class EnemyAI : MonoBehaviour
         animAction.Play(animAction.runName);
         //调用马达寻路功能  如果到达终点，修改状态为 state 攻击
         if (!motor.run()) state = State.Attack;
-    } 
-    public void dizz(float recoveyTime)
-    {
-
-        GameObject FxObj = Instantiate(dizzOBJ,
-            transform.position + new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-        Destroy(FxObj, recoveyTime);
-        motor.moveSpeed =0;
-        atkInterval =100;
-        animAction.stopAll();
-        Invoke("recovey",recoveyTime);
-        
     }
     /// <summary>
     /// 冰冻
     /// </summary>
     /// <param name="debuff">减少倍数 整数</param>
     /// <param name="recovetTime">恢复时间 浮点类型</param>
-    public void frozen(int debuff,float recoveyTime)
+    public void frozen(int debuff, float recovetTime)
     {
-        GameObject FxObj = Instantiate(frozenOBJ,
-            transform.position + new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
-        Destroy(FxObj, recoveyTime);
         motor.moveSpeed /= debuff;
-        atkInterval *= debuff;
-        Invoke("recovey", recoveyTime);
+        atkInterval *= recovetTime;
+        Invoke("recovey", recovetTime);
     }
     private void recovey()
     {
         motor.moveSpeed = RecoveyMove;
         atkInterval = RecoveyAtk;
+        print("a");
     }
 }

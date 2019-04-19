@@ -645,8 +645,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 5
-  maxValue: 100
-  currentValue: 100
 --- !u!1 &1470076475
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,27 +889,27 @@ PrefabInstance:
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -77.2
+      value: -76.980156
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.03642335
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.001126487
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.012012263
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99926364
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
@@ -921,27 +919,27 @@ PrefabInstance:
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 4.176
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -0.079
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 1.3750001
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 128.9
+      value: 128.83684
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -8.9
+      value: -16.26
       objectReference: {fileID: 0}
     - target: {fileID: 5962446196143511950, guid: d4ef7ba010d943949a6ad5c5025aea77,
         type: 3}
@@ -1326,7 +1324,7 @@ PrefabInstance:
     - target: {fileID: 9006928827695811376, guid: 7636e01555cab5444984bee9e415de1f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000005210538
+      value: -0.00001689288
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7636e01555cab5444984bee9e415de1f, type: 3}

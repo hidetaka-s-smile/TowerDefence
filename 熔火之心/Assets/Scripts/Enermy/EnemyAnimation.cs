@@ -12,21 +12,23 @@ public class EnemyAnimation : MonoBehaviour
     /// 跑步动画
     /// </summary>
     public string runName = "Run";
-
     /// <summary>
     /// 攻击动画
     /// </summary>
     public string atkName = "Attack01";
-
     /// <summary>
     /// 死亡动画
     /// </summary>
     public string deathName = "Dead";
-
     /// <summary>
     /// 闲置动画
     /// </summary>
     public string idleName = "Idle";
+    public string fastRunName = "";
+    public string fireName = "";
+    public string worryName = ""; 
+    public string flyName = "";
+    public string flyAttack = "";
     private Animation anim;
     private void Awake()
     {
@@ -51,5 +53,9 @@ public class EnemyAnimation : MonoBehaviour
     public bool IsPlaying(string name)
     {
         return anim.IsPlaying(name);
+    }
+    public void stopAll()
+    {
+        anim.Stop();
     }
 }
