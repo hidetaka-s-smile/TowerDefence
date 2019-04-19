@@ -34,6 +34,7 @@ public class Shortcut : MonoBehaviour
         //按下快捷键使用技能或道具
         if (Input.GetKeyDown(keyCode) && player.isclear == false)
         {
+            Cursor.SetCursor(player.cursor_normal, player.hotpots, player.mode);
             player.ifclear = false;
             if (type == ShortcutType.Tower)
             {

@@ -5482,6 +5482,7 @@ MonoBehaviour:
   EXP: 200
   EXP_max: 200
   Component: 0
+  MoveEffect: {fileID: 100010, guid: 462a97d0e7fe38845aaa96c35ee7ab29, type: 3}
   havetower: 0
   cd: 0
   speed: 0

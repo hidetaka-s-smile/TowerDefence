@@ -11,7 +11,12 @@ public class Player : MonoBehaviour
     public int EXP = 200;        //经验值
     public int EXP_max = 200;    //最大经验值
     public int Component = 0;   //零件数
-
+    public Texture2D cursor_normal;//正常
+    public Texture2D cursor_clear;//拆除
+    public Texture2D cursor_isclear;//选中拆除
+    public GameObject MoveEffect;
+    public Vector2 hotpots = Vector2.zero;
+    public CursorMode mode = CursorMode.Auto;
     private Transform m_Transform;
     private Quaternion b = new Quaternion(0, 0, 0, 0);
     private Vector3 mousePositionOnScreen;
@@ -54,6 +59,7 @@ public class Player : MonoBehaviour
         //}
         if(Input.GetKeyDown(KeyCode.F) && isbuild == false)
         {
+            Cursor.SetCursor(cursor_clear, hotpots, mode);
             ifclear = true;
             if (havetower == true)
             {
@@ -66,8 +72,9 @@ public class Player : MonoBehaviour
             newTower.transform.position = new Vector3(MousePoint.x, MousePoint.y + 2f, MousePoint.z);
         }
 
-        if(Input.GetMouseButtonDown(0) && ifclear == true)        //拆除
+        if(Input.GetMouseButtonDown(0) && ifclear == true)        //确认拆除
         {
+            StopMove();
             if (Physics.Raycast(ray, out hit))
             {
                 //判断点击的是否塔 
@@ -81,6 +88,7 @@ public class Player : MonoBehaviour
                 }
                 else
                 {
+                    Cursor.SetCursor(cursor_normal, hotpots, mode);
                     ifclear = false;
                 }
             }
@@ -110,7 +118,8 @@ public class Player : MonoBehaviour
         if (Input.GetMouseButtonDown(1)&&CanMove == true)        //移动
         {
             ismove = true;
-            isclear = false;
+            ifclear = false;
+            Cursor.SetCursor(cursor_normal, hotpots, mode);
             anima.SetBool("run", true);
             if(havetower==true)
             {
@@ -118,6 +127,7 @@ public class Player : MonoBehaviour
                 havetower = false;
             }
             GetTarget();
+            GameObject ME = GameObject.Instantiate(MoveEffect, targetPoint, Quaternion.Euler(0.0f, 0.0f, 0.0f)) as GameObject;
         }
         if(ismove == true)
         {
@@ -144,7 +154,13 @@ public class Player : MonoBehaviour
             anima.SetBool("run", false);
         }
         isbuild = false;
-        ifclear = false;
+        isclear = false;
+    }
+
+    void StopMove()
+    {
+        ismove = false;
+        anima.SetBool("run", false);
     }
 
     void GetMouse()
@@ -153,10 +169,19 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             //判断点击的是否地形  
+            if (hit.collider.tag.Equals("Tower") && ifclear == true)
+            {
+                Cursor.SetCursor(cursor_isclear, hotpots, mode);
+            }
+            else if (!hit.collider.tag.Equals("Tower") && ifclear == true)
+            {
+                Cursor.SetCursor(cursor_clear, hotpots, mode);
+            }
             if (!hit.collider.tag.Equals("Plane"))
             {
                 return;
             }
+            
             //点击位置坐标   
             MousePoint = hit.point;
         }
@@ -270,6 +295,7 @@ public class Player : MonoBehaviour
     }
     void ClearEnd()
     {
+        Cursor.SetCursor(cursor_normal, hotpots, mode);
         isclear = false;
         CanMove = true;
         anima.SetBool("attack1", false);
