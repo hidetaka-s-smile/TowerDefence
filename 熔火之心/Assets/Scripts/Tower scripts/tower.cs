@@ -11,7 +11,7 @@ public class Tower : MonoBehaviour
     public int buildCost;  //建造费用
     public int hp;             //血量
     public int hpMax;          //最大血量
-    public int ad;               //攻击力
+    public float ad;               //攻击力
     public GameObject bulletPrefeb; //子弹
     public float attackRateTime;//攻击间隔
     public float timer = 0;        //计时器

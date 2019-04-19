@@ -14,7 +14,6 @@ public class Bombing : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Die();
-            //调用敌人受伤方法  伤害值暂时为5
             other.GetComponent<EnemyStatusInfo>().Damage(damage);
             return;
         }
