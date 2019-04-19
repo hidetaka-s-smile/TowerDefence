@@ -5,11 +5,7 @@ using UnityEngine;
 public class LaserTower : Tower
 {
     public LineRenderer laserReanderer;//激光
-    // Start is called before the first frame update
-    void Start()
-    {
-        hp = 100;
-    }
+
 
     // Update is called once per frame
     /// <summary>

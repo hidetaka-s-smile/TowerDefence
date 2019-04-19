@@ -626,18 +626,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1449871155 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2084824408, guid: 94fe903be920f7446bcda1db009de594,
+--- !u!1 &1449871154 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2084824406, guid: 94fe903be920f7446bcda1db009de594,
     type: 3}
   m_PrefabInstance: {fileID: 5041934086246458708}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &1449871157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449871154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c32e0fd9cf9b5c45b61330a1c1f410f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smoothing: 5
+  maxValue: 100
+  currentValue: 100
 --- !u!1 &1470076475
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,7 +1326,7 @@ PrefabInstance:
     - target: {fileID: 9006928827695811376, guid: 7636e01555cab5444984bee9e415de1f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000028818033
+      value: -0.000005210538
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7636e01555cab5444984bee9e415de1f, type: 3}
@@ -2035,7 +2044,7 @@ PrefabInstance:
         type: 3}
       propertyPath: hpBarSlider
       value: 
-      objectReference: {fileID: 1449871155}
+      objectReference: {fileID: 1449871157}
     - target: {fileID: 7035684392892593379, guid: 94fe903be920f7446bcda1db009de594,
         type: 3}
       propertyPath: gear

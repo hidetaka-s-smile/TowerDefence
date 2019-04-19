@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class ColdTower : Tower
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        //初始化
-        buildTime = 4;
-        buildCost = 15;
-        hp = 100;
-        attackRateTime = 1f;
-        ad = 5;
-    }
-
     // Update is called once per frame
     public override void Attack()
     {

@@ -6,17 +6,6 @@ using UnityEngine;
 /// </summary>
 public class Boaster : Tower
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        //初始化
-        buildTime = 4;
-        buildCost = 15;
-        hp = 100;
-        attackRateTime = 3f;
-        ad = 5;
-    }
-
     // Update is called once per frame
     //攻击
     public override void Attack()

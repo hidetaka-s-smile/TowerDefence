@@ -17,7 +17,8 @@ public class Tower : MonoBehaviour
     public Transform firepostion;   //子弹初始位置
     public Transform head;          //发射子弹的头部
     public List<GameObject> enemys = new List<GameObject>();//可攻击敌人的存放数组
-    public Slider hpBarSlider;//血条UI
+    //public Slider hpBarSlider;//血条UI
+    public SmoothSlider hpBarSlider;//血条UI
     public GameObject gear;
     public GameObject NewGear;
     /// <summary>
@@ -38,10 +39,12 @@ public class Tower : MonoBehaviour
             enemys.Remove(other.gameObject);
         }
     }
+
     void Start()
     {
-        
+        hpBarSlider.InitValue(hp, hpMax);
     }
+
     public virtual void Update()
     {
         //如果不在建造中
@@ -59,6 +62,10 @@ public class Tower : MonoBehaviour
                 timer = 0;
                 Attack();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            GetDamage(35);
         }
     }
     //当塔在建造或摧毁时鼠标在塔上时虚化
@@ -145,8 +152,9 @@ public class Tower : MonoBehaviour
     public void GetDamage(int damage)
     {
         hp -= damage;
+        if (hp <= 0) hp = 0;
         //反应在血条UI上
-        hpBarSlider.value = hp / hpMax;
+        hpBarSlider.ChangeValue(hp);
         //播放被敲打的音效
 
         if (hp <= 0)

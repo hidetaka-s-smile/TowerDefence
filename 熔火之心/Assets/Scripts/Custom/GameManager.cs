@@ -31,14 +31,6 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            GameOver();
-        }
-    }
-
     /// <summary>
     /// 游戏是否正在运行 是则返回真
     /// </summary>
