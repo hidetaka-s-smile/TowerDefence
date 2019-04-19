@@ -46,7 +46,7 @@ public class MonsterAutoGrowEditor : MonoBehaviour
         {
             nowCnt++;
             Invoke("CreateEnemy", tempDelay*Time.deltaTime);
-            tempDelay +=20;
+            tempDelay +=maxMonsterGrowDelay;
         }
     }
 

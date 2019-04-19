@@ -32,7 +32,6 @@ public class EnemyAnimation : MonoBehaviour
     {
         //查找动画组件
         anim = GetComponentInChildren<Animation>();
-
     }
 
     /// <summary>

@@ -8,6 +8,7 @@ using System.Collections;
 [RequireComponent(typeof(EnemyInspectTower))]
 public class EnemyAI : MonoBehaviour
 {
+    public int atkValue  = 10;
     private EnemyInspectTower theObstaclesInspect;
     public Transform thePlayerTF;
     private float theExecuteRange;
@@ -49,11 +50,14 @@ public class EnemyAI : MonoBehaviour
         theObstaclesInspect = GetComponent<EnemyInspectTower>();
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
-        thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
         theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
         theAtkRange = GetComponent<EnemyStatusInfo>().atkRange;
         RecoveyMove = motor.moveSpeed;
         RecoveyAtk = atkInterval; 
+    }
+    private void Start()
+    {
+        thePlayerTF = motor.thePlayerTF;
     }
     /// <summary>
     /// 敌人状态
@@ -85,8 +89,7 @@ public class EnemyAI : MonoBehaviour
         
         if (Vector3.Distance(thePlayerTF.position, transform.position) < theAtkRange)
         {
-            print("D");
-            //thePlayerTF.GetComponent<Player>().GetDamage(1);
+            thePlayerTF.GetComponent<Player>().GetDamage(atkValue);
         }
     }
     private void Attack()

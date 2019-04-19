@@ -10,31 +10,26 @@ using UnityEngine.AI;
 public class EnemyMotor : MonoBehaviour
 {
     public Transform  thePlayerTF ;
-    //private  Transform  thePlayer;
     private float theExecuteRange;
     private float atkRange;
+    public string firstTargetTag = Tags.player;
     /// <summary>
     /// 移动速度
     /// </summary>
     public float moveSpeed = 10;
-
-    //private CharacterController theCC;
-    //private NavMeshAgent theAgent;
     private void Awake()
     {
-        thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
+        //如果没塔  找人
+        if (!(thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform))
+            thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform;
 
     }
     void Start()
     {
         theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
         atkRange = GetComponent<EnemyStatusInfo>().atkRange;
-        //theCC = this.GetComponent<CharacterController>();
 
-        //theAgent = GetComponent<NavMeshAgent>();
     }
-    
-
     //执行寻路 如果攻击进入范围返回F 给状态类切换状态
     public bool run()
     {
@@ -47,7 +42,6 @@ public class EnemyMotor : MonoBehaviour
         LookRotation(thePlayerTF.position);
         
         MovementForward();
-        //theCC.SimpleMove(transform.forward * moveSpeed * Time.deltaTime);
         return true;
     }
     /// <summary>

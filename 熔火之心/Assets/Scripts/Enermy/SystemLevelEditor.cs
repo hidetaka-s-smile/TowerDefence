@@ -9,7 +9,7 @@ public class SystemLevelEditor : MonoBehaviour
 {
     private bool monsterGrowFlag = true; 
     private Text timerText;
-    private int remainTime = 10;//剩余时间
+    private int remainTime = 3;//剩余时间
     private float timer = 0;//计时器
     public bool isBegin = true; //是否开始计时
     /// <summary>
@@ -19,7 +19,7 @@ public class SystemLevelEditor : MonoBehaviour
         {
             timerText.enabled = true;
             //初始化计时器
-            remainTime = 10;
+            remainTime = 3;
             timer = 0;
             //开始计时
             isBegin = true;
