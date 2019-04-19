@@ -60,7 +60,7 @@ Transform:
   m_GameObject: {fileID: 5464022356578135772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.63, z: 9.35}
-  m_LocalScale: {x: 6, y: 6, z: 6}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children:
   - {fileID: 6975472388648162202}
   - {fileID: 8776585331566288752}
@@ -142,6 +142,7 @@ MonoBehaviour:
   Bombprafeb: {fileID: 4692695334569503003, guid: 8133ca4448e47914894edd3ae414fc2f,
     type: 3}
   speed: 15
+  target: {fileID: 0}
   distanceMax: 30
 --- !u!54 &6622676328637171576
 Rigidbody:
