@@ -587,7 +587,7 @@ MonoBehaviour:
   head: {fileID: 8169803782263535107}
   enemys: []
   hpBarSlider: {fileID: 1449871157}
-  gear: {fileID: 2230413465281151538, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
+  gear: {fileID: 890649089358820366, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
   NewGear: {fileID: 0}
 --- !u!65 &7836105092487509005
 BoxCollider:

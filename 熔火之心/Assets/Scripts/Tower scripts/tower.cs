@@ -172,7 +172,7 @@ public class Tower : MonoBehaviour
 
         //根据该塔的零件需求的50%实例化掉落零件（和JJ沟通）
         NewGear = GameObject.Instantiate(gear,new Vector3(transform.position.x, transform.position.y+5f, transform.position.z), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
-        if(hp>0)
+        if (hp>0)
         {
             gear.GetComponent<Gear>().num = buildCost;
         }

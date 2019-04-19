@@ -11,13 +11,14 @@ public class Gear : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(Vector3.right * speed);
+        print(Player.GetComponent<Transform>().position);
         distance = Vector3.Distance(Player.GetComponent<Transform>().position, transform.position);
         if(distance < 10f)
         {

@@ -14,13 +14,15 @@ public class BulletfFy : MonoBehaviour
     }
     private void Movement()
     {
-        transform.position = Vector3.MoveTowards(transform.position, theTarget.position, Time.deltaTime * moveSpeed);
+        if (theTarget == null) Destroy(this);
+        transform.position = Vector3.MoveTowards(transform.position,theTarget.position, Time.deltaTime * moveSpeed);
     }
     private void Update()
     {
         Movement();
         if ((transform.position - theTarget.position).sqrMagnitude < 1)
-        { 
+        {
+            Destroy(this);
             if(theTarget.tag == Tags.player)
                 theTarget.GetComponent<Player>().GetDamage(theAtkValue);
             else theTarget.GetComponent<Tower>().GetDamage(theAtkValue);
