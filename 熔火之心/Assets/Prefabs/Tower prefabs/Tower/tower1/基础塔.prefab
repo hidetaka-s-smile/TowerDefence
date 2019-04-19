@@ -479,7 +479,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3026775498437395926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.8, y: -25.6, z: -30.1}
+  m_LocalPosition: {x: 22.7, y: -25.6, z: -30.1}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 6027428209079036581}
@@ -545,7 +545,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 4.007881
+  m_Radius: 7.982724
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6573824403018327405
 MonoBehaviour:
@@ -560,19 +560,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsBuilding: 0
-  buildTime: 0
-  buildCost: 0
-  hp: 0
-  hpMax: 0
-  ad: 0
+  buildTime: 2
+  buildCost: 20
+  hp: 100
+  hpMax: 100
+  ad: 10
   bulletPrefeb: {fileID: 6024032564868862079, guid: 846f7a7c434bd104a85e5ef58c8a47f2,
     type: 3}
-  attackRateTime: 0
+  attackRateTime: 0.2
   timer: 0
   firepostion: {fileID: 3026775497723979619}
   head: {fileID: 6027428209079036577}
   enemys: []
   hpBarSlider: {fileID: 0}
+  gear: {fileID: 0}
+  NewGear: {fileID: 0}
 --- !u!65 &5466416049346729808
 BoxCollider:
   m_ObjectHideFlags: 0

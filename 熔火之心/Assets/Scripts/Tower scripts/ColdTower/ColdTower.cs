@@ -18,7 +18,7 @@ public class ColdTower : Tower
     // Update is called once per frame
     public override void Attack()
     {
-        if (enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true)
+        if ((enemys[0] == null || enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true) && enemys.Count != 0)
         {
             UpdateEnemys();
         }

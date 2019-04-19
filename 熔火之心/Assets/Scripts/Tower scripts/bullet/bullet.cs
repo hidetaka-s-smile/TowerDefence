@@ -17,9 +17,15 @@ public class Bullet : MonoBehaviour
     public virtual void Update()
     {
         //如果目标为空或死亡则销毁子弹
-        if(target.GetComponent<EnemyStatusInfo>().Isdead==true)
+        if(target==null)
         {
             Die();
+        }
+        if(target.tag=="Enemy")
+        {
+            if (target.GetComponent<EnemyStatusInfo>().Isdead == true)
+                Die();
+            
         }
         transform.LookAt(target.position);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);

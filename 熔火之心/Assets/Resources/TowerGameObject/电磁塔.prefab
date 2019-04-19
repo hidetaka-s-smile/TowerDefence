@@ -9832,7 +9832,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed3fd34706571614b8333d4037055b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gearnum: 0
   IsBuilding: 0
   buildTime: 7
   buildCost: 40
@@ -9847,3 +9846,5 @@ MonoBehaviour:
   head: {fileID: 0}
   enemys: []
   hpBarSlider: {fileID: 0}
+  gear: {fileID: 0}
+  NewGear: {fileID: 0}

@@ -84,7 +84,7 @@ public class Tower : MonoBehaviour
     //攻击
     public virtual void Attack()
     {
-        if(enemys[0]== null||enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true)
+        if((enemys[0] == null || enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true)&&enemys.Count!=0)
         {
             UpdateEnemys();
         }

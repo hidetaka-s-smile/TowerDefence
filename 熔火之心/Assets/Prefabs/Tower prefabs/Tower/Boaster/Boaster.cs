@@ -22,7 +22,7 @@ public class Boaster : Tower
     public override void Attack()
     {
         //若敌人死亡或离开范围则更新
-        if (enemys[0] == null)
+        if ((enemys[0] == null || enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true) && enemys.Count != 0)
         {
             UpdateEnemys();
         }

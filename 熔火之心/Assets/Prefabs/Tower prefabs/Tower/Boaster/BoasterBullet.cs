@@ -8,7 +8,7 @@ public class BoasterBullet : MonoBehaviour
     public Transform bombpostion;//爆炸地点
     public GameObject Bombprafeb; //爆炸
     public int speed = 15;
-    private Transform target;
+    public Transform target;
     public void SetTarget(Transform _target)
     {
         this.target = _target;
@@ -43,8 +43,12 @@ public class BoasterBullet : MonoBehaviour
     private float time;
     void Update()
     {
+        if (target == null)
+        {
+            Die();
+        }
         //距离远时用抛物线 近时直接跟踪
-        distance= Vector3.Distance(transform.position, target.transform.position);
+        distance = Vector3.Distance(transform.position, target.transform.position);
         if(distance>=distanceMax)
         {
             transform.LookAt(target.transform.position);
@@ -59,10 +63,6 @@ public class BoasterBullet : MonoBehaviour
         {
             transform.LookAt(target.position);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        }
-        if(target.GetComponent<EnemyStatusInfo>().Isdead==true)
-        {
-            Die();
         }
     }
 
