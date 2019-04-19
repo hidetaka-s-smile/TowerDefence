@@ -206,7 +206,10 @@ public class Player : MonoBehaviour
             anima.SetBool("attack1", true);
             CanMove = false;
             anima.SetBool("run", false);
-            BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime * 1.0f);
+            if (!BuildLoader.instance.isLoading)
+            {
+                BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime * 1.0f);
+            }
             BuildTime++;
             if (BuildTime > newTower.GetComponent<Tower>().buildTime * 40)
             {
@@ -238,7 +241,10 @@ public class Player : MonoBehaviour
             anima.SetBool("run", false);
             BuildTime++;
             //炮塔摧毁中
-            BuildLoader.instance.BuildLoad(clearTower.GetComponent<Tower>().buildTime * 1.0f);
+            if (!BuildLoader.instance.isLoading)
+            {
+                BuildLoader.instance.BuildLoad(clearTower.GetComponent<Tower>().buildTime * 1.0f);
+            }
             clearTower.GetComponent<Tower>().IsBuilding = true;
             if (BuildTime > clearTower.GetComponent<Tower>().buildTime * 30)
             {
