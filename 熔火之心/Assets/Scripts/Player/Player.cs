@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -42,12 +43,20 @@ public class Player : MonoBehaviour
     RaycastHit hit;
 
     private GameObject towerGO;//即将建造的塔的物体
-
+    [Header("状态栏UI")]
+    public Text levelNumTxt;
+    public Text componentText;
+    public SmoothSlider hpBarSlider;
+    public SmoothSlider expBarSlider;
+   
     void Start()
     {
         anima = GetComponent<Animator>();
         speed = 30f;
         controller = GetComponent<CharacterController>();
+        //初始化slider
+        hpBarSlider.InitValue(Hp, Hp_max);
+        expBarSlider.InitValue(0, 200);
     }
 
     void Update()
@@ -291,6 +300,7 @@ public class Player : MonoBehaviour
             wallTransform.gameObject.GetComponent<Renderer>().material.color = new Color(1f, 1f, 1f, 1f);
         }
         Component -= newTower.GetComponent<Tower>().buildCost;
+        componentText.text = Component.ToString();
         return;
     }
     void ClearEnd()
@@ -322,15 +332,15 @@ public class Player : MonoBehaviour
     public void GetDamage(int damage)
     {
         Hp -= damage;
+        if (Hp < 0) Hp = 0;
         //反应在UI上
-
-        if(Hp <= 0)
+        hpBarSlider.ChangeValue(Hp);
+        if (Hp <= 0)
         {
-            Hp = 0;
             //播放死亡音效
 
             //角色死亡，游戏结束，调用关卡管理器的游戏结束事件
-
+            GameManager.instance.GameOver();
         }
         //还没死则播放受伤音效
 
@@ -350,8 +360,8 @@ public class Player : MonoBehaviour
             EXP += remain;
             LevelUp();
         }
-        //反应在UI上，如果可以请用Mathf.Lerp方法线性变化实现，不行也没关系，自己把握时间
-        
+        //反应在UI上
+        expBarSlider.ChangeValue(EXP);
     }
 
     /// <summary>
@@ -361,12 +371,25 @@ public class Player : MonoBehaviour
     {
         //等级增加，血量恢复
         Level++;
+        if(Level < 5) levelNumTxt.text = Level.ToString();
+        else levelNumTxt.text = "MAX";
         EXP_max = Level * 100 + 100;
         Hp = Hp_max;//Hp_max随等级如何更改，之后多番测试后决定
         //反应在UI上
+        hpBarSlider.ChangeValue(Hp);
+        expBarSlider.ChangeMaxValue(EXP_max);
         LevelUpTxt.instance.Show();
         //调用蓝图系统，发明新的图纸
         BluePrintPanel.instance.InventNewTower();
     }
 
+    /// <summary>
+    /// 加零件
+    /// </summary>
+    /// <param name="num"></param>
+    public void AddComponent(int num)
+    {
+        Component += num;
+        componentText.text = Component.ToString();
+    }
 }

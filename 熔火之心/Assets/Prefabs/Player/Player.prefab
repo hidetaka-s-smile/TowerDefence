@@ -5481,7 +5481,7 @@ MonoBehaviour:
   Hp_max: 500
   EXP: 200
   EXP_max: 200
-  Component: 0
+  Component: 30
   cursor_normal: {fileID: 2800000, guid: 88105f48e19b6e847b99ca220e98a65f, type: 3}
   cursor_clear: {fileID: 2800000, guid: 35805ab78b6de5548b71907ff3137eea, type: 3}
   cursor_isclear: {fileID: 2800000, guid: b18f38d72517e284b9649027e4dafd70, type: 3}
@@ -5499,6 +5499,10 @@ MonoBehaviour:
   clearTower: {fileID: 0}
   anima: {fileID: 3468774004145480388}
   CanMove: 1
+  levelNumTxt: {fileID: 0}
+  componentText: {fileID: 0}
+  hpBarSlider: {fileID: 0}
+  expBarSlider: {fileID: 0}
 --- !u!136 &3036070396313069026
 CapsuleCollider:
   m_ObjectHideFlags: 0

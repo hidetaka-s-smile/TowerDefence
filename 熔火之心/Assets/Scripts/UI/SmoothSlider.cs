@@ -46,4 +46,21 @@ public class SmoothSlider : MonoBehaviour
     {
         targetValue = newValue;
     }
+
+    /// <summary>
+    /// 更改最大值
+    /// </summary>
+    /// <param name="newMaxVal"></param>
+    public void ChangeMaxValue(float newMaxVal)
+    {
+        maxValue = newMaxVal;
+    }
+
+    /// <summary>
+    /// 获得当前值
+    /// </summary>
+    public float GetCurVal()
+    {
+        return currentValue;
+    }
 }
