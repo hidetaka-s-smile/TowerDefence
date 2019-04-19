@@ -27,9 +27,15 @@ public class EnemyStatusInfo : MonoBehaviour
     /// 最大血量
     /// </summary>
     public float maxHP;
+    [Header("经验值")]
+    public int exp;
+
+    private Player player;
+
     private void Awake()
     {
         blood = GetComponent<ParticleSystem>();
+        player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Player>();
     }
 
 
@@ -60,14 +66,6 @@ public class EnemyStatusInfo : MonoBehaviour
         hpBarSlider.InitValue(currentHP, maxHP);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Damage(20);
-        }
-    }
-
     /// <summary>
     /// 死亡
     /// </summary>
@@ -83,6 +81,8 @@ public class EnemyStatusInfo : MonoBehaviour
         GetComponent<EnemyAI>().state = EnemyAI.State.Death;
         //给生成器传输当前死亡数加一
         SystemLevelEditor.instance.DeathCnt();
+        //给人物加经验
+        player.GetExp(exp);
     }
 
 }

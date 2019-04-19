@@ -1275,7 +1275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.6, y: -0.000028955172}
+  m_AnchoredPosition: {x: -21.6, y: -0.0000004998783}
   m_SizeDelta: {x: 432.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8333169604301506564
@@ -1431,8 +1431,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 325391743307131882}
   m_HandleRect: {fileID: 3758998392329344075}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.99999994
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2360,11 +2360,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MaxSize
       value: 74
-      objectReference: {fileID: 0}
-    - target: {fileID: 7336434848157621068, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
-        type: 3}
-      propertyPath: originTime
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132e9974f5ab54b4893cdcb4b87eec1b, type: 3}
