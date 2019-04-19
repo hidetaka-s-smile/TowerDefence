@@ -27,6 +27,7 @@ public class GameOverUI : MonoBehaviour
     /// </summary>
     public void Show()
     {
+        MaskImg.instance.Show();
         ShowBlackMask();
         Invoke("ShowDefeatImg", 2.0f);
         Invoke("ShowTitleBtn", 4.5f);

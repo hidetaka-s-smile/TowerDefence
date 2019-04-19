@@ -38,7 +38,6 @@ public class Shortcut : MonoBehaviour
             player.ifclear = false;
             if (type == ShortcutType.Tower)
             {
-                print("正准备建造" + info.name);
                 //调用玩家的建造方法，传入info，生成相应预制体
                 if(player.Component - info.buildCost>=0)
                 {
@@ -47,11 +46,11 @@ public class Shortcut : MonoBehaviour
                 }
                 else
                 {
-                    print("零件不足");
+                    LackCompnentNotice.instance.Show();
                 }
                 
             }                
-            else print("技能栏为空");
+            else print("快捷栏为空");
         }
     }
 

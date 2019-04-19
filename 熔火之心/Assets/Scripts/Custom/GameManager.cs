@@ -31,6 +31,18 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            GameOverUI.instance.Show();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {   
+            GameWinUI.instance.Show();
+        }
+    }
+
     /// <summary>
     /// 游戏是否正在运行 是则返回真
     /// </summary>
@@ -65,6 +77,7 @@ public class GameManager : MonoBehaviour
         //人物模型胜利动画，游戏停止运行
 
         //显示胜利界面UI
+        GameWinUI.instance.Show();
     }
 
     /// <summary>
@@ -72,6 +85,33 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void Pause()
     {
+        MaskImg.instance.Show();
+        Time.timeScale = 0;
+    }
 
+    /// <summary>
+    /// 游戏继续
+    /// </summary>
+    public void Run()
+    {
+        MaskImg.instance.Hide();
+        Time.timeScale = 1;
+    }
+
+    /// <summary>
+    /// 开发人员名单界面
+    /// </summary>
+    public void GoToEnding()
+    {
+        //切换到场景3
+    }
+
+    /// <summary>
+    /// 失败重玩按钮
+    /// </summary>
+    public void OnRetryBtn()
+    {
+        //切换到场景2
+        //白色屏幕放大
     }
 }

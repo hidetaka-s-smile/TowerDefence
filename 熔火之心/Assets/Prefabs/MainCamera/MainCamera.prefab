@@ -96,6 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 20
-  rotateSpeed: 20
-  minDistance: 5
-  maxDistance: 15
+  rotateSpeed: 10
+  minDistance: 20
+  maxDistance: 100
