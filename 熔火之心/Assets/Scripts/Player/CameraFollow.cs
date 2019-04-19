@@ -26,7 +26,10 @@ public class CameraFollow : MonoBehaviour {
         //跟随玩家       
         transform.position = player.position + offset;
         //滚轮控制视野远近
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
             ScrollView();
+        }
         //按住Alt+鼠标左键旋转屏幕
         RotateView();
     }

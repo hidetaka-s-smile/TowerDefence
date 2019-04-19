@@ -22,14 +22,6 @@ public class LevelUpTxt : MonoBehaviour
         anim = gameObject.GetComponent<Animation>();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Show();
-        }
-    }
-
     /// <summary>
     /// 显示并播放动画
     /// </summary>

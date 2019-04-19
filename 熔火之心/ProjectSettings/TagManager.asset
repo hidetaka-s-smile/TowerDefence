@@ -12,6 +12,8 @@ TagManager:
   - Tower
   - player
   - Enemy
+  - AtkP
+  - DamP
   layers:
   - Default
   - TransparentFX

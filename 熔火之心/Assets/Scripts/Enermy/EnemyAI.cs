@@ -8,7 +8,11 @@ using System.Collections;
 [RequireComponent(typeof(EnemyInspectTower))]
 public class EnemyAI : MonoBehaviour
 {
-    public int atkValue  = 10;
+    public GameObject theAtkOBJ;
+    private ParticleSystem theAtkPar;
+    public int atkValue = 10;
+    private EnemyStatusInfo theSta;
+    
     private EnemyInspectTower theObstaclesInspect;
     public Transform thePlayerTF;
     private float theExecuteRange;
@@ -27,9 +31,8 @@ public class EnemyAI : MonoBehaviour
     /// <summary>
     /// 敌人状态
     /// </summary>
-    private float RecoveyMove ;
+    private float RecoveyMove;
     private float RecoveyAtk;
-    
     public enum State
     {
         /// <summary>
@@ -47,11 +50,15 @@ public class EnemyAI : MonoBehaviour
     }
     private void Awake()
     {
+        theAtkPar = theAtkOBJ.GetComponent<ParticleSystem>();
+        theSta = GetComponent<EnemyStatusInfo>();
+
         theObstaclesInspect = GetComponent<EnemyInspectTower>();
         animAction = GetComponent<EnemyAnimation>();
         motor = GetComponent<EnemyMotor>();
-        theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
-        theAtkRange = GetComponent<EnemyStatusInfo>().atkRange;
+        theExecuteRange =theSta.atkExecuteRange;
+        theAtkRange = theSta.atkRange;
+
         RecoveyMove = motor.moveSpeed;
         RecoveyAtk = atkInterval; 
     }
@@ -89,19 +96,27 @@ public class EnemyAI : MonoBehaviour
         
         if (Vector3.Distance(thePlayerTF.position, transform.position) < theAtkRange)
         {
-            thePlayerTF.GetComponent<Player>().GetDamage(atkValue);
+            if (thePlayerTF.tag == Tags.player)
+                thePlayerTF.GetComponent<Player>().GetDamage(atkValue);
+            else thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
         }
     }
     private void Attack()
     {
-        animAction.Play(animAction.atkName);
+        
+         
         Invoke("CaculateDamaga", delay);
         //限制攻击频率
         //播放攻动画
         if (atkTime <= Time.time )
         {
             animAction.Play(animAction.atkName);
-            
+            if (theAtkPar != null)
+            {
+                theAtkPar.Play();
+
+                Invoke("theAtkPar.Stop()", 1);
+             }
             atkTime = Time.time + atkInterval;
         }
 
@@ -114,6 +129,12 @@ public class EnemyAI : MonoBehaviour
     }
     private void Run()
     {
+        if (theAtkPar != null)
+        {
+            theAtkPar.Play();
+
+            Invoke("theAtkPar.Stop()", 1);
+        }
         //播放跑步动画
         animAction.Play(animAction.runName);
         //调用马达寻路功能  如果到达终点，修改状态为 state 攻击
