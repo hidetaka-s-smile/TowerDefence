@@ -30,11 +30,16 @@ public class EnemyMotor : MonoBehaviour
         atkRange = GetComponent<EnemyStatusInfo>().atkRange;
 
     }
+    private void Update()
+    {
+        if (thePlayerTF == null && (thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform) != null)
+            thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform;
+    }
     //执行寻路 如果攻击进入范围返回F 给状态类切换状态
     public bool run()
     {
         
-        if (Vector3.Distance(thePlayerTF.position, transform.position) < atkRange - theExecuteRange)
+        if (Vector3.Distance(thePlayerTF.position, transform.position) < atkRange )
         {
             return false;
         }
@@ -44,6 +49,7 @@ public class EnemyMotor : MonoBehaviour
         MovementForward();
         return true;
     }
+
     /// <summary>
     /// 向前移动
     /// </summary>
@@ -62,3 +68,5 @@ public class EnemyMotor : MonoBehaviour
         transform.LookAt(targetPos);
     }
 }
+
+

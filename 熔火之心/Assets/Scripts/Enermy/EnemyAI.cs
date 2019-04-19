@@ -8,8 +8,7 @@ using System.Collections;
 [RequireComponent(typeof(EnemyInspectTower))]
 public class EnemyAI : MonoBehaviour
 {
-    public GameObject theAtkOBJ;
-    private ParticleSystem theAtkPar;
+    public GameObject bullet;
     public int atkValue = 10;
     private EnemyStatusInfo theSta;
     
@@ -50,7 +49,6 @@ public class EnemyAI : MonoBehaviour
     }
     private void Awake()
     {
-        theAtkPar = theAtkOBJ.GetComponent<ParticleSystem>();
         theSta = GetComponent<EnemyStatusInfo>();
 
         theObstaclesInspect = GetComponent<EnemyInspectTower>();
@@ -76,15 +74,10 @@ public class EnemyAI : MonoBehaviour
         switch (state)
         {
             case State.Run:
-
-
                 if(!theObstaclesInspect.IsObstacle)
                 Run();
                 theObstaclesInspect.MoveForward();
                 theObstaclesInspect.Detection();
-
-
-
                 break;
             case State.Attack:
                 Attack();
@@ -98,43 +91,37 @@ public class EnemyAI : MonoBehaviour
         {
             if (thePlayerTF.tag == Tags.player)
                 thePlayerTF.GetComponent<Player>().GetDamage(atkValue);
-            else thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
+            //else thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
         }
     }
     private void Attack()
     {
-        
-         
         Invoke("CaculateDamaga", delay);
         //限制攻击频率
         //播放攻动画
         if (atkTime <= Time.time )
         {
-            animAction.Play(animAction.atkName);
-            if (theAtkPar != null)
+            if (bullet != null)
             {
-                theAtkPar.Play();
-
-                Invoke("theAtkPar.Stop()", 1);
-             }
+                GameObject bulletGO = Instantiate(bullet, transform.position+new Vector3(2,4,2),Quaternion.identity ) as GameObject;
+                bulletGO.GetComponent<BulletfFy>().ini(thePlayerTF.position);
+            }
+            animAction.Play(animAction.atkName);
             atkTime = Time.time + atkInterval;
+
         }
 
         if (!animAction.IsPlaying(animAction.atkName) )
         {
             //如果攻击动画没有播放  再  播放闲置动画
             animAction.Play(animAction.idleName);
+
+
         }
         if (motor.run()) state = State.Run;
     }
     private void Run()
     {
-        if (theAtkPar != null)
-        {
-            theAtkPar.Play();
-
-            Invoke("theAtkPar.Stop()", 1);
-        }
         //播放跑步动画
         animAction.Play(animAction.runName);
         //调用马达寻路功能  如果到达终点，修改状态为 state 攻击
