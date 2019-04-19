@@ -19405,7 +19405,7 @@ MonoBehaviour:
   head: {fileID: 2160712394708519913}
   enemys: []
   hpBarSlider: {fileID: 2963386393766805494}
-  gear: {fileID: 2230413465281151538, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
+  gear: {fileID: 890649089358820366, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
   NewGear: {fileID: 0}
 --- !u!54 &6127004053259386304
 Rigidbody:

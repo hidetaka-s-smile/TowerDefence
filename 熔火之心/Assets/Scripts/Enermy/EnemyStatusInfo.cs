@@ -7,6 +7,8 @@ using UnityEngine;
 /// </summary>
 public class EnemyStatusInfo : MonoBehaviour
 {
+    [Header("血条")]
+    public SmoothSlider hpBarSlider;
     public bool Isdead;
     ParticleSystem blood;
     /// <summary>
@@ -29,6 +31,8 @@ public class EnemyStatusInfo : MonoBehaviour
     {
         blood = GetComponent<ParticleSystem>();
     }
+
+
     public void Damage(float amount)
     {
         //如果敌人已经死亡 则退出(防止虐尸)
@@ -38,6 +42,8 @@ public class EnemyStatusInfo : MonoBehaviour
             return;
         }
         currentHP -= amount;
+        if (currentHP < 0) currentHP = 0;
+        hpBarSlider.ChangeValue(currentHP);
         if (currentHP <= 0)
             Death();
         blood.Play();
@@ -51,6 +57,15 @@ public class EnemyStatusInfo : MonoBehaviour
     private void Start()
     {
         blood = GetComponentInChildren<ParticleSystem>();
+        hpBarSlider.InitValue(currentHP, maxHP);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Damage(20);
+        }
     }
 
     /// <summary>
