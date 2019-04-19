@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class EnemyStatusInfo : MonoBehaviour
 {
+    public bool Isdead;
     ParticleSystem blood;
     /// <summary>
     /// 敌人执行攻击动作的范围与伤害距离的差距
@@ -51,6 +52,7 @@ public class EnemyStatusInfo : MonoBehaviour
     /// </summary>
     public void Death()
     {
+        Isdead = true;
         //销毁当前游戏物体
         Destroy(gameObject, deathDelay);
         //播放动画

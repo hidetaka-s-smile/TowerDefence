@@ -60,7 +60,7 @@ public class BoasterBullet : MonoBehaviour
             transform.LookAt(target.position);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
-        if(target==null)
+        if(target.GetComponent<EnemyStatusInfo>().Isdead==true)
         {
             Die();
         }

@@ -28,17 +28,19 @@ public class LaserTower : Tower
         }
         else
         {
+            bulletPrefeb.SetActive(false);
             laserReanderer.enabled = false;
         }
     }
     //攻击
     public override void Attack()
     {
-        if (enemys[0] == null)
+        if (enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true)
         {
             UpdateEnemys();
         }
         laserReanderer.SetPositions(new Vector3[] { firepostion.position, enemys[0].transform.position });
+        bulletPrefeb.SetActive(true);
         enemys[0].GetComponent<EnemyStatusInfo>().Damage(ad*Time.deltaTime);
     }
 }

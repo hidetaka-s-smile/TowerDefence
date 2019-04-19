@@ -119,14 +119,14 @@ public class Tower : MonoBehaviour
         List<int> emptyIndex = new List<int>();
         for(int index=0;index<enemys.Count;index++)
         {
-            if(enemys[index]==null)
+            if(enemys[index].GetComponent<EnemyStatusInfo>().Isdead==true)
             {
                 emptyIndex.Add(index);
             }
         }
         for(int i=0;i<emptyIndex.Count;i++)
         {
-            enemys.RemoveAt(emptyIndex[i] - i);
+            enemys.RemoveAt(emptyIndex[i]-i);
         }
     }
     /// <summary>
