@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
+    public GameObject fire;//着火特效
     public bool IsBuilding;  //是否在建造中
     public int buildTime;  //建造时间
     public int buildCost;  //建造费用
@@ -174,13 +175,15 @@ public class Tower : MonoBehaviour
         NewGear = GameObject.Instantiate(gear,new Vector3(transform.position.x, transform.position.y+5f, transform.position.z), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
         if (hp>0)
         {
+            //毁灭该物体
+            Destroy(gameObject);
             gear.GetComponent<Gear>().num = buildCost;
         }
         else
         {
+            fire.SetActive(true);
+            Destroy(gameObject, 1);
             gear.GetComponent<Gear>().num = buildCost/2;
         }
-        //毁灭该物体
-        Destroy(gameObject);
     }
 }
