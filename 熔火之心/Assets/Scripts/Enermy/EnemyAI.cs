@@ -71,6 +71,7 @@ public class EnemyAI : MonoBehaviour
     //每帧判断状态
     public void Update()
     {
+        thePlayerTF = motor.thePlayerTF;
         switch (state)
         {
             case State.Run:
