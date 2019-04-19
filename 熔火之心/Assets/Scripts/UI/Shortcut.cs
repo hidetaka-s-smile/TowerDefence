@@ -40,7 +40,7 @@ public class Shortcut : MonoBehaviour
             {
                 print("正准备建造" + info.name);
                 //调用玩家的建造方法，传入info，生成相应预制体
-                if(player.Component - info.buildCost>0)
+                if(player.Component - info.buildCost>=0)
                 {
                     if (Info != null && !player.isbuild)
                         player.Beforebuild(Info);
