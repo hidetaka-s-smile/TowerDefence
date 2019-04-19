@@ -91,7 +91,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (thePlayerTF.tag == Tags.player)
                 thePlayerTF.GetComponent<Player>().GetDamage(atkValue);
-            //else thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
+            else thePlayerTF.GetComponent<Tower>().GetDamage(atkValue);
         }
     }
     private void Attack()

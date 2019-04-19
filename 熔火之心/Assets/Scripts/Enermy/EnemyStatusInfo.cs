@@ -25,10 +25,18 @@ public class EnemyStatusInfo : MonoBehaviour
     /// 最大血量
     /// </summary>
     public float maxHP;
+    private void Awake()
+    {
+        blood = GetComponent<ParticleSystem>();
+    }
     public void Damage(float amount)
     {
         //如果敌人已经死亡 则退出(防止虐尸)
-        if (currentHP <= 0) return;
+        if (currentHP <= 0)
+        {
+            Isdead = true;
+            return;
+        }
         currentHP -= amount;
         if (currentHP <= 0)
             Death();

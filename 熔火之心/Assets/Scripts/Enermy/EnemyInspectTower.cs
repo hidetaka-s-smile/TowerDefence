@@ -91,7 +91,7 @@ class EnemyInspectTower:MonoBehaviour
                 {
                     //避开障碍物到返回原先状态的缓冲时间
                     timer += Time.deltaTime;
-                    if (timer > 0.8f)
+                    if (timer > 0.4f)
                     {
                         timer = 0;
                         _IsObstacle = false;
