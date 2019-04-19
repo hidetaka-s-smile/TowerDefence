@@ -39,12 +39,10 @@ public class EnemyStatusInfo : MonoBehaviour
     /// </summary>
     public float deathDelay = 10;
     //敌人生成器引用  敌人创建时由生成器传递
-    SystemLevelEditor theEditor;
+
     private void Start()
     {
         blood = GetComponentInChildren<ParticleSystem>();
-        theEditor = GameObject.FindGameObjectWithTag("LevelEditor").GetComponent<SystemLevelEditor>();
-
     }
 
     /// <summary>
@@ -61,7 +59,7 @@ public class EnemyStatusInfo : MonoBehaviour
         //修改状态
         GetComponent<EnemyAI>().state = EnemyAI.State.Death;
         //给生成器传输当前死亡数加一
-        theEditor.deachCnt();
+        SystemLevelEditor.instance.DeathCnt();
     }
 
 }

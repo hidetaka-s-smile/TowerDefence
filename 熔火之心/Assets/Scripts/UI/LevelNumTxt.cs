@@ -47,6 +47,7 @@ public class LevelNumTxt : MonoBehaviour
                 numText.text = "再来一波";
                 break;
         }
+        print(numText.text);
         numText.enabled = true;
         anim.Play();
     }

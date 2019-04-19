@@ -19,7 +19,6 @@ public class Gear : MonoBehaviour
     {
         transform.Rotate(Vector3.right * speed);
         distance = Vector3.Distance(Player.GetComponent<Transform>().position, transform.position);
-        print(distance);
         if(distance < 10f)
         {
             PickUp();

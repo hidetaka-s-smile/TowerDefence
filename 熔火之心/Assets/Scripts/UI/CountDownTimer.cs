@@ -11,11 +11,12 @@ public class CountDownTimer : MonoBehaviour
     private Text timerText;
     private int remainTime = 30;//剩余时间
     private float timer = 0;//计时器
-    private bool isBegin = true;//是否开始计时
+    private bool isBegin = false;//是否开始计时
     private Animation anim;
 
     private void Awake()
     {
+        instance = this;
         timerText = gameObject.GetComponent<Text>();
         anim = gameObject.GetComponent<Animation>();
     }
@@ -45,12 +46,13 @@ public class CountDownTimer : MonoBehaviour
     /// 显示倒计时
     /// </summary>
     public void ShowTimer()
-    {
-        anim.Play();
-        timerText.enabled = true;
+    {       
         //初始化计时器
         remainTime = 30;
         timer = 0;
+        //显示计时器
+        timerText.enabled = true;
+        anim.Play();       
         //开始计时
         isBegin = true;
     }
@@ -63,6 +65,6 @@ public class CountDownTimer : MonoBehaviour
         anim.Stop();
         timerText.enabled = false;
         //调用关卡管理器的开始生成敌人
-        print("敌人开始出来了");
+        SystemLevelEditor.instance.MonsterAutoGrow();
     }
 }
