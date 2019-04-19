@@ -50,6 +50,7 @@ public class LevelNumTxt : MonoBehaviour
         print(numText.text);
         numText.enabled = true;
         anim.Play();
+        Invoke("Hide", 1.2f);
     }
 
     private void Hide()

@@ -8,6 +8,8 @@ public class CountDownTimer : MonoBehaviour
     //单例模式
     public static CountDownTimer instance;
 
+    public int originTime = 30;//倒计时的时间
+
     private Text timerText;
     private int remainTime = 30;//剩余时间
     private float timer = 0;//计时器
@@ -48,7 +50,8 @@ public class CountDownTimer : MonoBehaviour
     public void ShowTimer()
     {       
         //初始化计时器
-        remainTime = 30;
+        remainTime = originTime;
+        timerText.text = remainTime.ToString() + 's';
         timer = 0;
         //显示计时器
         timerText.enabled = true;
