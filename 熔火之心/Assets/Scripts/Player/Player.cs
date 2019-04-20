@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public int EXP = 200;        //经验值
     public int EXP_max = 200;    //最大经验值
     public int Component = 0;   //零件数
+    public GameObject burner;
     public Texture2D cursor_normal;//正常
     public Texture2D cursor_clear;//拆除
     public Texture2D cursor_isclear;//选中拆除
@@ -66,6 +67,10 @@ public class Player : MonoBehaviour
         //{
         //    Beforebuild();
         //}
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            burner.GetComponent<Burner>().Creat();
+        }
         if(Input.GetKeyDown(KeyCode.F) && isbuild == false)
         {
             Cursor.SetCursor(cursor_clear, hotpots, mode);

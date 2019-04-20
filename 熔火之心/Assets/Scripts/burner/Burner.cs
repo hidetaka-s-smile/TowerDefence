@@ -18,7 +18,7 @@ public class Burner : MonoBehaviour
     }
     public void Creat()
     {
-        GameObject NewGear = GameObject.Instantiate(gear, new Vector3(transform.position.x, transform.position.y + 5f, transform.position.z + 5f), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
+        GameObject NewGear = GameObject.Instantiate(gear, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1f), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
         NewGear.GetComponent<Gear>().num = 50;
     }
 }
