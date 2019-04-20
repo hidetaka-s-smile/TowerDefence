@@ -24,7 +24,6 @@ public class BulletfFy : MonoBehaviour
         if (Vector3.Distance(transform.position ,theTarget.position) < 10)
         {
             Destroy(this.gameObject);
-            print("1");
             if (theTarget.tag == Tags.player) 
               theTarget.GetComponent<Player>().GetDamage(theAtkValue);
             else theTarget.GetComponent<Tower>().GetDamage(theAtkValue);

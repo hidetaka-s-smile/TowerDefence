@@ -100,39 +100,47 @@ public class BossAI : MonoBehaviour
         {
             if (thePlayerTF != null)
             {
-                if (FireChance <= 4)
+                if (FireChance <= 1)
                 {
+
                     GameObject[] players = GameObject.FindGameObjectsWithTag(Tags.tower);
-                    animAction.Play(animAction.fireName);
+                    transform.LookAt(players[0].transform.position);
                     GameObject fireFX = Instantiate(fireOBJ,
-                        GameObject.FindGameObjectWithTag("head").transform.position
-                        + new Vector3(-10, 0, 0), Quaternion.Euler(0,-90,0)) as GameObject;
-                    Destroy(fireFX,0.1f);
+                            GameObject.FindGameObjectWithTag("head").transform.position
+                            + new Vector3(10, -10, 0), Quaternion.identity) as GameObject;
+                    animAction.Play(animAction.fireName);
+
+                    fireFX.transform.LookAt(players[0].transform.position);
+
+                    Destroy(fireFX, 0.3f);
                     foreach (GameObject player in players)
                     {
                         if (CalSec(player.transform))
                         {
                             //if (player.GetComponent<Player>().tag == Tags.player)
-                                player.GetComponent<Player>().GetDamage(atkValue / 2);
+                            //player.GetComponent<Player>().GetDamage(atkValue / 2);
                             //else 
                             player.GetComponent<Tower>().GetDamage(atkValue / 2);
                         }
                     }
+                    atkTime = Time.time + atkInterval; 
                 }
                 else
                 {
+                    transform.LookAt(thePlayerTF.transform.position);
                     animAction.Play(animAction.atkName);
                     Invoke("CaculateDamaga", delay);
-                }
-                atkTime = Time.time + atkInterval;
-            }
 
+                    atkTime = Time.time + atkInterval;
+                }
+
+            }
+            if (!animAction.IsPlaying(animAction.atkName))
+            {
+                animAction.Play(animAction.idleName);
+            }
+            if (motor.run()) state = State.Run;
         }
-        if (!animAction.IsPlaying(animAction.atkName))
-        {
-            animAction.Play(animAction.idleName);
-        }
-        if (motor.run()) state = State.Run;
     }
     private void Run()
     {

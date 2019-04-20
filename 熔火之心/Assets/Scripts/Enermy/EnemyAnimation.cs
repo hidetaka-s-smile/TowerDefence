@@ -24,11 +24,7 @@ public class EnemyAnimation : MonoBehaviour
     /// 闲置动画
     /// </summary>
     public string idleName = "Idle";
-    public string fastRunName = "";
-    public string fireName = "";
-    public string worryName = ""; 
-    public string flyName = "";
-    public string flyAttack = "";
+    public string fireName = "fly attack 3";
     private Animation anim;
     private void Awake()
     {

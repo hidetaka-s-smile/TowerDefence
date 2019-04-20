@@ -1859,8 +1859,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8351934559626138813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.0728, y: -1.6659, z: 6.5782}
-  m_LocalScale: {x: 4.44948, y: 4.44948, z: 4.44948}
+  m_LocalPosition: {x: 7.2606, y: -10.217, z: 9.3783}
+  m_LocalScale: {x: 20.18471, y: 20.18471, z: 20.18471}
   m_Children:
   - {fileID: 8351934559626430967}
   - {fileID: 8351934559626381453}
@@ -1876,7 +1876,7 @@ Animation:
   m_GameObject: {fileID: 8351934559626138813}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400004, guid: 48be382f2a8c6e4468ef3370f269251b, type: 3}
+  m_Animation: {fileID: 7400026, guid: 48be382f2a8c6e4468ef3370f269251b, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: 48be382f2a8c6e4468ef3370f269251b, type: 3}
   - {fileID: 7400002, guid: 48be382f2a8c6e4468ef3370f269251b, type: 3}
@@ -1916,15 +1916,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e5959ba34e09d42aa1a1aaaa55593c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runName: walk
-  atkName: attack 1
+  runName: fly forward
+  atkName: fly attack 3
   deathName: fly death
-  idleName: idle
-  fastRunName: 
-  fireName: 
-  worryName: 
-  flyName: stand to fly
-  flyAttack: fly attack 1
+  idleName: fly
+  fireName: fly attack 1
 --- !u!114 &3880167136991925559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1939,7 +1935,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thePlayerTF: {fileID: 0}
   firstTargetTag: Player
-  moveSpeed: 10
+  moveSpeed: 45
 --- !u!114 &1676301856544463686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1972,7 +1968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
+  MoveSpeed: 45
   ColliderDistance: 2
   ObstacleTags:
   - Enemy
@@ -1989,10 +1985,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58cdf72269722d046924eda3a657a259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireOBJ: {fileID: 0}
+  fireOBJ: {fileID: 3628799806227511670, guid: 45a79b089c464af4c810c19d6991a8e0, type: 3}
   atkValue: 10
   thePlayerTF: {fileID: 0}
-  atkInterval: 3
+  atkInterval: 5
   delay: 0.3
   state: 2
 --- !u!1 &8351934559626138931

@@ -19,12 +19,10 @@ public class EnemyMotor : MonoBehaviour
     public float moveSpeed = 10;
     private void Awake()
     {
-        if (thePlayerTF == null)
-        {
-            if (!GameObject.FindGameObjectWithTag(firstTargetTag).transform)
+        if(thePlayerTF==null)
+            if (GameObject.FindGameObjectWithTag(firstTargetTag).transform==false)
                 thePlayerTF = thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
             else thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform;
-        } 
     }
 
     void Start()
@@ -34,16 +32,16 @@ public class EnemyMotor : MonoBehaviour
     }
     private void Update()
     {
-        if (thePlayerTF == null ||thePlayerTF.GetComponent<Tower>().hp<=0 )  
+        if (thePlayerTF == null)
         {
-            if ((thePlayerTF = GameObject.FindGameObjectsWithTag(firstTargetTag)[1].transform) == null)
+            if ((thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform) == null)
                 thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
         }
     }
     //执行寻路 如果攻击进入范围返回F 给状态类切换状态
     public bool run()
     {
-        
+        if (thePlayerTF == null) return true;
         if (Vector3.Distance(thePlayerTF.position, transform.position) < atkRange )
         {
             return false;
