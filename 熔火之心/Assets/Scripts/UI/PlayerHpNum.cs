@@ -16,6 +16,6 @@ public class PlayerHpNum : MonoBehaviour
 
     private void Update()
     {
-        numText.text = slider.GetCurVal().ToString() + "/500";
+        numText.text = ((int)slider.GetCurVal()).ToString() + "/500";
     }
 }
