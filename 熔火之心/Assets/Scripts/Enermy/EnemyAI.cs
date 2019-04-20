@@ -133,7 +133,7 @@ public class EnemyAI : MonoBehaviour
     {
 
         GameObject FxObj = Instantiate(dizzOBJ,
-        transform.position + new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        transform.position + new Vector3(0, 1, 0), Quaternion.identity) as GameObject;
         Destroy(FxObj, recoveyTime);
         motor.moveSpeed =0;
         atkInterval =100;

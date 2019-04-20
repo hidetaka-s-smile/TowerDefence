@@ -11,12 +11,11 @@ public class ColdBullet : Bullet
     {
         if (other.tag == "Enemy")
         {
-            
+            Die();
+            other.GetComponent<EnemyStatusInfo>().Damage(damage);
             //调用敌人受伤方法  伤害值暂时为5
             //冰冻
             other.GetComponent<EnemyAI>().frozen(debuff, debufftime);
-            other.GetComponent<EnemyStatusInfo>().Damage(damage);
-            Die();
             
             return;
         }
