@@ -61,10 +61,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            GetDamage(60);
-        }
         transform.localEulerAngles = new Vector3(0.0f, transform.localEulerAngles.y, 0.0f);
         //if (Input.GetKeyDown(KeyCode.Q) && isbuild == false)
         //{
