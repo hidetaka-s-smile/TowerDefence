@@ -51,8 +51,12 @@ public class Tower : MonoBehaviour
 
     public virtual void Update()
     {
-        //如果不在建造中
-        if(IsBuilding==false)
+        if (enemys.Count == 0)
+        {
+            timer = 0;
+        }
+            //如果不在建造中
+            if (IsBuilding==false)
         {
             //塔的头部跟随敌人
             if (enemys.Count > 0)
