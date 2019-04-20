@@ -215,6 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb025088ebf98e0488baf1843657f54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identy: {fileID: 0}
+  audios: {fileID: 0}
+  fire: {fileID: 0}
   IsBuilding: 0
   buildTime: 6
   buildCost: 30
@@ -228,8 +231,8 @@ MonoBehaviour:
   firepostion: {fileID: 298865028}
   head: {fileID: 3191711242960242851}
   enemys: []
-  hpBarSlider: {fileID: 1156797091355807304}
-  gear: {fileID: 2230413465281151538, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
+  hpBarSlider: {fileID: 0}
+  gear: {fileID: 890649089358820366, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
   NewGear: {fileID: 0}
 --- !u!54 &2323696026662591698
 Rigidbody:

@@ -237,20 +237,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8625f1b163be4469fe7c6b9ddc24e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identy: {fileID: 0}
+  audios: {fileID: 0}
+  fire: {fileID: 0}
   IsBuilding: 0
   buildTime: 3
   buildCost: 20
   hp: 120
   hpMax: 120
-  ad: 100
+  ad: 25
   bulletPrefeb: {fileID: 3541070212035966288}
   attackRateTime: 0
   timer: 0
   firepostion: {fileID: 2944127357955485688}
   head: {fileID: 5726151586376023297}
   enemys: []
-  hpBarSlider: {fileID: 6301309170690203958}
-  gear: {fileID: 2230413465281151538, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
+  hpBarSlider: {fileID: 0}
+  gear: {fileID: 890649089358820366, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
   NewGear: {fileID: 0}
   laserReanderer: {fileID: 1686433134}
 --- !u!54 &8543858422247051534

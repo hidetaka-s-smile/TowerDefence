@@ -559,6 +559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0de79768fae1f8444aba5a76bed5592e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identy: {fileID: 0}
+  audios: {fileID: 0}
+  fire: {fileID: 0}
   IsBuilding: 0
   buildTime: 2
   buildCost: 20
@@ -573,7 +576,7 @@ MonoBehaviour:
   head: {fileID: 6027428209079036577}
   enemys: []
   hpBarSlider: {fileID: 0}
-  gear: {fileID: 0}
+  gear: {fileID: 890649089358820366, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
   NewGear: {fileID: 0}
 --- !u!65 &5466416049346729808
 BoxCollider:

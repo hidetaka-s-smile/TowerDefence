@@ -137,11 +137,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6622a4536f3d0bf4fbb792d3a71b40b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 300
+  damage: 40
   bombpostion: {fileID: 6975472388648162202}
   Bombprafeb: {fileID: 4692695334569503003, guid: 8133ca4448e47914894edd3ae414fc2f,
     type: 3}
-  speed: 15
+  speed: 30
   target: {fileID: 0}
   distanceMax: 30
 --- !u!54 &6622676328637171576

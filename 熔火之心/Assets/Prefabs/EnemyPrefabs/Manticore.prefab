@@ -1953,8 +1953,8 @@ MonoBehaviour:
   Isdead: 0
   atkExecuteRange: 40
   atkRange: 45
-  currentHP: 1000
-  maxHP: 1000
+  currentHP: 2000
+  maxHP: 2000
   exp: 0
   deathDelay: 10
 --- !u!114 &5401707421738236355
@@ -1990,10 +1990,10 @@ MonoBehaviour:
     type: 3}
   dizzOBJ: {fileID: 585155957668537751, guid: 403a0dabf77eddb41bcf478b2b63a530, type: 3}
   fireOBJ: {fileID: 3628799806227511670, guid: 45a79b089c464af4c810c19d6991a8e0, type: 3}
-  atkValue: 10
+  atkValue: 100
   thePlayerTF: {fileID: 0}
-  atkInterval: 3.5
-  delay: 0.3
+  atkInterval: 150
+  delay: 0.1
   state: 2
 --- !u!65 &7635693827666468574
 BoxCollider:

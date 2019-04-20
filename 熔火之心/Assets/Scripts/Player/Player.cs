@@ -346,10 +346,11 @@ public class Player : MonoBehaviour
         hpBarSlider.ChangeValue(Hp);
         if (Hp <= 0)
         {
+            CanMove = false;
+            anima.SetBool("die", true);
             //播放死亡音效
             gameObject.GetComponent<PlayerAudio>().DieAudio();
             //角色死亡，游戏结束，调用关卡管理器的游戏结束事件
-            anima.SetBool("die", true);
             if (GameManager.instance.gameStatus != GameStatus.GameOver)
             {
                 GameManager.instance.GameOver();

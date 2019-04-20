@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6167da1838a090f4da815404db2e32df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
-  speed: 40
+  damage: 20
+  speed: 50
   target: {fileID: 0}
   Isdebuff: 0
   debuff: 2
