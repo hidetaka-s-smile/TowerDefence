@@ -114,4 +114,12 @@ public class GameManager : MonoBehaviour
         //切换到场景2
         //白色屏幕放大
     }
+
+    /// <summary>
+    /// 回到标题界面
+    /// </summary>
+    public void OnTitleBtn()
+    {
+        //切换到场景1
+    }
 }

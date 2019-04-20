@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>
 /// 音频管理器
@@ -9,6 +10,7 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager _instance;
 
+    public Slider slider;
     public AudioClip btnClip;
 
     private AudioSource audioSource;
@@ -34,5 +36,13 @@ public class AudioManager : MonoBehaviour
     public void Play2DClip(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
+    }
+    
+    /// <summary>
+    /// 滑动条调整音量
+    /// </summary>
+    public void ControlVolume()
+    {
+        audioSource.volume = slider.value;
     }
 }
