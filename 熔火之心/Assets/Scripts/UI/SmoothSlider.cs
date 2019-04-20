@@ -38,7 +38,6 @@ public class SmoothSlider : MonoBehaviour
         targetValue = currentValue;
         maxValue = hpMax;       
     }
-
     /// <summary>
     /// 更改目标值
     /// </summary>
@@ -46,7 +45,6 @@ public class SmoothSlider : MonoBehaviour
     {
         targetValue = newValue;
     }
-
     /// <summary>
     /// 更改最大值
     /// </summary>
@@ -55,7 +53,6 @@ public class SmoothSlider : MonoBehaviour
     {
         maxValue = newMaxVal;
     }
-
     /// <summary>
     /// 获得当前值
     /// </summary>

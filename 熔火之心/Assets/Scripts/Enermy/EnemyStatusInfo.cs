@@ -36,6 +36,7 @@ public class EnemyStatusInfo : MonoBehaviour
     {
         blood = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Player>();
+        hpBarSlider.InitValue(currentHP, maxHP);
     }
 
 
@@ -58,12 +59,12 @@ public class EnemyStatusInfo : MonoBehaviour
     /// 死亡延迟时间
     /// </summary>
     public float deathDelay = 10;
-    //敌人生成器引用  敌人创建时由生成器传递
+    
 
     private void Start()
     {
         blood = GetComponentInChildren<ParticleSystem>();
-        hpBarSlider.InitValue(currentHP, maxHP);
+
     }
 
     /// <summary>
