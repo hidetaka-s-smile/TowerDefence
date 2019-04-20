@@ -4,11 +4,11 @@ using UnityEngine;
 /// <summary>
 /// 人工智能
 /// </summary>
-[RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo) ) ]
+[RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo))]
 [RequireComponent(typeof(EnemyInspectTower))]
 public class BossAI : MonoBehaviour
-{
-    public GameObject bullet;
+{ 
+    public GameObject fireOBJ;
     public int atkValue = 10;
     private EnemyStatusInfo theSta;
     private EnemyInspectTower theObstaclesInspect;
@@ -93,20 +93,37 @@ public class BossAI : MonoBehaviour
     }
     private void Attack()
     {
-
+        int FireChance = Random.Range(0, 4);
         //限制攻击频率
         //播放攻动画
         if (atkTime <= Time.time)
         {
             if (thePlayerTF != null)
             {
-                animAction.Play(animAction.atkName);
-                if (bullet != null)
+                if (FireChance <= 4)
                 {
-                    GameObject bulletGO = Instantiate(bullet, transform.position + new Vector3(2, 4, 2), Quaternion.identity) as GameObject;
-                    bulletGO.GetComponent<BulletfFy>().ini(thePlayerTF, atkValue);
+                    GameObject[] players = GameObject.FindGameObjectsWithTag(Tags.tower);
+                    animAction.Play(animAction.fireName);
+                    GameObject fireFX = Instantiate(fireOBJ,
+                        GameObject.FindGameObjectWithTag("head").transform.position
+                        + new Vector3(-10, 0, 0), Quaternion.Euler(0,-90,0)) as GameObject;
+                    Destroy(fireFX,0.1f);
+                    foreach (GameObject player in players)
+                    {
+                        if (CalSec(player.transform))
+                        {
+                            //if (player.GetComponent<Player>().tag == Tags.player)
+                                player.GetComponent<Player>().GetDamage(atkValue / 2);
+                            //else 
+                            player.GetComponent<Tower>().GetDamage(atkValue / 2);
+                        }
+                    }
                 }
-                else Invoke("CaculateDamaga", delay);
+                else
+                {
+                    animAction.Play(animAction.atkName);
+                    Invoke("CaculateDamaga", delay);
+                }
                 atkTime = Time.time + atkInterval;
             }
 
@@ -141,4 +158,33 @@ public class BossAI : MonoBehaviour
         atkInterval = RecoveyAtk;
         print("a");
     }
+    public bool CalSec(Transform target)
+    {
+        Transform Target = target; 
+        float SkillDistance = 2 * theAtkRange;//扇形距离
+        float SkillAng = 60;//扇形的角度
+        float distance = Vector3.Distance(transform.position, Target.position);//距离
+        Vector3 norVec = transform.rotation * Vector3.forward * 5;
+        Vector3 temVec = Target.position - transform.position;
+        Debug.DrawLine(transform.position, norVec, Color.red);//画出技能释放者面对的方向向量
+        Debug.DrawLine(transform.position, Target.position, Color.green);//画出技能释放者与目标点的连线
+        float angle = Mathf.Acos(Vector3.Dot(norVec.normalized, temVec.normalized)) * Mathf.Rad2Deg;
+        if (distance < SkillDistance && angle < SkillAng * 0.5f)
+        {
+            Debug.Log("在扇形范围内");
+            return true;
+        }
+        else return false;
+    }
+
 }
+        
+        
+
+
+
+
+    
+
+    
+
