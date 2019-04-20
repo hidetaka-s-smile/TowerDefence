@@ -14,6 +14,8 @@ TagManager:
   - Enemy
   - AtkP
   - DamP
+  - head
+  - Empty
   layers:
   - Default
   - TransparentFX

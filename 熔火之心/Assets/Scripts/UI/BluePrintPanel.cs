@@ -39,6 +39,7 @@ public class BluePrintPanel : MonoBehaviour
     /// </summary>
     public void OnPanelEnter()
     {
+        AudioManager.instance.PlayBluePrintClip();
         if (NewTowerNoticePointer.instance.IsShow)
             NewTowerNoticePointer.instance.Hide();
         if (!isOpen && !anim.isPlaying)
@@ -53,7 +54,8 @@ public class BluePrintPanel : MonoBehaviour
     /// 面板离开游戏界面
     /// </summary>
     public void OnPanelExit()
-    {       
+    {
+        AudioManager.instance.PlayBluePrintClip();
         if (isOpen && !anim.isPlaying)
         {
             isOpen = false;
@@ -70,8 +72,12 @@ public class BluePrintPanel : MonoBehaviour
         if (curIndex > 0)
         {
             NewTowerNoticePointer.instance.Show();
-        }        
-        TowerInfo newTowerInfo = TowerInfos.instance.GetTowerInfo(towerIdArray[curIndex]);
+        }
+        TowerInfo newTowerInfo = new TowerInfo();
+        if (curIndex < towerIdArray.Length)
+        {
+            newTowerInfo = TowerInfos.instance.GetTowerInfo(towerIdArray[curIndex]);
+        }
         curIndex++;
         // 超过两张图纸 显示滑动条
         if (curIndex > 2)

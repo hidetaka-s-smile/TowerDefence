@@ -5,10 +5,26 @@ using UnityEngine;
 public class SettingPanel : MonoBehaviour
 {
     private Animation anim;
+    private bool isOpen = false;
 
     private void Awake()
     {
         anim = gameObject.GetComponent<Animation>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isOpen)
+            {
+                OnOpenBtn();
+            }
+            else
+            {
+                OnCloseBtn();
+            }    
+        }
     }
 
     /// <summary>
@@ -16,8 +32,11 @@ public class SettingPanel : MonoBehaviour
     /// </summary>
     public void OnOpenBtn()
     {
+        isOpen = true;
+        AudioManager.instance.PlaySettingClip();
         anim.Play("SettingPanelEnter");
         //GameManager.instance.Pause();
+        
     }
 
     /// <summary>
@@ -25,6 +44,8 @@ public class SettingPanel : MonoBehaviour
     /// </summary>
     public void OnCloseBtn()
     {
+        isOpen = false;
+        AudioManager.instance.PlaySettingClip();
         anim.Play("SettingPanelExit");
         //GameManager.instance.Run();
     }
