@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// 游戏运行状态
@@ -29,18 +30,6 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            GameOverUI.instance.Show();
-        }
-        if (Input.GetKeyDown(KeyCode.M))
-        {   
-            GameWinUI.instance.Show();
-        }
     }
 
     /// <summary>
@@ -111,6 +100,7 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayButtonClip();
         //切换到场景3
+        SceneManager.LoadScene(2);
         //黑色屏幕放大
     }
 
@@ -121,6 +111,7 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayButtonClip();
         //切换到场景2
+        SceneManager.LoadScene(1);
         //白色屏幕放大
     }
 
@@ -131,5 +122,6 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayButtonClip();
         //切换到场景1
+        SceneManager.LoadScene(0);
     }
 }

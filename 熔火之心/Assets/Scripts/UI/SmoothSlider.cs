@@ -60,4 +60,9 @@ public class SmoothSlider : MonoBehaviour
     {
         return currentValue;
     }
+
+    public float GetMaxVal()
+    {
+        return maxValue;
+    }
 }

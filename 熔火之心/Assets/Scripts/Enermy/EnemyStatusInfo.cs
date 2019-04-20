@@ -34,6 +34,12 @@ public class EnemyStatusInfo : MonoBehaviour
 
     private void Awake()
     {
+        //BOSS一登场就出现状态栏
+        if(gameObject.tag == Tags.boss)
+        {
+            BossStatusUI.instance.ShowStatus();
+            hpBarSlider = GameObject.FindGameObjectWithTag(Tags.bossSlider).GetComponent<SmoothSlider>();
+        }     
         blood = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Player>();
         hpBarSlider.InitValue(currentHP, maxHP);
@@ -54,6 +60,13 @@ public class EnemyStatusInfo : MonoBehaviour
         if (currentHP <= 0)
             Death();
         blood.Play();
+        //如果是BOSS，则半血一下进入狂暴模式
+        if (gameObject.tag == Tags.boss)
+        {
+            //咆哮一声
+            //音乐变更
+            AudioManager.instance.PlayCreazyBossBGM();
+        }
     }
     /// <summary>
     /// 死亡延迟时间
@@ -73,6 +86,12 @@ public class EnemyStatusInfo : MonoBehaviour
     public void Death()
     {
         Isdead = true;
+        //如果是BOSS则把状态栏隐藏,并游戏胜利
+        if (gameObject.tag == Tags.boss)
+        {
+            BossStatusUI.instance.Hide();
+            GameManager.instance.GameWin();
+        }
         //销毁当前游戏物体
         Destroy(gameObject, deathDelay);
         //播放动画

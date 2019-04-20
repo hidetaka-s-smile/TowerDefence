@@ -17,7 +17,7 @@ public class SystemLevelEditor : MonoBehaviour
     /// <summary>
     /// 总关卡数
     /// </summary>
-    public int maxLevel = 10;
+    public int maxLevel = 5;
     /// <summary>
     /// 当前关卡
     /// </summary>
@@ -52,8 +52,7 @@ public class SystemLevelEditor : MonoBehaviour
     public void MonsterAutoGrow()
     {
         LevelNumTxt.instance.ShowLevelNum(currentLevel);
-        if(currentLevel==5) GameObject.Instantiate(boss, transform.position + new Vector3(4, 0, 4), Quaternion.identity);
-        else theMonsterGrow.monsterAutoGrow(currentLevel, monsterTypeNumberForEachLevel[currentLevel - 1]);
+        theMonsterGrow.monsterAutoGrow(currentLevel, monsterTypeNumberForEachLevel[currentLevel - 1]);
     }
     /// <summary>
     /// 怪物死亡清算
@@ -62,7 +61,7 @@ public class SystemLevelEditor : MonoBehaviour
     {
         nowDeathCnt++;
         //每次有怪物死亡就判断，如果怪物全死亡 一关结束 计时器开始
-        if (currentLevel!=5&&nowDeathCnt >= monsterCntForEachLevel[currentLevel - 1])
+        if (currentLevel != maxLevel && nowDeathCnt >= monsterCntForEachLevel[currentLevel - 1])
         {
             //熔炉生成零件
             Burner.instance.Creat();
@@ -74,15 +73,13 @@ public class SystemLevelEditor : MonoBehaviour
         }
         if (currentLevel == maxLevel)
         {
-            print("Boss关卡开始");
+            //告知这次倒计时为boss倒计时
+            CountDownTimer.instance.isBoss = true;
             Burner.instance.Creat();
             nowDeathCnt = 0;
             //显示关卡完成后开始计时
             CompletedTxt.instance.Show();
-            Invoke("ShowTimer", 2.0f);
-            //播放登场动画
-            //播放BOSS关卡Notice
-            BossLevelTxt.instance.Show();
+            Invoke("ShowTimer", 2.0f);           
         }
     }
     /// <summary>
@@ -90,7 +87,21 @@ public class SystemLevelEditor : MonoBehaviour
     /// </summary>
     private void ShowTimer()
     {
-        CountDownTimer.instance.ShowTimer();
+        CountDownTimer.instance.ShowTimer();       
+    }
+
+    /// <summary>
+    /// 开始boss关卡
+    /// </summary>
+    public void StartBossLevel()
+    {
+        //生成BOSS
+        GameObject.Instantiate(boss, transform.position + new Vector3(4, 0, 4), Quaternion.identity);
+        //播放登场动画
+        //播放BOSS关卡Notice
+        BossLevelTxt.instance.Show();
+        //更换音乐
+        AudioManager.instance.PlayBossBGM();
     }
 }
 

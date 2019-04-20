@@ -14,4 +14,6 @@ public class Tags
     public const string shopNPC = "ShopNPC";            //商人
     public const string shortcut = "Shortcut";          //快捷栏
     public const string shortcutIcon = "ShortcutIcon";  //快捷栏图标
+    public const string boss = "Boss";                  //BOSS
+    public const string bossSlider = "BossSlider";      //BOSS血条
 }

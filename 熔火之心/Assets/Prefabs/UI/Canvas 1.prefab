@@ -506,9 +506,10 @@ GameObject:
   m_Component:
   - component: {fileID: 362565459}
   - component: {fileID: 362565460}
+  - component: {fileID: 1576784073}
   m_Layer: 5
   m_Name: HpSlider
-  m_TagString: Untagged
+  m_TagString: BossSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -584,6 +585,19 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1576784073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362565458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c32e0fd9cf9b5c45b61330a1c1f410f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothing: 5
 --- !u!1 &580833872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,13 +1777,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1358121448}
+  - component: {fileID: 1166108484}
   m_Layer: 5
   m_Name: BossStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1358121448
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1792,6 +1807,18 @@ RectTransform:
   m_AnchoredPosition: {x: -359.74, y: -159.3}
   m_SizeDelta: {x: 719.4, y: 318.5}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1166108484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358121447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9adb3673528b645828744205b503f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404863553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2352,7 +2379,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3221,6 +3248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 4200669861055401541}
+  maxHp: 500
 --- !u!1 &1429852616689624212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3850,6 +3878,7 @@ GameObject:
   - component: {fileID: 1723696001888094121}
   - component: {fileID: 8273817375789276467}
   - component: {fileID: 6745991047296558920}
+  - component: {fileID: 1281930538}
   m_Layer: 5
   m_Name: HpText
   m_TagString: Untagged
@@ -3948,6 +3977,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 3, y: -3}
   m_UseGraphicAlpha: 1
+--- !u!114 &1281930538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030037056373825551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfe9aaad63381147b9373c01e4c410a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1576784073}
+  maxHp: 8000
 --- !u!1 &3223454432784712815
 GameObject:
   m_ObjectHideFlags: 0
@@ -6775,15 +6818,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 132e9974f5ab54b4893cdcb4b87eec1b, type: 3}
---- !u!224 &3500287351347731899 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7336434848157621065, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
-    type: 3}
-  m_PrefabInstance: {fileID: 6143970178211546866}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3500287351347731844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7336434848157621110, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6143970178211546866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3500287351347731899 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7336434848157621065, guid: 132e9974f5ab54b4893cdcb4b87eec1b,
     type: 3}
   m_PrefabInstance: {fileID: 6143970178211546866}
   m_PrefabAsset: {fileID: 0}

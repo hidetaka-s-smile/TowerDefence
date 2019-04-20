@@ -9,6 +9,8 @@ public class CountDownTimer : MonoBehaviour
     public static CountDownTimer instance;
 
     public int originTime = 30;//倒计时的时间
+    [HideInInspector]
+    public bool isBoss = false;
 
     private Text timerText;
     private int remainTime = 30;//剩余时间
@@ -68,6 +70,15 @@ public class CountDownTimer : MonoBehaviour
         anim.Stop();
         timerText.enabled = false;
         //调用关卡管理器的开始生成敌人
-        SystemLevelEditor.instance.MonsterAutoGrow();
+        if (isBoss)
+        {
+            //进入boss关卡
+            SystemLevelEditor.instance.StartBossLevel();
+        }
+        else
+        {
+            //按关卡生成
+            SystemLevelEditor.instance.MonsterAutoGrow();
+        }
     }
 }
