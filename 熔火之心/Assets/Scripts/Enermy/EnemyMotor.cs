@@ -34,12 +34,11 @@ public class EnemyMotor : MonoBehaviour
     }
     private void Update()
     {
-        if (thePlayerTF == null)
+        if (thePlayerTF == null ||thePlayerTF.GetComponent<Tower>().hp<=0 )  
         {
-            if ((thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform) == null)
+            if ((thePlayerTF = GameObject.FindGameObjectsWithTag(firstTargetTag)[1].transform) == null)
                 thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
         }
-
     }
     //执行寻路 如果攻击进入范围返回F 给状态类切换状态
     public bool run()

@@ -1916,15 +1916,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e5959ba34e09d42aa1a1aaaa55593c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runName: Run
-  atkName: Attack01
-  deathName: Dead
-  idleName: Idle
+  runName: walk
+  atkName: attack 1
+  deathName: fly death
+  idleName: idle
   fastRunName: 
   fireName: 
   worryName: 
-  flyName: 
-  flyAttack: 
+  flyName: stand to fly
+  flyAttack: fly attack 1
 --- !u!114 &3880167136991925559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1954,10 +1954,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBarSlider: {fileID: 0}
   Isdead: 0
-  atkExecuteRange: 0
-  atkRange: 0
-  currentHP: 0
-  maxHP: 0
+  atkExecuteRange: 40
+  atkRange: 45
+  currentHP: 1000
+  maxHP: 1000
+  exp: 0
   deathDelay: 10
 --- !u!114 &5401707421738236355
 MonoBehaviour:
