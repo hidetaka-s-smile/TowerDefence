@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public Texture2D cursor_clear;//拆除
     public Texture2D cursor_isclear;//选中拆除
     public GameObject MoveEffect;
+    public GameObject BuildAudio;
     public Vector2 hotpots = Vector2.zero;
     public CursorMode mode = CursorMode.Auto;
     private Transform m_Transform;
@@ -245,12 +246,14 @@ public class Player : MonoBehaviour
             anima.SetBool("attack1", true);
             CanMove = false;
             anima.SetBool("run", false);
+            BuildAudio.GetComponent<AudioSource>().Play();
             if (!BuildLoader.instance.isLoading)
             {
-                BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime * 1.0f);
+                BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime);
+                BuildAudio.GetComponent<AudioSource>().Play();
             }
             BuildTime++;
-            if (BuildTime > newTower.GetComponent<Tower>().buildTime * 40)
+            if (BuildTime >= newTower.GetComponent<Tower>().buildTime * 52)
             {
                 BuildEnd();
                 BuildTime = 0;
@@ -282,10 +285,11 @@ public class Player : MonoBehaviour
             //炮塔摧毁中
             if (!BuildLoader.instance.isLoading)
             {
-                BuildLoader.instance.BuildLoad(clearTower.GetComponent<Tower>().buildTime * 1.0f);
+                BuildLoader.instance.BuildLoad(clearTower.GetComponent<Tower>().buildTime);
+                BuildAudio.GetComponent<AudioSource>().Play();
             }
             clearTower.GetComponent<Tower>().IsBuilding = true;
-            if (BuildTime > clearTower.GetComponent<Tower>().buildTime * 30)
+            if (BuildTime >= clearTower.GetComponent<Tower>().buildTime * 52)
             {
                 ClearEnd();
                 BuildTime = 0;
@@ -298,7 +302,9 @@ public class Player : MonoBehaviour
         newTower.GetComponent<Tower>().IsBuilding=false;
         isbuild = false;
         CanMove = true;
+        BuildLoader.instance.HideLoader();
         anima.SetBool("attack1", false);
+        BuildAudio.GetComponent<AudioSource>().Stop();
         for (int i = 0; i < 3; i++)
         {
             Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
@@ -313,7 +319,9 @@ public class Player : MonoBehaviour
         Cursor.SetCursor(cursor_normal, hotpots, mode);
         isclear = false;
         CanMove = true;
+        BuildLoader.instance.HideLoader();
         anima.SetBool("attack1", false);
+        BuildAudio.GetComponent<AudioSource>().Stop();
         clearTower.GetComponent<Tower>().BeDestroyed();
     }
 

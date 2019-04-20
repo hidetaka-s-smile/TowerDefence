@@ -62,7 +62,7 @@ public class BuildLoader : MonoBehaviour
     /// <summary>
     /// 隐藏读条
     /// </summary>
-    private void HideLoader()
+    public void HideLoader()
     {
         bg.enabled = false;
         fill.enabled = false;

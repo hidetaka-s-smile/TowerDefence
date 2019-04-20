@@ -19126,7 +19126,6 @@ GameObject:
   - component: {fileID: 1786158934674236444}
   - component: {fileID: 1786158934675203804}
   - component: {fileID: 1786158934673209371}
-  - component: {fileID: 1786158934673209370}
   m_Layer: 0
   m_Name: Tow_Tesla1
   m_TagString: Tower
@@ -19210,19 +19209,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &1786158934673209370
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786158934673209368}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4656601, y: 2.1965876, z: 1.4656599}
-  m_Center: {x: 0, y: 1.0753827, z: 0.0008519888}
 --- !u!1 &1786158934673209372
 GameObject:
   m_ObjectHideFlags: 0
@@ -28836,6 +28822,7 @@ GameObject:
   - component: {fileID: 7042741855691313177}
   - component: {fileID: 8647016916190729381}
   - component: {fileID: 5655191331295942000}
+  - component: {fileID: 8790056835277080385}
   m_Layer: 9
   m_Name: "\u7535\u78C1\u5854"
   m_TagString: Tower
@@ -28965,3 +28952,16 @@ MonoBehaviour:
   hpBarSlider: {fileID: 4659884338559121857}
   gear: {fileID: 890649089358820366, guid: d83511767e9ea0a4c9d5f01a36b45b7c, type: 3}
   NewGear: {fileID: 0}
+--- !u!65 &8790056835277080385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7042741855691313251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.46566, y: 2.196588, z: 1.46566}
+  m_Center: {x: 0, y: 1.075383, z: 0.0008519888}
