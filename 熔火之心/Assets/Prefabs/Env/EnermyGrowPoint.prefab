@@ -115,15 +115,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8bd57b96c03434dbf4195ccb0efb58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 8351934559626138813, guid: 8da43acadffbad944a30586d4380c304, type: 3}
   maxLevel: 5
   currentLevel: 1
   monsterType:
-  - {fileID: 100000, guid: a1fa4dde4e1d56144b7b8494a1f32ce1, type: 3}
   - {fileID: 100000, guid: ec15986fc83fedc4786cef8b60135339, type: 3}
-  - {fileID: 100000, guid: 0821e72013843fb48aeb8e9684cc605e, type: 3}
+  - {fileID: 100000, guid: a1fa4dde4e1d56144b7b8494a1f32ce1, type: 3}
   - {fileID: 100118, guid: 2dc7fd707639358488ce5b5f66909ed7, type: 3}
-  monsterTypeNumberForEachLevel: 0100000002000000030000000400000004000000
-  monsterCntForEachLevel: 0a0000000a0000000a0000000a0000000a000000
+  - {fileID: 100000, guid: 0821e72013843fb48aeb8e9684cc605e, type: 3}
+  monsterTypeNumberForEachLevel: 0400000004000000040000000400000004000000
+  monsterCntForEachLevel: 0500000006000000060000000700000001000000
 --- !u!114 &6658226139017268006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,22 +234,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 8d718d9d91e191749a9e7421dbb6fe06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 8d718d9d91e191749a9e7421dbb6fe06, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 8d718d9d91e191749a9e7421dbb6fe06, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 8d718d9d91e191749a9e7421dbb6fe06, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 8d718d9d91e191749a9e7421dbb6fe06, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d718d9d91e191749a9e7421dbb6fe06, type: 3}

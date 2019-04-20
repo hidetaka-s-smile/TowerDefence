@@ -15,10 +15,6 @@ public class MonsterAutoGrowEditor : MonoBehaviour
     private int tempDelay;
     private GameObject[] MonsterTypePrefabs;
     /// <summary>
-    /// 要生成敌人的数量
-    /// </summary>
-    private int maxCnt;
-    /// <summary>
     /// 改关的怪物种类数
     /// </summary>
     private int typeCnt;
@@ -30,28 +26,57 @@ public class MonsterAutoGrowEditor : MonoBehaviour
     /// <summary>
     /// 生成怪物
     /// </summary>
-    public void CreateEnemy()
+    public void monsterAutoGrow(int CurrentLevel, int theTypeCnt)
     {
-        int tempRandomIndex = Random.Range(0, typeCnt);
-        GameObject.Instantiate(MonsterTypePrefabs[tempRandomIndex] 
-            ,transform.position+new Vector3(4,0,4), Quaternion.identity);
-    }
-
-    public void monsterAutoGrow(int theMaxCnt, int theTypeCnt)
-    {
-        maxCnt = theMaxCnt;
+        int theCurrentLevel = CurrentLevel;
         typeCnt = theTypeCnt;
-        int nowCnt = 0;///当前关卡敌人生成数
         tempDelay = maxMonsterGrowDelay;
-        while (nowCnt < maxCnt)
+        switch (CurrentLevel)
         {
-            nowCnt++;
-            Invoke("CreateEnemy", tempDelay*Time.deltaTime);
-            tempDelay +=maxMonsterGrowDelay;
+            case 1:
+                for(int i = 1; i <= 5; i++)
+                {
+                    CreateEnemy(0);
+                    tempDelay += maxMonsterGrowDelay;
+                }
+                break;
+            case 2:
+                for(int i = 1; i <= 6; i++)
+                {
+                    if (i <= 3)
+                    {
+                        CreateEnemy(0);
+                        tempDelay += maxMonsterGrowDelay;
+                    }
+                    else
+                    {
+                        CreateEnemy(1);
+                        tempDelay += maxMonsterGrowDelay;
+                    }
+                }
+                break;
+            case 3:
+                for(int i = 1; i <= 6; i++)
+                {
+                    int k = (i + 1) / 2;
+                    CreateEnemy(k);
+                }
+                break;
+            case 4:
+                for(int i = 1; i <= 7; i++)
+                {
+                    int k = (i + 1) / 2;
+                    if (k == 4) k--;
+                    CreateEnemy(k + 1);
+                }
+                break;
         }
+        
     }
 
-
-
-
+    public void CreateEnemy(int theType)
+    {
+        GameObject.Instantiate( MonsterTypePrefabs[theType]
+            , transform.position + new Vector3(4, 0, 4), Quaternion.identity);
+    }
 }

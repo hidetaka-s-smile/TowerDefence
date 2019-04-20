@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7975739984356173369}
   m_Layer: 0
   m_Name: mon_orgeHitter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 8}
+  m_LocalPosition: {x: 0.050765, y: -10.43, z: -1.256}
+  m_LocalScale: {x: 14.0464, y: 14.0464, z: 14.0464}
   m_Children:
   - {fileID: 400116}
   - {fileID: 400118}
@@ -79,6 +79,7 @@ MonoBehaviour:
   atkName: Attack01
   deathName: Dead
   idleName: Idle
+  fireName: fly attack 3
 --- !u!114 &4942227838394504832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,8 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayerTF: {fileID: 0}
-  firstTargetTag: Player
-  moveSpeed: 10
+  firstTargetTag: Tower
+  moveSpeed: 15
 --- !u!114 &7327084878430815395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,8 +111,9 @@ MonoBehaviour:
   Isdead: 0
   atkExecuteRange: 20
   atkRange: 30
-  currentHP: 200
-  maxHP: 200
+  currentHP: 300
+  maxHP: 300
+  exp: 35
   deathDelay: 10
 --- !u!114 &3202441939178910177
 MonoBehaviour:
@@ -125,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 10
+  MoveSpeed: 15
   ColliderDistance: 3
   ObstacleTags:
   - Enemy
@@ -142,6 +144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f876e55bd9ad5746b7ea08ff476a4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frozenOBJ: {fileID: 809337128676663924, guid: 2fc948c7383407947bc0d160f8d1b0ef,
+    type: 3}
+  dizzOBJ: {fileID: 585155957668537751, guid: 403a0dabf77eddb41bcf478b2b63a530, type: 3}
   bullet: {fileID: 0}
   atkValue: 20
   thePlayerTF: {fileID: 0}

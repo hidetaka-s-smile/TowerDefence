@@ -122,11 +122,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBarSlider: {fileID: 8905051061352082046}
   Isdead: 0
-  atkExecuteRange: 50
-  atkRange: 60
+  atkExecuteRange: 60
+  atkRange: 70
   currentHP: 100
   maxHP: 100
-  exp: 0
+  exp: 60
   deathDelay: 10
 --- !u!114 &6389608141472651780
 MonoBehaviour:
@@ -161,9 +161,9 @@ MonoBehaviour:
     type: 3}
   dizzOBJ: {fileID: 585155957668537751, guid: 403a0dabf77eddb41bcf478b2b63a530, type: 3}
   bullet: {fileID: 6883218841979992134, guid: 49cffb4c5de295743a369e85cc98d279, type: 3}
-  atkValue: 10
+  atkValue: 15
   thePlayerTF: {fileID: 0}
-  atkInterval: 3
+  atkInterval: 4
   delay: 0.3
   state: 2
 --- !u!1 &100002

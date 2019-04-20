@@ -100,9 +100,8 @@ public class BossAI : MonoBehaviour
         {
             if (thePlayerTF != null)
             {
-                if (FireChance <= 1&& GameObject.FindGameObjectWithTag(Tags.tower))
+                if (theSta.currentHP<=theSta.maxHP/2&&  FireChance <= 2&& GameObject.FindGameObjectWithTag(Tags.tower))
                 {
-
                     GameObject[] players = GameObject.FindGameObjectsWithTag(Tags.tower);
                     transform.LookAt(players[0].transform.position);
                     GameObject fireFX = Instantiate(fireOBJ,
@@ -110,7 +109,7 @@ public class BossAI : MonoBehaviour
                             + new Vector3(-2 ,0,-2), Quaternion.identity) as GameObject;
                     animAction.Play(animAction.fireName);
                     fireFX.transform.LookAt(players[0].transform.position);
-                    Destroy(fireFX, 0.5f);
+                    Destroy(fireFX, 0.8f);
                     foreach (GameObject player in players)
                     {
                         if (CalSec(player.transform))

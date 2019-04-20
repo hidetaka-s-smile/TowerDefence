@@ -109,11 +109,7 @@ MonoBehaviour:
   atkName: Attack01
   deathName: Dead
   idleName: Idle
-  fastRunName: 
   fireName: 
-  worryName: 
-  flyName: 
-  flyAttack: 
 --- !u!114 &2336279628129630987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thePlayerTF: {fileID: 0}
   firstTargetTag: Player
-  moveSpeed: 30
+  moveSpeed: 40
 --- !u!114 &1598606069469166385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +143,7 @@ MonoBehaviour:
   atkRange: 15
   currentHP: 100
   maxHP: 100
-  exp: 0
+  exp: 40
   deathDelay: 5
 --- !u!114 &6619431799063590901
 MonoBehaviour:
@@ -161,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 25
+  MoveSpeed: 40
   ColliderDistance: 2
   ObstacleTags:
   - Enemy
@@ -178,10 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f876e55bd9ad5746b7ea08ff476a4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frozenOBJ: {fileID: 0}
-  dizzOBJ: {fileID: 0}
+  frozenOBJ: {fileID: 809337128676663924, guid: 2fc948c7383407947bc0d160f8d1b0ef,
+    type: 3}
+  dizzOBJ: {fileID: 585155957668537751, guid: 403a0dabf77eddb41bcf478b2b63a530, type: 3}
   bullet: {fileID: 0}
-  atkValue: 10
+  atkValue: 15
   thePlayerTF: {fileID: 0}
   atkInterval: 3
   delay: 0.3

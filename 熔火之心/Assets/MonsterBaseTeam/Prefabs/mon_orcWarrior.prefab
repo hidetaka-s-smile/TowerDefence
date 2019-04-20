@@ -2047,6 +2047,7 @@ MonoBehaviour:
   atkName: Attack01
   deathName: Dead
   idleName: Idle
+  fireName: fly attack 3
 --- !u!114 &7096117763587129400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2076,10 +2077,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBarSlider: {fileID: 1017647805}
   Isdead: 0
-  atkExecuteRange: 90
-  atkRange: 100
-  currentHP: 80
-  maxHP: 80
+  atkExecuteRange: 25
+  atkRange: 35
+  currentHP: 75
+  maxHP: 75
+  exp: 100
   deathDelay: 5
 --- !u!114 &3551546656459052108
 MonoBehaviour:
@@ -2110,10 +2112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f876e55bd9ad5746b7ea08ff476a4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frozenOBJ: {fileID: 809337128676663924, guid: 2fc948c7383407947bc0d160f8d1b0ef,
+    type: 3}
+  dizzOBJ: {fileID: 585155957668537751, guid: 403a0dabf77eddb41bcf478b2b63a530, type: 3}
   bullet: {fileID: 0}
-  atkValue: 20
+  atkValue: 40
   thePlayerTF: {fileID: 0}
-  atkInterval: 3
+  atkInterval: 2
   delay: 0.3
   state: 2
 --- !u!65 &1135507285521921744
