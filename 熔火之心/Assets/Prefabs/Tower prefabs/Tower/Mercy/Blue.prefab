@@ -4640,7 +4640,7 @@ GameObject:
   - component: {fileID: 8265724}
   - component: {fileID: 9181289342379713703}
   m_Layer: 0
-  m_Name: RocketMissileBlue
+  m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

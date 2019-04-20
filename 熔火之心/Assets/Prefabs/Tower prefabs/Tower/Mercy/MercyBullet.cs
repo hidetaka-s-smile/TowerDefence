@@ -16,6 +16,15 @@ public class MercyBullet : Bullet
        
 
     }
+    public override void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+           
+            other.GetComponent<EnemyStatusInfo>().Damage(damage);
+            print("1");
+        }
+    }
 }
     
     
