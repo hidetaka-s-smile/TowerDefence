@@ -12,7 +12,11 @@ public class PlayerHpNum : MonoBehaviour
 
     private void Awake()
     {
-        numText = gameObject.GetComponent<Text>();
+        numText = gameObject.GetComponent<Text>();        
+    }
+
+    private void Start()
+    {
         maxHp = slider.GetMaxVal();
     }
 
