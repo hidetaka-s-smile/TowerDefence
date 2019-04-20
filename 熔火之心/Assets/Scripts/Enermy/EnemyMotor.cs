@@ -19,22 +19,27 @@ public class EnemyMotor : MonoBehaviour
     public float moveSpeed = 10;
     private void Awake()
     {
-        //如果没塔  找人
-        if (!(thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform))
-            thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform;
-
+        if (thePlayerTF == null)
+        {
+            if (!GameObject.FindGameObjectWithTag(firstTargetTag).transform)
+                thePlayerTF = thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
+            else thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform;
+        } 
     }
+
     void Start()
     {
         theExecuteRange = GetComponent<EnemyStatusInfo>().atkExecuteRange;
         atkRange = GetComponent<EnemyStatusInfo>().atkRange;
-
     }
     private void Update()
     {
-        if (thePlayerTF == null &&
-            (thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform) == null)
-            thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
+        if (thePlayerTF == null)
+        {
+            if ((thePlayerTF = GameObject.FindGameObjectWithTag(firstTargetTag).transform) == null)
+                thePlayerTF = GameObject.FindGameObjectWithTag(Tags.player).transform;
+        }
+
     }
     //执行寻路 如果攻击进入范围返回F 给状态类切换状态
     public bool run()

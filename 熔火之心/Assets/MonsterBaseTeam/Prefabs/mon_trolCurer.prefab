@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 400000}
   - component: {fileID: 11100000}
-  - component: {fileID: 5568289612960646066}
-  - component: {fileID: 5597799535455331306}
-  - component: {fileID: 4741513073689664925}
-  - component: {fileID: 7040640504008734931}
-  - component: {fileID: 6964757310843156515}
   - component: {fileID: 5571956416783042159}
+  - component: {fileID: 1521233648749098846}
+  - component: {fileID: 5014679570213625999}
+  - component: {fileID: 9016201953243371090}
+  - component: {fileID: 7992481560206017384}
+  - component: {fileID: 1095212009330281911}
   m_Layer: 0
   m_Name: mon_trolCurer
   m_TagString: Enemy
@@ -63,7 +63,20 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!114 &5568289612960646066
+--- !u!65 &5571956416783042159
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 4, z: 1.1}
+  m_Center: {x: 0, y: 1.3, z: 0}
+--- !u!114 &1521233648749098846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,7 +92,12 @@ MonoBehaviour:
   atkName: Attack01
   deathName: Dead
   idleName: Idle
---- !u!114 &5597799535455331306
+  fastRunName: 
+  fireName: 
+  worryName: 
+  flyName: 
+  flyAttack: 
+--- !u!114 &5014679570213625999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,9 +110,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayerTF: {fileID: 0}
-  firstTargetTag: Tower
-  moveSpeed: 35
---- !u!114 &4741513073689664925
+  firstTargetTag: Player
+  moveSpeed: 10
+--- !u!114 &9016201953243371090
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,14 +124,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988cd0aa15db9aa4d82f8cbb4dac163f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBarSlider: {fileID: 8905051061352082046}
+  hpBarSlider: {fileID: 0}
   Isdead: 0
-  atkExecuteRange: 70
-  atkRange: 60
+  atkExecuteRange: 60
+  atkRange: 65
   currentHP: 100
   maxHP: 100
+  exp: 0
   deathDelay: 10
---- !u!114 &7040640504008734931
+--- !u!114 &7992481560206017384
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,12 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 35
+  MoveSpeed: 10
   ColliderDistance: 2
   ObstacleTags:
   - Enemy
   - Player
---- !u!114 &6964757310843156515
+--- !u!114 &1095212009330281911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,25 +161,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f876e55bd9ad5746b7ea08ff476a4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frozenOBJ: {fileID: 0}
+  dizzOBJ: {fileID: 0}
   bullet: {fileID: 6883218841979992134, guid: 49cffb4c5de295743a369e85cc98d279, type: 3}
-  atkValue: 15
+  atkValue: 10
   thePlayerTF: {fileID: 0}
   atkInterval: 3
   delay: 0.3
   state: 2
---- !u!65 &5571956416783042159
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1, y: 4, z: 1.1}
-  m_Center: {x: 0, y: 1.3, z: 0}
 --- !u!1 &100002
 GameObject:
   m_ObjectHideFlags: 0

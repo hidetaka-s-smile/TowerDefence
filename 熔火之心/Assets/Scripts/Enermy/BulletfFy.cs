@@ -11,6 +11,7 @@ public class BulletfFy : MonoBehaviour
     {
         theAtkValue = atkValue;
         theTarget = target;
+        Destroy(this.gameObject,2f);
     }
     private void Movement()
     {
@@ -20,12 +21,14 @@ public class BulletfFy : MonoBehaviour
     private void Update()
     {
         Movement();
-        if ((transform.position - theTarget.position).sqrMagnitude < 1)
+        if (Vector3.Distance(transform.position ,theTarget.position) < 10)
         {
-            Destroy(this);
-            if(theTarget.tag == Tags.player)
-                theTarget.GetComponent<Player>().GetDamage(theAtkValue);
+            Destroy(this.gameObject);
+            print("1");
+            if (theTarget.tag == Tags.player) 
+              theTarget.GetComponent<Player>().GetDamage(theAtkValue);
             else theTarget.GetComponent<Tower>().GetDamage(theAtkValue);
+            
         }
     }
 }

@@ -60,7 +60,7 @@ public class EnemyAI : MonoBehaviour
         RecoveyMove = motor.moveSpeed;
         RecoveyAtk = atkInterval; 
     }
-    public void Start()
+     void Start()
     {
         thePlayerTF = motor.thePlayerTF;
     }
@@ -69,7 +69,7 @@ public class EnemyAI : MonoBehaviour
     /// </summary>
     public State state = State.Run;
     //每帧判断状态
-    public void Update()
+     void Update()
     {
         thePlayerTF = motor.thePlayerTF;
         switch (state)
@@ -133,7 +133,7 @@ public class EnemyAI : MonoBehaviour
     {
 
         GameObject FxObj = Instantiate(dizzOBJ,
-            transform.position + new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        transform.position + new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         Destroy(FxObj, recoveyTime);
         motor.moveSpeed =0;
         atkInterval =100;
