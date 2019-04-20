@@ -18,7 +18,6 @@ public class Gear : MonoBehaviour
     void Update()
     {
         transform.Rotate(Vector3.right * speed);
-        print(Player.GetComponent<Transform>().position);
         distance = Vector3.Distance(Player.GetComponent<Transform>().position, transform.position);
         if(distance < 10f)
         {

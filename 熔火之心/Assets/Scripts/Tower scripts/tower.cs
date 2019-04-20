@@ -7,7 +7,7 @@ public class Tower : MonoBehaviour
 {
     public GameObject fire;//着火特效
     public bool IsBuilding;  //是否在建造中
-    public int buildTime;  //建造时间
+    public float buildTime;  //建造时间
     public int buildCost;  //建造费用
     public int hp;             //血量
     public int hpMax;          //最大血量
