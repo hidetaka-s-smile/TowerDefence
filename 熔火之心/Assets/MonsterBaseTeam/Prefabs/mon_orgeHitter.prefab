@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7975739984356173369}
   m_Layer: 0
   m_Name: mon_orgeHitter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,6 +79,7 @@ MonoBehaviour:
   atkName: Attack01
   deathName: Dead
   idleName: Idle
+  fireName: fly attack 3
 --- !u!114 &4942227838394504832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +113,7 @@ MonoBehaviour:
   atkRange: 30
   currentHP: 200
   maxHP: 200
+  exp: 0
   deathDelay: 10
 --- !u!114 &3202441939178910177
 MonoBehaviour:
@@ -142,6 +144,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f876e55bd9ad5746b7ea08ff476a4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frozenOBJ: {fileID: 0}
+  dizzOBJ: {fileID: 0}
   bullet: {fileID: 0}
   atkValue: 20
   thePlayerTF: {fileID: 0}

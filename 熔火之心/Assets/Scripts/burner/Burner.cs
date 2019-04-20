@@ -20,7 +20,7 @@ public class Burner : MonoBehaviour
     /// </summary>
     public void Creat()
     {
-        GameObject NewGear = GameObject.Instantiate(gear, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1f), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
+        GameObject NewGear = GameObject.Instantiate(gear, new Vector3(transform.position.x+15f, transform.position.y-10f, transform.position.z), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
         NewGear.GetComponent<Gear>().num = creatNum;
     }
 }

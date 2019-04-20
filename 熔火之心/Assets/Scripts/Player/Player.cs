@@ -13,12 +13,11 @@ public class Player : MonoBehaviour
     public int EXP_max = 200;    //最大经验值
     public int Component = 0;   //零件数
     public GameObject burner;
+    public AudioSource BuildAudio;
     public Texture2D cursor_normal;//正常
     public Texture2D cursor_clear;//拆除
     public Texture2D cursor_isclear;//选中拆除
     public GameObject MoveEffect;
-    public GameObject BuildAudio;
-    public GameObject DamageAudio;
     public Vector2 hotpots = Vector2.zero;
     public CursorMode mode = CursorMode.Auto;
     private Transform m_Transform;
@@ -65,8 +64,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         transform.localEulerAngles = new Vector3(0.0f, transform.localEulerAngles.y, 0.0f);
-        
-        if(Input.GetKeyDown(KeyCode.F) && isbuild == false)
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            burner.GetComponent<Burner>().Creat();
+        }
+        if (Input.GetKeyDown(KeyCode.F) && isbuild == false)
         {
             Cursor.SetCursor(cursor_clear, hotpots, mode);
             ifclear = true;
@@ -242,8 +244,8 @@ public class Player : MonoBehaviour
             anima.SetBool("run", false);
             if (!BuildLoader.instance.isLoading)
             {
+                BuildAudio.Play();
                 BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime);
-                BuildAudio.GetComponent<AudioSource>().Play();
             }
             BuildTime++;
             if (BuildTime >= newTower.GetComponent<Tower>().buildTime * 50)
@@ -278,8 +280,8 @@ public class Player : MonoBehaviour
             //炮塔摧毁中
             if (!BuildLoader.instance.isLoading)
             {
+                BuildAudio.Play();
                 BuildLoader.instance.BuildLoad(clearTower.GetComponent<Tower>().buildTime);
-                BuildAudio.GetComponent<AudioSource>().Play();
             }
             clearTower.GetComponent<Tower>().IsBuilding = true;
             if (BuildTime >= clearTower.GetComponent<Tower>().buildTime * 49)
@@ -297,7 +299,7 @@ public class Player : MonoBehaviour
         CanMove = true;
         BuildLoader.instance.HideLoader();
         anima.SetBool("attack1", false);
-        BuildAudio.GetComponent<AudioSource>().Stop();
+        gameObject.GetComponent<Player>().BuildAudio.Stop();
         for (int i = 0; i < 3; i++)
         {
             Transform wallTransform = newTower.GetComponentsInChildren<Transform>()[i];
@@ -314,7 +316,7 @@ public class Player : MonoBehaviour
         CanMove = true;
         BuildLoader.instance.HideLoader();
         anima.SetBool("attack1", false);
-        BuildAudio.GetComponent<AudioSource>().Stop();
+        gameObject.GetComponent<Player>().BuildAudio.Stop();
         clearTower.GetComponent<Tower>().BeDestroyed();
     }
 
@@ -338,15 +340,16 @@ public class Player : MonoBehaviour
     public void GetDamage(int damage)
     {
         Hp -= damage;
-        DamageAudio.GetComponent<AudioSource>().Play();
+        gameObject.GetComponent<PlayerAudio>().DamageAudio();
         if (Hp < 0) Hp = 0;
         //反应在UI上
         hpBarSlider.ChangeValue(Hp);
         if (Hp <= 0)
         {
             //播放死亡音效
-
+            gameObject.GetComponent<PlayerAudio>().DieAudio();
             //角色死亡，游戏结束，调用关卡管理器的游戏结束事件
+            anima.SetBool("die", true);
             GameManager.instance.GameOver();
         }
         //还没死则播放受伤音效
