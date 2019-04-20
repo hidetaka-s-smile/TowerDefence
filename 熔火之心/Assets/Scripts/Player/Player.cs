@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     public Texture2D cursor_isclear;//选中拆除
     public GameObject MoveEffect;
     public GameObject BuildAudio;
+    public GameObject DamageAudio;
     public Vector2 hotpots = Vector2.zero;
     public CursorMode mode = CursorMode.Auto;
     private Transform m_Transform;
@@ -64,14 +65,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         transform.localEulerAngles = new Vector3(0.0f, transform.localEulerAngles.y, 0.0f);
-        //if (Input.GetKeyDown(KeyCode.Q) && isbuild == false)
-        //{
-        //    Beforebuild();
-        //}
-        if(Input.GetKeyDown(KeyCode.C))
-        {
-            burner.GetComponent<Burner>().Creat();
-        }
+        
         if(Input.GetKeyDown(KeyCode.F) && isbuild == false)
         {
             Cursor.SetCursor(cursor_clear, hotpots, mode);
@@ -246,14 +240,13 @@ public class Player : MonoBehaviour
             anima.SetBool("attack1", true);
             CanMove = false;
             anima.SetBool("run", false);
-            BuildAudio.GetComponent<AudioSource>().Play();
             if (!BuildLoader.instance.isLoading)
             {
                 BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime);
                 BuildAudio.GetComponent<AudioSource>().Play();
             }
             BuildTime++;
-            if (BuildTime >= newTower.GetComponent<Tower>().buildTime * 52)
+            if (BuildTime >= newTower.GetComponent<Tower>().buildTime * 50)
             {
                 BuildEnd();
                 BuildTime = 0;
@@ -289,7 +282,7 @@ public class Player : MonoBehaviour
                 BuildAudio.GetComponent<AudioSource>().Play();
             }
             clearTower.GetComponent<Tower>().IsBuilding = true;
-            if (BuildTime >= clearTower.GetComponent<Tower>().buildTime * 52)
+            if (BuildTime >= clearTower.GetComponent<Tower>().buildTime * 49)
             {
                 ClearEnd();
                 BuildTime = 0;
@@ -345,6 +338,7 @@ public class Player : MonoBehaviour
     public void GetDamage(int damage)
     {
         Hp -= damage;
+        DamageAudio.GetComponent<AudioSource>().Play();
         if (Hp < 0) Hp = 0;
         //反应在UI上
         hpBarSlider.ChangeValue(Hp);

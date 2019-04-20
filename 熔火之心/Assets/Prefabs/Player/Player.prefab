@@ -5561,6 +5561,10 @@ MonoBehaviour:
   cursor_clear: {fileID: 2800000, guid: 35805ab78b6de5548b71907ff3137eea, type: 3}
   cursor_isclear: {fileID: 2800000, guid: b18f38d72517e284b9649027e4dafd70, type: 3}
   MoveEffect: {fileID: 100010, guid: 462a97d0e7fe38845aaa96c35ee7ab29, type: 3}
+  BuildAudio: {fileID: 6641608167578785189, guid: cc905783027d8a3498ed23b66f6f1d82,
+    type: 3}
+  DamageAudio: {fileID: 1877818739618081708, guid: 3de30982c89922948b960f014d7da1e0,
+    type: 3}
   hotpots: {x: 0, y: 0}
   mode: 0
   havetower: 0
