@@ -157,9 +157,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f876e55bd9ad5746b7ea08ff476a4eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frozenOBJ: {fileID: 6883218841979992134, guid: 49cffb4c5de295743a369e85cc98d279,
+  frozenOBJ: {fileID: 809337128676663924, guid: 2fc948c7383407947bc0d160f8d1b0ef,
     type: 3}
-  dizzOBJ: {fileID: 0}
+  dizzOBJ: {fileID: 585155957668537751, guid: 403a0dabf77eddb41bcf478b2b63a530, type: 3}
   bullet: {fileID: 6883218841979992134, guid: 49cffb4c5de295743a369e85cc98d279, type: 3}
   atkValue: 10
   thePlayerTF: {fileID: 0}

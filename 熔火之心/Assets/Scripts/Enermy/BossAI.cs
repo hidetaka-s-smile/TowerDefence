@@ -28,7 +28,7 @@ public class BossAI : MonoBehaviour
     public float delay = 0.3f;
     /// <summary>
     /// 敌人状态
-    /// </summary>
+    /// </summary>           
     private float RecoveyMove;
     private float RecoveyAtk;
     public enum State
@@ -100,19 +100,17 @@ public class BossAI : MonoBehaviour
         {
             if (thePlayerTF != null)
             {
-                if (FireChance <= 1)
+                if (FireChance <= 1&& GameObject.FindGameObjectWithTag(Tags.tower))
                 {
 
                     GameObject[] players = GameObject.FindGameObjectsWithTag(Tags.tower);
                     transform.LookAt(players[0].transform.position);
                     GameObject fireFX = Instantiate(fireOBJ,
                             GameObject.FindGameObjectWithTag("head").transform.position
-                            + new Vector3(10, -10, 0), Quaternion.identity) as GameObject;
+                            + new Vector3(10, -5,0), Quaternion.identity) as GameObject;
                     animAction.Play(animAction.fireName);
-
                     fireFX.transform.LookAt(players[0].transform.position);
-
-                    Destroy(fireFX, 0.3f);
+                    Destroy(fireFX, 0.5f);
                     foreach (GameObject player in players)
                     {
                         if (CalSec(player.transform))
@@ -126,20 +124,20 @@ public class BossAI : MonoBehaviour
                     atkTime = Time.time + atkInterval; 
                 }
                 else
-                {
+                { 
                     transform.LookAt(thePlayerTF.transform.position);
                     animAction.Play(animAction.atkName);
                     Invoke("CaculateDamaga", delay);
-
                     atkTime = Time.time + atkInterval;
                 }
 
             }
-            if (!animAction.IsPlaying(animAction.atkName))
-            {
-                animAction.Play(animAction.idleName);
-            }
+
             if (motor.run()) state = State.Run;
+        }
+        if (!animAction.IsPlaying(animAction.atkName) && !animAction.IsPlaying(animAction.fireName))
+        {
+            animAction.Play(animAction.idleName);
         }
     }
     private void Run()
