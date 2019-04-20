@@ -57,13 +57,16 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
-        gameStatus = GameStatus.GameOver;
-        //调用音频管理器播放游戏死亡音乐
+        if (gameStatus != GameStatus.GameOver)
+        {
+            gameStatus = GameStatus.GameOver;
+            //调用音频管理器播放游戏死亡音乐
+            AudioManager.instance.PlayDefeatClip();
+            //人物模型倒地动画，游戏停止运行
 
-        //人物模型倒地动画，游戏停止运行
-
-        //显示死亡界面UI
-        GameOverUI.instance.Show();
+            //显示死亡界面UI
+            GameOverUI.instance.Show();
+        }
     }
 
     /// <summary>
@@ -71,13 +74,16 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameWin()
     {
-        gameStatus = GameStatus.Win;
-        //调用音频管理器播放游戏胜利音乐
+        if (gameStatus != GameStatus.Win)
+        {
+            gameStatus = GameStatus.Win;
+            //调用音频管理器播放游戏胜利音乐
+            AudioManager.instance.PlayWinClip();
+            //人物模型胜利动画，游戏停止运行
 
-        //人物模型胜利动画，游戏停止运行
-
-        //显示胜利界面UI
-        GameWinUI.instance.Show();
+            //显示胜利界面UI
+            GameWinUI.instance.Show();
+        }
     }
 
     /// <summary>
@@ -103,7 +109,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GoToEnding()
     {
+        AudioManager.instance.PlayButtonClip();
         //切换到场景3
+        //黑色屏幕放大
     }
 
     /// <summary>
@@ -111,6 +119,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnRetryBtn()
     {
+        AudioManager.instance.PlayButtonClip();
         //切换到场景2
         //白色屏幕放大
     }
@@ -120,6 +129,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void OnTitleBtn()
     {
+        AudioManager.instance.PlayButtonClip();
         //切换到场景1
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// </summary>
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager _instance;
+    public static AudioManager instance;
     //Clips
     public Slider slider;
     public AudioClip btnClip;
@@ -26,7 +26,7 @@ public class AudioManager : MonoBehaviour
     
     private void Awake()
     {
-        _instance = this;
+        instance = this;
         currentAudioSource = battleBGM;
     }
 

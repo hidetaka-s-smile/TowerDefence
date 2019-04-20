@@ -350,7 +350,10 @@ public class Player : MonoBehaviour
             gameObject.GetComponent<PlayerAudio>().DieAudio();
             //角色死亡，游戏结束，调用关卡管理器的游戏结束事件
             anima.SetBool("die", true);
-            GameManager.instance.GameOver();
+            if (GameManager.instance.gameStatus != GameStatus.GameOver)
+            {
+                GameManager.instance.GameOver();
+            }
         }
         //还没死则播放受伤音效
 
