@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Tower : MonoBehaviour
 {
+    public GameObject identy;
+    public AudioSource audios;
     public GameObject fire;//着火特效
     public bool IsBuilding;  //是否在建造中
     public int buildTime;  //建造时间
@@ -43,6 +45,7 @@ public class Tower : MonoBehaviour
 
     void Start()
     {
+        
         hpBarSlider.InitValue(hp, hpMax);
     }
 
@@ -124,17 +127,20 @@ public class Tower : MonoBehaviour
     //当enemys[0]为null时，更新敌人
     public void UpdateEnemys()
     {
-        List<int> emptyIndex = new List<int>();
-        for(int index=0;index<enemys.Count;index++)
+        if(enemys.Count>0)
         {
-            if(enemys[index].GetComponent<EnemyStatusInfo>().Isdead==true)
+            List<int> emptyIndex = new List<int>();
+            for (int index = 0; index < enemys.Count; index++)
             {
-                emptyIndex.Add(index);
+                if (enemys[index].GetComponent<EnemyStatusInfo>().Isdead == true)
+                {
+                    emptyIndex.Add(index);
+                }
             }
-        }
-        for(int i=0;i<emptyIndex.Count;i++)
-        {
-            enemys.RemoveAt(emptyIndex[i]-i);
+            for (int i = 0; i < emptyIndex.Count; i++)
+            {
+                enemys.RemoveAt(emptyIndex[i] - i);
+            }
         }
     }
     /// <summary>
@@ -169,8 +175,9 @@ public class Tower : MonoBehaviour
     /// </summary>
     public void BeDestroyed()
     {
+        identy.tag = "Empty";
+        audios.Play();
         //播放摧毁音效和动画
-
         //根据该塔的零件需求的50%实例化掉落零件（和JJ沟通）
         NewGear = GameObject.Instantiate(gear,new Vector3(transform.position.x, transform.position.y+5f, transform.position.z), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
         if (hp>0)

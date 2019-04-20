@@ -13,19 +13,22 @@ public class LaserTower : Tower
     /// </summary>
     public override void Update()
     {
-        if (enemys.Count > 0)
+        if(IsBuilding==false)
         {
-            if(laserReanderer.enabled ==false)
+            if (enemys.Count > 0)
             {
-                laserReanderer.enabled = true;
+                if (laserReanderer.enabled == false)
+                {
+                    laserReanderer.enabled = true;
+                }
+                CanYHeadFollow();
+                Attack();
             }
-            CanYHeadFollow();
-            Attack();
-        }
-        else
-        {
-            bulletPrefeb.SetActive(false);
-            laserReanderer.enabled = false;
+            else
+            {
+                bulletPrefeb.SetActive(false);
+                laserReanderer.enabled = false;
+            }
         }
     }
     //攻击
