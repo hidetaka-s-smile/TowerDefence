@@ -65,13 +65,25 @@ public class SystemLevelEditor : MonoBehaviour
         //每次有怪物死亡就判断，如果怪物全死亡 一关结束 计时器开始
         if (nowDeathCnt >= monsterCntForEachLevel[currentLevel - 1])
         {
+            //熔炉生成零件
+            Burner.instance.Creat();
+
             nowDeathCnt = 0;
             //显示关卡完成后开始计时
             CompletedTxt.instance.Show();
             Invoke("ShowTimer", 2.0f);
             currentLevel++;
         }
-        //if (currentLevel == maxLevel) ;//生成boss
+        if (currentLevel == maxLevel)
+        {
+            print("Boss关卡开始");
+            //生成BOSS
+
+            //播放登场动画
+
+            //播放BOSS关卡Notice
+            BossLevelTxt.instance.Show();
+        }
     }
 
     /// <summary>

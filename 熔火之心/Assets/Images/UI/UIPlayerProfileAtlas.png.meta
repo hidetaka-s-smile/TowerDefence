@@ -1,7 +1,45 @@
 fileFormatVersion: 2
 guid: f26fddd26b3922a45bcb2b453b174775
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: UIPlayerProfileAtlas_0
+    21300002: UIPlayerProfileAtlas_1
+    21300004: UIPlayerProfileAtlas_2
+    21300006: UIPlayerProfileAtlas_3
+    21300008: UIPlayerProfileAtlas_4
+    21300010: UIPlayerProfileAtlas_5
+    21300012: UIPlayerProfileAtlas_6
+    21300014: UIPlayerProfileAtlas_7
+    21300016: yuankuang
+    21300018: UIPlayerProfileAtlas_9
+    21300020: UIPlayerProfileAtlas_10
+    21300022: UIPlayerProfileAtlas_11
+    21300024: UIPlayerProfileAtlas_12
+    21300026: UIPlayerProfileAtlas_13
+    21300028: UIPlayerProfileAtlas_14
+    21300030: UIPlayerProfileAtlas_15
+    21300032: UIPlayerProfileAtlas_16
+    21300034: UIPlayerProfileAtlas_17
+    21300036: UIPlayerProfileAtlas_18
+    21300038: UIPlayerProfileAtlas_19
+    21300040: UIPlayerProfileAtlas_20
+    21300042: UIPlayerProfileAtlas_21
+    21300044: UIPlayerProfileAtlas_22
+    21300046: UIPlayerProfileAtlas_23
+    21300048: UIPlayerProfileAtlas_24
+    21300050: UIPlayerProfileAtlas_25
+    21300052: UIPlayerProfileAtlas_26
+    21300054: UIPlayerProfileAtlas_27
+    21300056: UIPlayerProfileAtlas_28
+    21300058: Frame
+    21300060: UIPlayerProfileAtlas_30
+    21300062: UIPlayerProfileAtlas_31
+    21300064: UIPlayerProfileAtlas_32
+    21300066: UIPlayerProfileAtlas_33
+    21300068: UIPlayerProfileAtlas_34
+    21300070: UIPlayerProfileAtlas_35
+    21300072: UIPlayerProfileAtlas_36
+    21300074: UIPlayerProfileAtlas_37
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -104,7 +142,767 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 876
+        width: 101
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbc89b3f6b149d24e9c6f7fa45a8efdc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_1
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 888
+        width: 100
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6142e21b5f6da740b80cdb05f2c1e76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 888
+        width: 81
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c73c42e47de5d4c8f0de6b67fa6ca1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_3
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 743
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30abbf5461266df4da3f83dd0ef8cf5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_4
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 743
+        width: 100
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3aed705d1ff3145bc24ae5bf410fcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_5
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 828
+        width: 89
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24c31444a241aa4a9f74979f4413bfa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_6
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 742
+        width: 84
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62ac921d7dca52409eae5ed3bc01d55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_7
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 610
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0ef8e8bcc1c58346a29c86a9d18769e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: yuankuang
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 610
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b771167490fd04e98fd78a6cedeb43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 460
+        width: 148
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e1fd1028fdafb40b68cdad1d864241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_10
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 461
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b4a3503b27b844fad2b2753f5ceb77
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_11
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 461
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f63b65757d5caf4f9847b63fb7400ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_12
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 501
+        width: 78
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57fceeec7e331b443ba735465d7ef036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 368
+        width: 328
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09a28b28cc1fe74295b37193a1b639c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_14
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 450
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec23ec9c55b08c48ab447545e6cec34
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_15
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 417
+        width: 80
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d3b7d5c1a7b4b54e97574030732af42
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_16
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 418
+        width: 83
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0541b68d7c95a114c8be0c964f6b08d9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_17
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 418
+        width: 83
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47273bbb3471e5e418b01d94ffc63b8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 418
+        width: 88
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05d8cc78d14e15c42bfc0acf8b92e84b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_19
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 418
+        width: 88
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e6427f8d8612d43b075b1195e0875b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_20
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 377
+        width: 268
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1729abf0007f8314bad0043b2a76b86f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_21
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 369
+        width: 318
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19fdc26b09d3c44aa7832256603d889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_22
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 440
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac151c208974ec4fb8ec8b0764d04d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_23
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 354
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5da9efa6eb9964593399208eddc014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_24
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 349
+        width: 122
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430f5bd97d362f540819130802f264c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_25
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 297
+        width: 185
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c49042aecaac34cb35844fce6a3149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_26
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 299
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94ca5825875bc2942869b1ac0a08f290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_27
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 299
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73ee6aa58439464292f5dfe8f3482ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_28
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 296
+        width: 16
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13751848223a32c4587cdd3f9a489359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frame
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 195
+        width: 150
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3451d042a34e1fb479a1de69acaa0c47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_30
+      rect:
+        serializedVersion: 2
+        x: 877
+        y: 194
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8234624473cc1d54397d1a778cbfed4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_31
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 3
+        width: 269
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc2081abc7d3c540b0751baeb34f791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_32
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 2
+        width: 224
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091463228e1444f46a0f90574436f130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_33
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 98
+        width: 46
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9527b5fbaad574daa9ee088c0639ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_34
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 98
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a147773558ea1d4d8b2cb4c69013833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_35
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 1
+        width: 26
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f02e1d8ce88b3f4cb4f7e499daa9f52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_36
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 50
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c559457b8adea546931dd4c6dbd44bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIPlayerProfileAtlas_37
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 1
+        width: 38
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85969b82eff3a1f4da80093ed148833e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

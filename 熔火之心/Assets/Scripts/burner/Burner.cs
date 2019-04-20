@@ -4,21 +4,23 @@ using UnityEngine;
 
 public class Burner : MonoBehaviour
 {
+    public static Burner instance;
+
     public GameObject gear;
-    // Start is called before the first frame update
-    void Start()
+    [Header("生产零件的个数")]
+    public int creatNum;
+
+    private void Awake()
     {
-        
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    /// <summary>
+    /// 每一波结束生产零件
+    /// </summary>
     public void Creat()
     {
         GameObject NewGear = GameObject.Instantiate(gear, new Vector3(transform.position.x, transform.position.y, transform.position.z - 1f), Quaternion.Euler(0.0f, 0.0f, 90.0f)) as GameObject;
-        NewGear.GetComponent<Gear>().num = 50;
+        NewGear.GetComponent<Gear>().num = creatNum;
     }
 }
