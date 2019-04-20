@@ -1839,6 +1839,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8351934559626447659}
   - component: {fileID: 8351934559620389853}
+  - component: {fileID: 5225394008541317310}
+  - component: {fileID: 3880167136991925559}
+  - component: {fileID: 1676301856544463686}
+  - component: {fileID: 5401707421738236355}
+  - component: {fileID: 6439680078704154031}
   m_Layer: 0
   m_Name: Manticore
   m_TagString: Untagged
@@ -1854,8 +1859,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8351934559626138813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.034, y: 0.1, z: 6}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalPosition: {x: 7.0728, y: -1.6659, z: 6.5782}
+  m_LocalScale: {x: 4.44948, y: 4.44948, z: 4.44948}
   m_Children:
   - {fileID: 8351934559626430967}
   - {fileID: 8351934559626381453}
@@ -1899,6 +1904,96 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &5225394008541317310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351934559626138813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81e5959ba34e09d42aa1a1aaaa55593c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runName: Run
+  atkName: Attack01
+  deathName: Dead
+  idleName: Idle
+  fastRunName: 
+  fireName: 
+  worryName: 
+  flyName: 
+  flyAttack: 
+--- !u!114 &3880167136991925559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351934559626138813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ad23c0cb0f7a74c8606f55c3dd16d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayerTF: {fileID: 0}
+  firstTargetTag: Player
+  moveSpeed: 10
+--- !u!114 &1676301856544463686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351934559626138813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 988cd0aa15db9aa4d82f8cbb4dac163f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hpBarSlider: {fileID: 0}
+  Isdead: 0
+  atkExecuteRange: 0
+  atkRange: 0
+  currentHP: 0
+  maxHP: 0
+  deathDelay: 10
+--- !u!114 &5401707421738236355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351934559626138813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 2
+  ColliderDistance: 2
+  ObstacleTags:
+  - Enemy
+  - Player
+--- !u!114 &6439680078704154031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351934559626138813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cdf72269722d046924eda3a657a259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireOBJ: {fileID: 0}
+  atkValue: 10
+  thePlayerTF: {fileID: 0}
+  atkInterval: 3
+  delay: 0.3
+  state: 2
 --- !u!1 &8351934559626138931
 GameObject:
   m_ObjectHideFlags: 0
@@ -4535,7 +4630,7 @@ GameObject:
   - component: {fileID: 8351934559626396359}
   m_Layer: 0
   m_Name: Bip001 Head
-  m_TagString: Untagged
+  m_TagString: head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
