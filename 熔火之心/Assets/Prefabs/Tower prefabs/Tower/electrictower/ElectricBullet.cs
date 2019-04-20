@@ -14,8 +14,9 @@ public class ElectricBullet : Bullet
             other.GetComponent<EnemyStatusInfo>().Damage(damage);
             //调用敌人受伤方法  伤害值暂时为5
             //冰冻
-            other.GetComponent<EnemyAI>().dizz(debufftime);
-
+            if (other.GetComponent<EnemyAI>() != null)
+                other.GetComponent<EnemyAI>().dizz(debufftime);
+            else other.GetComponent<BossAI>().dizz(debufftime);
             return;
         }
     }

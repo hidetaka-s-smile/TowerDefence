@@ -8,6 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(SystemLevelEditor)) ]
 public class MonsterAutoGrowEditor : MonoBehaviour
 {
+    public int creatFlag = 0;
     /// <summary>
     /// 敌人生成延迟时间
     /// </summary>
@@ -28,15 +29,17 @@ public class MonsterAutoGrowEditor : MonoBehaviour
     /// </summary>
     public void monsterAutoGrow(int CurrentLevel, int theTypeCnt)
     {
+        print(CurrentLevel);
         int theCurrentLevel = CurrentLevel;
         typeCnt = theTypeCnt;
         tempDelay = maxMonsterGrowDelay;
         switch (CurrentLevel)
         {
             case 1:
-                for(int i = 1; i <= 5; i++)
+                creatFlag = 0;
+                for (int i = 1; i <= 5; i++)
                 {
-                    CreateEnemy(0);
+                    Invoke("CreateEnemy", tempDelay);
                     tempDelay += maxMonsterGrowDelay;
                 }
                 break;
@@ -45,12 +48,14 @@ public class MonsterAutoGrowEditor : MonoBehaviour
                 {
                     if (i <= 3)
                     {
-                        CreateEnemy(0);
+                        creatFlag = 0;
+                        Invoke("CreateEnemy",tempDelay);
                         tempDelay += maxMonsterGrowDelay;
                     }
                     else
                     {
-                        CreateEnemy(1);
+                        creatFlag = 1;
+                        Invoke("CreateEnemy", tempDelay);
                         tempDelay += maxMonsterGrowDelay;
                     }
                 }
@@ -59,7 +64,9 @@ public class MonsterAutoGrowEditor : MonoBehaviour
                 for(int i = 1; i <= 6; i++)
                 {
                     int k = (i + 1) / 2;
-                    CreateEnemy(k);
+                    creatFlag = k-1;
+                    Invoke("CreateEnemy", tempDelay);
+                    tempDelay += maxMonsterGrowDelay;
                 }
                 break;
             case 4:
@@ -67,16 +74,18 @@ public class MonsterAutoGrowEditor : MonoBehaviour
                 {
                     int k = (i + 1) / 2;
                     if (k == 4) k--;
-                    CreateEnemy(k + 1);
+                    creatFlag = k ;
+                    Invoke("CreateEnemy", tempDelay);
+                    tempDelay += maxMonsterGrowDelay;
                 }
                 break;
         }
         
     }
 
-    public void CreateEnemy(int theType)
+    public void CreateEnemy()
     {
-        GameObject.Instantiate( MonsterTypePrefabs[theType]
+        GameObject.Instantiate( MonsterTypePrefabs[creatFlag]
             , transform.position + new Vector3(4, 0, 4), Quaternion.identity);
     }
 }

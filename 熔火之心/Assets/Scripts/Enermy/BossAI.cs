@@ -7,7 +7,9 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyAnimation), typeof(EnemyMotor), typeof(EnemyStatusInfo))]
 [RequireComponent(typeof(EnemyInspectTower))]
 public class BossAI : MonoBehaviour
-{ 
+{
+    public GameObject frozenOBJ;
+    public GameObject dizzOBJ;
     public GameObject fireOBJ;
     public int atkValue = 10;
     private EnemyStatusInfo theSta;
@@ -106,7 +108,7 @@ public class BossAI : MonoBehaviour
                     transform.LookAt(players[0].transform.position);
                     GameObject fireFX = Instantiate(fireOBJ,
                             GameObject.FindGameObjectWithTag("head").transform.position
-                            + new Vector3(-2 ,0,-2), Quaternion.identity) as GameObject;
+                            + new Vector3(-2 ,-2,-2), Quaternion.identity) as GameObject;
                     animAction.Play(animAction.fireName);
                     fireFX.transform.LookAt(players[0].transform.position);
                     Destroy(fireFX, 0.8f);
@@ -146,16 +148,34 @@ public class BossAI : MonoBehaviour
         //调用马达寻路功能  如果到达终点，修改状态为 state 攻击
         if (!motor.run()) state = State.Attack;
     }
+    public void dizz(float recoveyTime)
+    {
+        recoveyTime /= 3;
+        GameObject FxObj = Instantiate(dizzOBJ,
+        transform.position + new Vector3(0, 5, 0), Quaternion.identity) as GameObject;
+        Destroy(FxObj, recoveyTime);
+        motor.moveSpeed = 0;
+        GetComponent<EnemyInspectTower>().MoveSpeed = 0;
+        atkInterval = 1000;
+        animAction.stopAll();
+        Invoke("recovey", recoveyTime);
+
+    }
     /// <summary>
     /// 冰冻
     /// </summary>
     /// <param name="debuff">减少倍数 整数</param>
     /// <param name="recovetTime">恢复时间 浮点类型</param>
-    public void frozen(int debuff, float recovetTime)
+    public void frozen(int debuff, float recoveyTime)
     {
+        debuff /= 4;
+        GameObject FxObj = Instantiate(frozenOBJ,
+            transform.position, Quaternion.identity) as GameObject;
+        FxObj.transform.SetParent(this.transform, true);
+        Destroy(FxObj, recoveyTime);
         motor.moveSpeed /= debuff;
-        atkInterval *= recovetTime;
-        Invoke("recovey", recovetTime);
+        atkInterval *= debuff;
+        Invoke("recovey", recoveyTime);
     }
     private void recovey()
     {

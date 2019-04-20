@@ -16,6 +16,7 @@ TagManager:
   - DamP
   - head
   - Empty
+  - Boss
   layers:
   - Default
   - TransparentFX

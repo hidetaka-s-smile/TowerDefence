@@ -133,7 +133,7 @@ public class EnemyAI : MonoBehaviour
     {
 
         GameObject FxObj = Instantiate(dizzOBJ,
-        transform.position + new Vector3(0, 3, 0), Quaternion.identity) as GameObject;
+        transform.position + new Vector3(0, 5, 0), Quaternion.identity) as GameObject;
         Destroy(FxObj, recoveyTime);
         motor.moveSpeed =0;
         GetComponent<EnemyInspectTower>().MoveSpeed = 0;
@@ -150,8 +150,8 @@ public class EnemyAI : MonoBehaviour
     public void frozen(int debuff,float recoveyTime)
     {
         GameObject FxObj = Instantiate(frozenOBJ,
-            transform.position + new Vector3(0, 3, 0), Quaternion.identity) as GameObject;
-        FxObj.transform.SetParent(this.transform, false);
+            transform.position,Quaternion.identity) as GameObject;
+        FxObj.transform.SetParent(this.transform, true);
         Destroy(FxObj, recoveyTime);
         motor.moveSpeed /= debuff;
         atkInterval *= debuff;

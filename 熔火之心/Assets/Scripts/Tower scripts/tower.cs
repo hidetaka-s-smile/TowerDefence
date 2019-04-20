@@ -119,7 +119,7 @@ public class Tower : MonoBehaviour
     public void CantYHeadFollow()
     {
         UpdateEnemys();
-        if (enemys.Count > 0 && enemys[0].GetComponent<EnemyStatusInfo>().Isdead==false)
+        if (enemys.Count > 0 && enemys[0]!=null && enemys[0].GetComponent<EnemyStatusInfo>().Isdead==false)
         {
             Vector3 targetPosition = enemys[0].transform.position;
             Vector3 dir = targetPosition - transform.position;

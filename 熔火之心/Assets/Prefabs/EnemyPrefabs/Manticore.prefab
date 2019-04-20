@@ -1844,9 +1844,10 @@ GameObject:
   - component: {fileID: 1676301856544463686}
   - component: {fileID: 5401707421738236355}
   - component: {fileID: 6439680078704154031}
+  - component: {fileID: 7635693827666468574}
   m_Layer: 0
   m_Name: Manticore
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1860,7 +1861,7 @@ Transform:
   m_GameObject: {fileID: 8351934559626138813}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.2606, y: -10.217, z: 9.3783}
-  m_LocalScale: {x: 20.18471, y: 20.18471, z: 20.18471}
+  m_LocalScale: {x: 30.424652, y: 30.424652, z: 30.424652}
   m_Children:
   - {fileID: 8351934559626430967}
   - {fileID: 8351934559626381453}
@@ -1935,7 +1936,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thePlayerTF: {fileID: 0}
   firstTargetTag: Player
-  moveSpeed: 45
+  moveSpeed: 60
 --- !u!114 &1676301856544463686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,7 +1969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcc412d22e9ed6c418aad8c05f0a3e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 45
+  MoveSpeed: 60
   ColliderDistance: 2
   ObstacleTags:
   - Enemy
@@ -1985,12 +1986,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58cdf72269722d046924eda3a657a259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frozenOBJ: {fileID: 809337128676663924, guid: 2fc948c7383407947bc0d160f8d1b0ef,
+    type: 3}
+  dizzOBJ: {fileID: 585155957668537751, guid: 403a0dabf77eddb41bcf478b2b63a530, type: 3}
   fireOBJ: {fileID: 3628799806227511670, guid: 45a79b089c464af4c810c19d6991a8e0, type: 3}
   atkValue: 10
   thePlayerTF: {fileID: 0}
-  atkInterval: 5
+  atkInterval: 3.5
   delay: 0.3
   state: 2
+--- !u!65 &7635693827666468574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8351934559626138813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 6, z: 1}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!1 &8351934559626138931
 GameObject:
   m_ObjectHideFlags: 0

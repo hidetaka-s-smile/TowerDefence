@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thePlayerTF: {fileID: 0}
-  firstTargetTag: Player
+  firstTargetTag: Tower
   moveSpeed: 30
 --- !u!114 &1893620136558949533
 MonoBehaviour:

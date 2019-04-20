@@ -52,7 +52,8 @@ public class SystemLevelEditor : MonoBehaviour
     public void MonsterAutoGrow()
     {
         LevelNumTxt.instance.ShowLevelNum(currentLevel);
-        theMonsterGrow.monsterAutoGrow(currentLevel, monsterTypeNumberForEachLevel[currentLevel - 1]);
+        if(currentLevel==5) GameObject.Instantiate(boss, transform.position + new Vector3(4, 0, 4), Quaternion.identity);
+        else theMonsterGrow.monsterAutoGrow(currentLevel, monsterTypeNumberForEachLevel[currentLevel - 1]);
     }
     /// <summary>
     /// 怪物死亡清算
@@ -74,7 +75,11 @@ public class SystemLevelEditor : MonoBehaviour
         if (currentLevel == maxLevel)
         {
             print("Boss关卡开始");
-            GameObject.Instantiate(boss, transform.position + new Vector3(4, 0, 4), Quaternion.identity);
+            Burner.instance.Creat();
+            nowDeathCnt = 0;
+            //显示关卡完成后开始计时
+            CompletedTxt.instance.Show();
+            Invoke("ShowTimer", 2.0f);
             //播放登场动画
             //播放BOSS关卡Notice
             BossLevelTxt.instance.Show();
