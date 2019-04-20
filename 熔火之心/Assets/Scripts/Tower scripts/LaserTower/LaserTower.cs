@@ -22,7 +22,11 @@ public class LaserTower : Tower
                     laserReanderer.enabled = true;
                 }
                 CanYHeadFollow();
-                Attack();
+                if (enemys.Count > 0&&enemys[0].gameObject!=null)
+                {
+                    if(enemys[0].GetComponent<EnemyStatusInfo>().Isdead == false)
+                       Attack();
+                }
             }
             else
             {
@@ -34,7 +38,7 @@ public class LaserTower : Tower
     //攻击
     public override void Attack()
     {
-        if ((enemys[0] == null || enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true) && enemys.Count != 0)
+        if ( enemys.Count != 0 && ( enemys[0].GetComponent<EnemyStatusInfo>().Isdead == true) || enemys[0] == null )
         {
             UpdateEnemys();
         }

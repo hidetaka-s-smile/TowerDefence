@@ -15,13 +15,14 @@ public class BulletfFy : MonoBehaviour
     }
     private void Movement()
     {
-        if (theTarget == null) Destroy(this);
-        transform.position = Vector3.MoveTowards(transform.position,theTarget.position, Time.deltaTime * moveSpeed);
+        if (theTarget == null) Destroy(this.gameObject);
+        else transform.position = Vector3.MoveTowards(transform.position,theTarget.position, Time.deltaTime * moveSpeed);
     }
     private void Update()
     {
         Movement();
-        if (Vector3.Distance(transform.position ,theTarget.position) < 10)
+
+        if (theTarget!=null && Vector3.Distance(transform.position ,theTarget.position) < 10)
         {
             Destroy(this.gameObject);
             if (theTarget.tag == Tags.player) 

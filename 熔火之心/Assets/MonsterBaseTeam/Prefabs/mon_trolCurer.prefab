@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988cd0aa15db9aa4d82f8cbb4dac163f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpBarSlider: {fileID: 0}
+  hpBarSlider: {fileID: 8905051061352082046}
   Isdead: 0
   atkExecuteRange: 50
   atkRange: 60

@@ -67,10 +67,6 @@ public class Tower : MonoBehaviour
                 Attack();
             }
         }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            GetDamage(35);
-        }
     }
     //当塔在建造或摧毁时鼠标在塔上时虚化
     public void OnMouseOver()
@@ -100,27 +96,38 @@ public class Tower : MonoBehaviour
             UpdateEnemys();
         }
         GameObject bullet= GameObject.Instantiate(bulletPrefeb, firepostion.position, firepostion.rotation);
-        bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
+        if(enemys[0] != null)
+        {
+            bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
+        }
     }
     /// <summary>
     /// 头部可随y轴旋转摆动跟随敌人
     /// </summary>
     public void CanYHeadFollow()
     {
-        Vector3 targetPosition = enemys[0].transform.position;
-        head.LookAt(enemys[0].transform.position);
+        UpdateEnemys();
+        if (enemys.Count > 0 && enemys[0].gameObject!=null && enemys[0].GetComponent<EnemyStatusInfo>().Isdead == false)
+        {
+            Vector3 targetPosition = enemys[0].transform.position;
+            head.LookAt(enemys[0].transform.position);
+        }
     }
     /// <summary>
     /// 头部不可随y轴旋转跟随敌人
     /// </summary>
     public void CantYHeadFollow()
     {
-        Vector3 targetPosition = enemys[0].transform.position;
-        Vector3 dir = targetPosition - transform.position;
-        dir.y = 0;
-        float angle = Vector3.Angle(dir, new Vector3(0, 0, 1));
-        angle *= Mathf.Sign(dir.x);
-        head.localEulerAngles = new Vector3(0, angle, 0);
+        UpdateEnemys();
+        if (enemys.Count > 0 && enemys[0].GetComponent<EnemyStatusInfo>().Isdead==false)
+        {
+            Vector3 targetPosition = enemys[0].transform.position;
+            Vector3 dir = targetPosition - transform.position;
+            dir.y = 0;
+            float angle = Vector3.Angle(dir, new Vector3(0, 0, 1));
+            angle *= Mathf.Sign(dir.x);
+            head.localEulerAngles = new Vector3(0, angle, 0);
+        }
 
     }
     //更新敌人
@@ -132,7 +139,7 @@ public class Tower : MonoBehaviour
             List<int> emptyIndex = new List<int>();
             for (int index = 0; index < enemys.Count; index++)
             {
-                if (enemys[index].GetComponent<EnemyStatusInfo>().Isdead == true)
+                if (enemys[index].gameObject != null && enemys[index].GetComponent<EnemyStatusInfo>().Isdead == true)
                 {
                     emptyIndex.Add(index);
                 }

@@ -21,14 +21,17 @@ public class Bullet : MonoBehaviour
         {
             Die();
         }
-        if(target.tag=="Enemy")
+        if(target!=null)
         {
-            if (target.GetComponent<EnemyStatusInfo>().Isdead == true)
-                Die();
+            if (target.tag == "Enemy")
+            {
+                if (target.GetComponent<EnemyStatusInfo>().Isdead == true)
+                    Die();
+                transform.LookAt(target.position);
+                transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            }
             
         }
-        transform.LookAt(target.position);
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
     }
     public virtual void OnTriggerEnter(Collider other)

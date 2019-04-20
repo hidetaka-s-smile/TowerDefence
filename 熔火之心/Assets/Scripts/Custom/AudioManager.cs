@@ -9,16 +9,25 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager _instance;
-
+    //Clips
     public Slider slider;
     public AudioClip btnClip;
+    public AudioClip settingClip;
+    public AudioClip bluePrintClip;
+    public AudioClip defeatClip;
+    public AudioClip winClip;
+    //BGM
+    public AudioSource battleBGM;
+    public AudioSource bossBGM;
+    public AudioSource bossCreazyBGM;
+    public AudioSource audioSourceEffect;//音效的音频源
 
-    private AudioSource audioSource;
-
+    private AudioSource currentAudioSource;//当前的bgm
+    
     private void Awake()
     {
         _instance = this;
-        audioSource = gameObject.GetComponent<AudioSource>();
+        currentAudioSource = battleBGM;
     }
 
     /// <summary>
@@ -26,7 +35,41 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void PlayButtonClip()
     {
-        audioSource.PlayOneShot(btnClip);
+        audioSourceEffect.PlayOneShot(btnClip);
+    }
+
+    /// <summary>
+    /// 播放蓝图界面音效
+    /// </summary>
+    public void PlayBluePrintClip()
+    {
+        audioSourceEffect.PlayOneShot(bluePrintClip);
+    }
+
+    /// <summary>
+    /// 播放设置界面出现音效
+    /// </summary>
+    public void PlaySettingClip()
+    {
+        audioSourceEffect.PlayOneShot(settingClip);
+    }
+
+    /// <summary>
+    /// 播放失败界面音乐
+    /// </summary>
+    public void PlayDefeatClip()
+    {
+        currentAudioSource.Stop();
+        audioSourceEffect.PlayOneShot(defeatClip);
+    }
+
+    /// <summary>
+    /// 播放胜利界面音乐
+    /// </summary>
+    public void PlayWinClip()
+    {
+        currentAudioSource.Stop();
+        audioSourceEffect.PlayOneShot(winClip);
     }
 
     /// <summary>
@@ -35,7 +78,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="clip"></param>
     public void Play2DClip(AudioClip clip)
     {
-        audioSource.PlayOneShot(clip);
+        audioSourceEffect.PlayOneShot(clip);
     }
     
     /// <summary>
@@ -43,6 +86,27 @@ public class AudioManager : MonoBehaviour
     /// </summary>
     public void ControlVolume()
     {
-        audioSource.volume = slider.value;
+        currentAudioSource.volume = slider.value;
     }
+
+    /// <summary>
+    /// 播放boss战音乐
+    /// </summary>
+    public void PlayBossBGM()
+    {
+        currentAudioSource.Stop();
+        bossBGM.Play();
+        currentAudioSource = bossBGM;
+    }
+
+    /// <summary>
+    /// boss进入狂暴阶段音乐
+    /// </summary>
+    public void PlayCreazyBossBGM()
+    {
+        currentAudioSource.Stop();
+        bossCreazyBGM.Play();
+        currentAudioSource = bossCreazyBGM;
+    }
+
 }
