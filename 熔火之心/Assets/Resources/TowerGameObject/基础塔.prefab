@@ -5270,7 +5270,7 @@ MonoBehaviour:
   buildCost: 10
   hp: 100
   hpMax: 100
-  ad: 50
+  ad: 10
   bulletPrefeb: {fileID: 6024032564868862079, guid: 846f7a7c434bd104a85e5ef58c8a47f2,
     type: 3}
   attackRateTime: 1

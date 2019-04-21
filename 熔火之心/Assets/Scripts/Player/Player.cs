@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public int EXP = 200;        //经验值
     public int EXP_max = 200;    //最大经验值
     public int Component = 0;   //零件数
+    public GameObject burner;
     public AudioSource BuildAudio;
     public Texture2D cursor_normal;//正常
     public Texture2D cursor_clear;//拆除
@@ -63,6 +64,10 @@ public class Player : MonoBehaviour
     void Update()
     {
         transform.localEulerAngles = new Vector3(0.0f, transform.localEulerAngles.y, 0.0f);
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            burner.GetComponent<Burner>().Creat();
+        }
         if (Input.GetKeyDown(KeyCode.F) && isbuild == false)
         {
             Cursor.SetCursor(cursor_clear, hotpots, mode);
@@ -242,12 +247,6 @@ public class Player : MonoBehaviour
                 BuildAudio.Play();
                 BuildLoader.instance.BuildLoad(newTower.GetComponent<Tower>().buildTime);
             }
-            BuildTime++;
-            if (BuildTime >= newTower.GetComponent<Tower>().buildTime * 50)
-            {
-                BuildEnd();
-                BuildTime = 0;
-            }
         }
         if (Input.GetMouseButtonDown(1) && CanMove == true)
         {
@@ -271,7 +270,6 @@ public class Player : MonoBehaviour
             anima.SetBool("attack1", true);
             CanMove = false;
             anima.SetBool("run", false);
-            BuildTime++;
             //炮塔摧毁中
             if (!BuildLoader.instance.isLoading)
             {
@@ -279,11 +277,6 @@ public class Player : MonoBehaviour
                 BuildLoader.instance.BuildLoad(clearTower.GetComponent<Tower>().buildTime);
             }
             clearTower.GetComponent<Tower>().IsBuilding = true;
-            if (BuildTime >= clearTower.GetComponent<Tower>().buildTime * 49)
-            {
-                ClearEnd();
-                BuildTime = 0;
-            }
         }
     }
     void BuildEnd()
@@ -361,20 +354,16 @@ public class Player : MonoBehaviour
     /// <param name="exp"></param>
     public void GetExp(int exp)
     {
-        if (Level < 5)
+        EXP += exp;
+        if (EXP >= EXP_max)
         {
-            EXP += exp;
-            if (EXP >= EXP_max)
-            {               
-                //将多出的经验值加上，然后升级
-                int remain = EXP - EXP_max;
-                EXP = 0;
-                EXP += remain;
-                LevelUp();
-            }
-            //反应在UI上
-            expBarSlider.ChangeValue(EXP);
+            //将多出的经验值加上，然后升级
+            int remain = EXP_max - EXP;
+            EXP += remain;
+            LevelUp();
         }
+        //反应在UI上
+        expBarSlider.ChangeValue(EXP);
     }
 
     /// <summary>
@@ -386,7 +375,7 @@ public class Player : MonoBehaviour
         Level++;
         if(Level < 5) levelNumTxt.text = Level.ToString();
         else levelNumTxt.text = "MAX";
-        EXP_max = Level * 100 + 100;        
+        EXP_max = Level * 100 + 100;
         Hp = Hp_max;//Hp_max随等级如何更改，之后多番测试后决定
         //反应在UI上
         hpBarSlider.ChangeValue(Hp);
@@ -394,12 +383,6 @@ public class Player : MonoBehaviour
         LevelUpTxt.instance.Show();
         //调用蓝图系统，发明新的图纸
         BluePrintPanel.instance.InventNewTower();
-        if (Level >= 5)
-        {
-            //满级之后把经验槽加满
-            EXP = EXP_max;
-            expBarSlider.ChangeValue(EXP);
-        }
     }
 
     /// <summary>
@@ -410,5 +393,38 @@ public class Player : MonoBehaviour
     {
         Component += num;
         componentText.text = Component.ToString();
+    }
+
+    private void FixedUpdate()
+    {
+        if (BuildLoader.instance.isLoading)
+        {
+            if (isclear==true)
+            {
+                float distance = Vector3.Distance(towerPoint, transform.position);
+                if(distance<12f)
+                {
+                    BuildTime++;
+                    if (BuildTime >= clearTower.GetComponent<Tower>().buildTime * 49)
+                    {
+                        ClearEnd();
+                        BuildTime = 0;
+                    }
+                }
+            }
+            if (isbuild == true)
+            {
+                float distance = Vector3.Distance(towerPoint, transform.position);
+                if(distance < 12f)
+                {
+                    BuildTime++;
+                    if (BuildTime >= newTower.GetComponent<Tower>().buildTime * 49)
+                    {
+                        BuildEnd();
+                        BuildTime = 0;
+                    }
+                }
+            }
+        }
     }
 }

@@ -1992,7 +1992,7 @@ MonoBehaviour:
   fireOBJ: {fileID: 3628799806227511670, guid: 45a79b089c464af4c810c19d6991a8e0, type: 3}
   atkValue: 100
   thePlayerTF: {fileID: 0}
-  atkInterval: 150
+  atkInterval: 5
   delay: 0.1
   state: 2
 --- !u!65 &7635693827666468574

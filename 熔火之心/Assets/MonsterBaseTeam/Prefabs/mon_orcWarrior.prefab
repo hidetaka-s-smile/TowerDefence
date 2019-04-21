@@ -2081,7 +2081,7 @@ MonoBehaviour:
   atkRange: 35
   currentHP: 75
   maxHP: 75
-  exp: 100
+  exp: 70
   deathDelay: 5
 --- !u!114 &3551546656459052108
 MonoBehaviour:
