@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     public SmoothSlider hpBarSlider;
     public SmoothSlider expBarSlider;
    
-    void Start()
+    void Awake()
     {
         anima = GetComponent<Animator>();
         speed = 30f;
