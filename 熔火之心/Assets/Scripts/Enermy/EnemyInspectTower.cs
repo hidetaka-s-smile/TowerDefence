@@ -199,9 +199,9 @@ class EnemyInspectTower:MonoBehaviour
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.TransformPoint(Vector3.forward * ColliderDistance / 2));
-        Gizmos.DrawLine(transform.position, transform.TransformPoint(Vector3.right * ColliderDistance));
-        Gizmos.DrawLine(transform.position, transform.TransformPoint(Vector3.left * ColliderDistance));
+        //Gizmos.DrawLine(transform.position, transform.TransformPoint(Vector3.forward * ColliderDistance / 2));
+        //Gizmos.DrawLine(transform.position, transform.TransformPoint(Vector3.right * ColliderDistance));
+        //Gizmos.DrawLine(transform.position, transform.TransformPoint(Vector3.left * ColliderDistance));
     }
 
 }

@@ -20,6 +20,7 @@ public class BossStatusUI : MonoBehaviour
     /// </summary>
     public void ShowStatus()
     {
+        print("已经显示了boss血条");
         gameObject.SetActive(true);
     }
 

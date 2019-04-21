@@ -45,7 +45,6 @@ public class Tower : MonoBehaviour
 
     void Start()
     {
-        
         hpBarSlider.InitValue(hp, hpMax);
     }
 

@@ -108,8 +108,8 @@ public class BossAI : MonoBehaviour
                     transform.LookAt(players[0].transform.position);
                     GameObject fireFX = Instantiate(fireOBJ,
                             GameObject.FindGameObjectWithTag("head").transform.position
-                            + new Vector3(-2 ,-2,-2), Quaternion.identity) as GameObject;
-                    animAction.Play(animAction.fireName);
+                            + new Vector3(0 ,-2,-1), Quaternion.identity) as GameObject;
+                    animAction.Play(animAction.idleName);
                     fireFX.transform.LookAt(players[0].transform.position);
                     Destroy(fireFX, 0.8f);
                     foreach (GameObject player in players)

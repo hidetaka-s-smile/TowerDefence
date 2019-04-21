@@ -39,6 +39,7 @@ public class EnemyStatusInfo : MonoBehaviour
         {
             BossStatusUI.instance.ShowStatus();
             hpBarSlider = GameObject.FindGameObjectWithTag(Tags.bossSlider).GetComponent<SmoothSlider>();
+            print(hpBarSlider.gameObject.name);
         }     
         blood = GetComponent<ParticleSystem>();
         player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Player>();
@@ -92,13 +93,17 @@ public class EnemyStatusInfo : MonoBehaviour
             BossStatusUI.instance.Hide();
             GameManager.instance.GameWin();
         }
-        //销毁当前游戏物体
-        Destroy(gameObject, deathDelay);
         //播放动画
         var anim = GetComponent<EnemyAnimation>();
         anim.Play(anim.deathName);
+        if(GetComponent<EnemyAI>()==null)
+        GetComponent<BossAI>().state = BossAI.State.Death;
+        else GetComponent<EnemyAI>().state = EnemyAI.State.Death;
+        //销毁当前游戏物体
+        Destroy(gameObject, deathDelay);
+
         //修改状态
-        GetComponent<EnemyAI>().state = EnemyAI.State.Death;
+ 
         //给生成器传输当前死亡数加一
         SystemLevelEditor.instance.DeathCnt();
         //给人物加经验
