@@ -74,7 +74,7 @@ public class BoasterBullet : MonoBehaviour
             Die();
             return;
         }
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy" || other.tag == "Boss")
         {
 
             GameObject Bomb = GameObject.Instantiate(Bombprafeb, bombpostion.position, bombpostion.rotation);

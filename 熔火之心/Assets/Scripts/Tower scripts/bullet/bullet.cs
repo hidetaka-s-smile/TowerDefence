@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         }
         if(target!=null)
         {
-            if (target.tag == "Enemy")
+            if (target.tag == "Enemy" || target.tag == "Boss")
             {
                 if (target.GetComponent<EnemyStatusInfo>().Isdead == true)
                     Die();
@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
     }
     public virtual void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Enemy")
+        if(other.tag=="Enemy" || other.tag == "Boss")
         {
             Die();
             //调用敌人受伤方法  伤害值暂时为5

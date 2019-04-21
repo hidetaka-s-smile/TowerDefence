@@ -30,14 +30,14 @@ public class Tower : MonoBehaviour
     /// <param name="other"></param>
     public void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy"||other.tag == "Boss")
         {
             enemys.Add(other.gameObject);
         }
     }
     public void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy" || other.tag == "Boss")
         {
             enemys.Remove(other.gameObject);
         }

@@ -11,7 +11,7 @@ public class Bombing : MonoBehaviour
     //若敌人在爆炸范围内则受伤
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy" || other.tag == "Boss")
         {
             Die();
             other.GetComponent<EnemyStatusInfo>().Damage(damage);
