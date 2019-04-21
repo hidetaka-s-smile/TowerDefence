@@ -1952,8 +1952,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000036198, y: 80.57001}
-  m_SizeDelta: {x: 299.4, y: 65.399994}
+  m_AnchoredPosition: {x: 5.0309, y: 110.35}
+  m_SizeDelta: {x: 417.03, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1446528190
 CanvasRenderer:
@@ -1985,11 +1985,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 7879fe06d88145343a5e610ccf18aef0, type: 3}
-    m_FontSize: 56
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 59
+    m_MaxSize: 66
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -3248,7 +3248,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 4200669861055401541}
-  maxHp: 500
 --- !u!1 &1429852616689624212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,7 +3989,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1576784073}
-  maxHp: 8000
 --- !u!1 &3223454432784712815
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,7 +4561,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -21.6, y: -0.000009834766}
+  m_AnchoredPosition: {x: -21.6, y: -0.0000043509995}
   m_SizeDelta: {x: 432.2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8333169604301506564
@@ -6344,6 +6342,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shortcuts
       objectReference: {fileID: 0}
+    - target: {fileID: 1966707744080976733, guid: 0090363d6696a0f4eb71b4f812ba9fe9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2654713712200385459, guid: 0090363d6696a0f4eb71b4f812ba9fe9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6448,11 +6451,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1966707744080976733, guid: 0090363d6696a0f4eb71b4f812ba9fe9,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2923022205846785325, guid: 0090363d6696a0f4eb71b4f812ba9fe9,
         type: 3}
