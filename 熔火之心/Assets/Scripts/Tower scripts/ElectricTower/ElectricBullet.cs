@@ -8,7 +8,7 @@ public class ElectricBullet : Bullet
     public int debufftime;
     public override void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy" || other.tag == "Boss")
         {
             Die();
             other.GetComponent<EnemyStatusInfo>().Damage(damage);
