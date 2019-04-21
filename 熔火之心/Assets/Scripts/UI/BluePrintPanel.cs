@@ -20,18 +20,40 @@ public class BluePrintPanel : MonoBehaviour
 
     private Animation anim;
     private int curIndex = 0;//当前即将解锁的塔编号
-    private bool isOpen = false;   
+    private bool isOpen = false;
+    private bool isLockFinalTower = false;//是否解锁了最终塔
+    private Player player;
 
     private void Awake()
     {
         instance = this;
         anim = gameObject.GetComponent<Animation>();
+        player = GameObject.FindGameObjectWithTag(Tags.player).GetComponent<Player>();
     }
 
     private void Start()
     {
         //默认一开始就有基础炮塔图纸
         InventNewTower();
+    }
+
+    private void Update()
+    {
+        //当人物满级之后，可以按住L和M解锁最终塔 怜悯
+        if(player.Level >= 5)
+        {
+            if (Input.GetKey(KeyCode.L))
+            {
+                if (Input.GetKeyDown(KeyCode.M))
+                {
+                    if (!isLockFinalTower)
+                    {
+                        isLockFinalTower = true;
+                        InventNewTower();
+                    }
+                }
+            }
+        }
     }
 
     /// <summary>
@@ -77,8 +99,8 @@ public class BluePrintPanel : MonoBehaviour
         if (curIndex < towerIdArray.Length)
         {
             newTowerInfo = TowerInfos.instance.GetTowerInfo(towerIdArray[curIndex]);
+            curIndex++;
         }
-        curIndex++;
         // 超过两张图纸 显示滑动条
         if (curIndex > 2)
             ShowScrollbar();

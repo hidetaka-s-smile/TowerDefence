@@ -5553,7 +5553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  Die: {fileID: 0}
+  Die: {fileID: 8300000, guid: d33686e7ac8aa584f9d37232bab7d211, type: 3}
   Damage: {fileID: 8300000, guid: a9a02fd4f8c203b46ae171659e116fe3, type: 3}
 --- !u!114 &3468774005758048384
 MonoBehaviour:
@@ -5570,7 +5570,7 @@ MonoBehaviour:
   Level: 1
   Hp: 500
   Hp_max: 500
-  EXP: 200
+  EXP: 0
   EXP_max: 200
   Component: 30
   burner: {fileID: 9144147126821133813, guid: ff6c038a4aa37b44ab98d5f4a4b53349, type: 3}
@@ -5666,7 +5666,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
