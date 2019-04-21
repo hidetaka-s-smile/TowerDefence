@@ -19,11 +19,11 @@ public class EndingPanel : MonoBehaviour
 
     private void Show()
     {
-        Invoke("ShowThx1", 20.0f);
-        Invoke("ShowThx2", 22.0f);
-        Invoke("ShowThx3", 24.0f);
-        Invoke("ShowEnd", 26.0f);
-        Invoke("ShowByeBtn", 30.0f);
+        Invoke("ShowThx1", 34.0f);
+        Invoke("ShowThx2", 36.0f);
+        Invoke("ShowThx3", 38.0f);
+        Invoke("ShowEnd", 40.0f);
+        Invoke("ShowByeBtn", 42.0f);
     }
 
     private void ShowEnd()
