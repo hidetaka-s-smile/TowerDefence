@@ -8,6 +8,9 @@ public class TitleUIManager : MonoBehaviour
 {
     public AudioClip enterClip;
     public Animation maskAnim;
+    public Image maskImg;
+    public Text loadingTxt;
+    public Animation loadingAnim;
 
     private AudioSource audioSource;
 
@@ -19,13 +22,21 @@ public class TitleUIManager : MonoBehaviour
     public void OnStartBtn()
     {
         audioSource.PlayOneShot(enterClip);
+        maskImg.enabled = true;
         maskAnim.Play();
+        Invoke("ShowLoading", 0.4f);
         Invoke("LoadGame", 1.0f);
     }
 
     public void OnQuitBtn()
     {
         Application.Quit();
+    }
+
+    private void ShowLoading()
+    {
+        loadingTxt.enabled = true;
+        loadingAnim.Play();
     }
 
     /// <summary>
