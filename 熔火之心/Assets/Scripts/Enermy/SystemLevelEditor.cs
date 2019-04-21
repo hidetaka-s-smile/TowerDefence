@@ -101,6 +101,7 @@ public class SystemLevelEditor : MonoBehaviour
         //播放BOSS关卡Notice
         BossLevelTxt.instance.Show();
         //更换音乐
+        AudioManager.instance.PlayBossRoarClip();
         AudioManager.instance.PlayBossBGM();
     }
 }

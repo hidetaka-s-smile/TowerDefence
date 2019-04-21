@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip bluePrintClip;
     public AudioClip defeatClip;
     public AudioClip winClip;
+    public AudioClip bossRoarClip;
     //BGM
     public AudioSource battleBGM;
     public AudioSource bossBGM;
@@ -109,4 +110,8 @@ public class AudioManager : MonoBehaviour
         currentAudioSource = bossCreazyBGM;
     }
 
+    public void PlayBossRoarClip()
+    {
+        audioSourceEffect.PlayOneShot(bossRoarClip);
+    }
 }

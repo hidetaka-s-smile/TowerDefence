@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("DeadNum", deadNum + 1);
         }
-        if (gameStatus != GameStatus.GameOver)
+        if (gameStatus != GameStatus.Win && gameStatus != GameStatus.GameOver)
         {
             gameStatus = GameStatus.GameOver;
             //调用音频管理器播放游戏死亡音乐
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameWin()
     {
-        if (gameStatus != GameStatus.Win)
+        if (gameStatus != GameStatus.Win && gameStatus != GameStatus.GameOver)
         {
             gameStatus = GameStatus.Win;
             //调用音频管理器播放游戏胜利音乐
