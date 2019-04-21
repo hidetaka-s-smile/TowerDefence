@@ -46,6 +46,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
+        //计算玩家的死亡次数
+        int deadNum = PlayerPrefs.GetInt("DeadNum", 0);
+        if(deadNum == 0) PlayerPrefs.SetInt("DeadNum", 1);
+        else
+        {
+            PlayerPrefs.SetInt("DeadNum", deadNum + 1);
+        }
         if (gameStatus != GameStatus.GameOver)
         {
             gameStatus = GameStatus.GameOver;

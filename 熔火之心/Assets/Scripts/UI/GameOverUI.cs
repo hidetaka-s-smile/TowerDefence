@@ -15,6 +15,10 @@ public class GameOverUI : MonoBehaviour
     public Animation defeatAnim;//失败图标动画
     public Animation blackMaskAnim;//黑色遮罩动画
     public GameObject titleBtn;//返回标题界面按钮
+    public Text suggestText;
+    public Animation suggestTextAnim;
+    public Text finalTowerText;
+    public Animation finalTowerTextAnim;
 
     private void Awake()
     {
@@ -30,7 +34,15 @@ public class GameOverUI : MonoBehaviour
         MaskImg.instance.Show();
         ShowBlackMask();
         Invoke("ShowDefeatImg", 2.0f);
-        Invoke("ShowTitleBtn", 4.5f);
+        if(PlayerPrefs.GetInt("DeadNum",0) < 3)
+        {
+            Invoke("ShowSuggestText", 4.0f);
+        }
+        else
+        {
+            Invoke("ShowFinalTowerText", 4.0f);
+        }
+        Invoke("ShowTitleBtn", 6.0f);
     }
 
     private void ShowBlackMask()
@@ -48,5 +60,17 @@ public class GameOverUI : MonoBehaviour
     private void ShowTitleBtn()
     {
         titleBtn.SetActive(true);
+    }
+
+    private void ShowSuggestText()
+    {
+        suggestText.enabled = true;
+        suggestTextAnim.Play();
+    }
+
+    private void ShowFinalTowerText()
+    {
+        finalTowerText.enabled = true;
+        finalTowerTextAnim.Play();
     }
 }
